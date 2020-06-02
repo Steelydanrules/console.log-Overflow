@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+ .nav-bar-logged-in {
+  display: flex;
+  justify-content: space-around;
+  
+ }
+
+ .nav-bar-logged-out {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 98%;
+ }
+
+ #signup-button {
+   padding: 5px;
+   background-color: #cad9e3
+ }
+
+ #signup-button:hover {
+   padding: 5px;
+   background-color: #a2c6e3
+ }
+
+ #login-button {
+   padding: 5px;
+   background-color: #cad9e3
+ }
+
+ #login-button:hover {
+   padding: 5px;
+   background-color: #a2c6e3
+ }
