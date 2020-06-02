@@ -5,9 +5,7 @@ import SignUpContainer from './session/signup_container';
 const App = () => (
   <div>
     <header>
-      <Link to="/api/signup" component={SignUpContainer}> Sign up </Link>
-
-      app
+      <SignUpContainer />
     </header>
   </div>
 )

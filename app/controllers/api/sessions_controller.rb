@@ -4,7 +4,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login(@user)
-      render "api/questions"
+      render "api/users/show"
     else
       render json: ["Please enter appropriate username/login info"], status: 401
     end
@@ -12,7 +12,9 @@ class Api::SessionsController < ApplicationController
 
   def destroy
     @user = current_user
+    if @user
+    render json: {}
     logout
-    render "api/questions"
+    end
   end
 end
