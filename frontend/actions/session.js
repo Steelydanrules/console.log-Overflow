@@ -1,6 +1,10 @@
 import { postUser,
 postSession,
+<<<<<<< HEAD
 deleteSession } from '..utils/session';
+=======
+deleteSession } from '../util/session';
+>>>>>>> auth
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';

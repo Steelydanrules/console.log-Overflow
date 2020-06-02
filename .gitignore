@@ -27,7 +27,10 @@
 /config/master.key
 
 node_modules
+<<<<<<< HEAD
 bundle.js
 bundle.js.map
 /public/assets
+=======
+>>>>>>> auth
 
