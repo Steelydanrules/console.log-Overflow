@@ -10,6 +10,7 @@ class Signup extends React.Component{
       password:""
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.renderErrors = this.renderErrors.bind(this)
   }
 
   handleChange(type){
@@ -17,17 +18,35 @@ class Signup extends React.Component{
   }
 
   handleSubmit(e) {
-    debugger
     e.preventDefault();
-    this.props.createNewUser(this.state)
-    this.setState({username: "", email: "", password: ""})
+    if (this.props.createNewUser(this.state)) {
+      this.setState({
+        username: "",
+        email: "",
+        password: ""
+      });
+   } else {
+    this.renderErrors()
+   } 
+  }
+
+  renderErrors() {
+    return (
+      <div>
+        {this.props.errors.map((error, i) => (
+          <p className='errors' key={`error-${i}`}>
+            {error}
+          </p>
+        ))}
+      </div>
+    );
   }
 
   render(){
     return(
       <div className="session-form-padding-signup">
         <div className='left-of-signup'>
-          <ul className='left-of-signup-list' style={{ style: "none"}}> 
+          <ul className='left-of-signup-list' style={ { style: "none"} }> 
           <li>
           <h3>Join the console.log Overflow Community</h3>
           </li>
@@ -52,6 +71,7 @@ class Signup extends React.Component{
           <br />
           <div className="session-form">
             <form onSubmit={this.handleSubmit}>
+              {this.renderErrors()}
             <label>
                 Display Name:
               <br />
@@ -71,7 +91,7 @@ class Signup extends React.Component{
               <br />
               <input type="password" value={this.state.password} onChange={this.handleChange("password")} />
               <br />
-              <small class="subtext">Password must be at least 6 characters</small>
+              <small className="subtext">Password must be at least 6 characters</small>
             </label>
             <br />
             <br />
