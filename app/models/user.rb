@@ -21,8 +21,7 @@ class User < ApplicationRecord
   end
 
   def reset_session_token!
-    generate_unique_session_token
-    save!
+    self.update!(session_token: User.generate_session_token)
     self.session_token
   end
 

@@ -1,11 +1,13 @@
-export const postUser = user => ( //sends request to create a new user
+export const postUser = user => {
+  debugger
+  return( //sends request to create a new user
   $.ajax({
     url: '/api/users',
     method: 'POST',
     data: { user },
 
   })
-)
+)}
 
 export const postSession = user => ( // sends request to log in a user
   $.ajax({
@@ -15,9 +17,10 @@ export const postSession = user => ( // sends request to log in a user
 
   })
 )
-export const deleteSession = () => ( //creates a new user
+
+export const deleteSession = () => ( //logs user out
   $.ajax({
-    url: '/api/users',
+    url: '/api/session',
     method: 'DELETE'
   })
 )
