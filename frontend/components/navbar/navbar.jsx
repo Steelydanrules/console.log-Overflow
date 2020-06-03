@@ -16,6 +16,7 @@ class NavBar extends React.Component{
           <img 
           src="assets/titlenotscrolled.png" 
           alt="not scolled logo" 
+          id="top-logo" 
           onMouseOver={ e => (e.currentTarget.src ="assets/titlescrolled.png")}
           onMouseLeave={ e => (e.currentTarget.src ="assets/titlenotscrolled.png")}
           />
@@ -29,7 +30,8 @@ class NavBar extends React.Component{
       return(
         <div className="nav-bar-logged-out">
           <Link to="/">
-          <img 
+          <img
+          id="top-logo" 
           src="assets/titlenotscrolled.png" 
           alt="not scolled logo" 
           onMouseOver={ e => (e.currentTarget.src ="assets/titlescrolled.png")}
@@ -42,7 +44,7 @@ class NavBar extends React.Component{
                 Log In
             </button>
           </Link>
-          
+           
           <Link to='/signup'>
             <button id="signup-button">
               Sign Up

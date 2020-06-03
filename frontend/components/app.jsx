@@ -4,6 +4,7 @@ import SignUpContainer from './session/signup_container';
 import LogInContainer from './session/login_container';
 import NavBarContainer from './navbar/navbar_container'
 import { AuthRoute } from '../util/route_util';
+import HomePageContainer from './homepage/homepage_container'
 
 const App = () => (
   <div>
@@ -11,181 +12,11 @@ const App = () => (
       <NavBarContainer />
     </header>
 
-    <p>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      dsds
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      go far
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      please
-    </p>
-    
     <Switch>
-
+    {/* <Route exact path="/" component={HomePageContainer} /> */}
     <AuthRoute exact path='/signup' component={SignUpContainer} />
     <AuthRoute exact path='/login' component={LogInContainer} />
-
     </Switch>
 
 
