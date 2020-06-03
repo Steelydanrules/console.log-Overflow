@@ -46,7 +46,7 @@ class Signup extends React.Component{
     return(
       <div className="session-form-padding-signup">
         <div className='left-of-signup'>
-          <ul className='left-of-signup-list' style={ { style: "none"} }> 
+          <ul className='left-of-signup-list' style={ { listStyle: "none"} }> 
           <li>
           <h3>Join the console.log Overflow Community</h3>
           </li>
