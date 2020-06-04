@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 class Homepage extends React.Component {
@@ -89,7 +89,7 @@ class Homepage extends React.Component {
       </div>
     
       <div className="questions-are-everywhere">
-      <h2 style={{ paddingTop: "50px" }}>Questions are everywhere, answers are on Stack Overflow</h2>
+      <h2 style={{ paddingTop: "50px" }}>Questions are abundant, limited answers are on console.log Overflow</h2>
         <div className="clickable-list-three-cols">
           <ul className="clickable-list-col-one-three" style={{ listStyle: "none" }}>
               <li onClick={() => this.changeQuestionsImage("1")}>
@@ -124,21 +124,30 @@ class Homepage extends React.Component {
             </li>    
           </ul>
         </div>
+        <div className="fourhundredpixels">
+          <p id="bottom-text-1" className="question-main-image-change-shown">Ask a question publicly on
+            our site and get insigntful answers.</p>
+          <p id="bottom-text-2" className="question-main-image-change-hidden">Upvoting helps exceptional
+            content rise to the top and bring awareness to useful responses.</p>
+          <p id="bottom-text-3" className="question-main-image-change-hidden">Answer a question to share
+            your knowledge with the world or in private with your team.</p>
+          <p id="bottom-text-4" className="question-main-image-change-hidden">Tags help make information
+            searchable and find answers that are important to you.</p>
+          <p id="bottom-text-5" className="question-main-image-change-hidden">Accept the answer which solved
+            your problem to let others benefit from the valuable information.</p>
+          <p id="bottom-text-6" className="question-main-image-change-hidden">Our reputation system rewards
+            both the new & experienced based on contribution and activity.</p>
+          <br />
+        </div>
+          <button onClick={event => window.location.href = '/signup'} 
+          className="orange-button-center">
+            Create an account</button>
+      </div>
 
-          <h4 id="bottom-text-1" className="question-main-image-change-shown">Ask a question publicly on
-            170+ Stack Exchange sites or privately using Stack Overflow for Teams.</h4>
-          <h4 id="bottom-text-2" className="question-main-image-change-hidden">Upvoting helps exceptional
-            content rise to the top and bring awareness to useful responses.</h4>
-          <h4 id="bottom-text-3" className="question-main-image-change-hidden">Answer a question to share
-            your knowledge with the world or in private with your team.</h4>
-          <h4 id="bottom-text-4" className="question-main-image-change-hidden">Tags help make information
-            searchable and find answers that are important to you.</h4>
-          <h4 id="bottom-text-5" className="question-main-image-change-hidden">Accept the answer which solved
-            your problem to let others benefit from the valuable information.</h4>
-          <h4 id="bottom-text-6" className="question-main-image-change-hidden">Our reputation system rewards
-            both the new & experienced based on contribution and activity.</h4>
+      <div className="learn-and-grow">
+      
 
-          <Link to="/signup"><button className="signup-button-questions">Create and account</button></Link>
+
       </div>
 
 
