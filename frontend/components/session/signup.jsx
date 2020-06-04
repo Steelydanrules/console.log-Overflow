@@ -67,7 +67,7 @@ class Signup extends React.Component{
 
         </div>
         <div className="right-of-signup">
-          <img src="assets/icon.svg" alt="cool-logo" height="35" width="35" />
+          <img src={window.orangePix} alt="cool-logo" height="35" width="35" />
           <br />
           <div className="session-form">
             <form onSubmit={this.handleSubmit}>

@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import defaultLogo  from '../images/titlenotscrolled.png'
 
+// {window.blankLoveToCodeURL}
+// {window.circleOrangeIcon} 
+// {window.icon} 
+// {window.titlenotscrolled} 
+// {window.titlescrolled} 
+
 class NavBar extends React.Component{
   constructor(props){
     super(props);
@@ -14,14 +20,13 @@ class NavBar extends React.Component{
           <div className="nav-bar-logged-in">
           <Link to="/">
           <img 
-          src="assets/titlenotscrolled.png" 
+          src={window.titlenotscrolled} 
           alt="not scolled logo" 
           id="top-logo" 
-          onMouseOver={ e => (e.currentTarget.src ="assets/titlescrolled.png")}
-          onMouseLeave={ e => (e.currentTarget.src ="assets/titlenotscrolled.png")}
+              onMouseOver={e => (e.currentTarget.src =window.titlescrolled)}
+              onMouseLeave={e => (e.currentTarget.src = window.titlenotscrolled)}
           />
           </Link>
-        <image src="ConsoleLogOverflow/app/assets/images/titlenotscrolled.png" />
           <p>{this.props.currentUser.username}</p>
           <button onClick={() => this.props.logout()}>Log Out</button>
         </div>
@@ -32,10 +37,10 @@ class NavBar extends React.Component{
           <Link to="/">
           <img
           id="top-logo" 
-          src="assets/titlenotscrolled.png" 
+          src={window.titlenotscrolled} 
           alt="not scolled logo" 
-          onMouseOver={ e => (e.currentTarget.src ="assets/titlescrolled.png")}
-          onMouseLeave={ e => (e.currentTarget.src ="assets/titlenotscrolled.png")}
+              onMouseOver={e => (e.currentTarget.src = window.titlescrolled)}
+              onMouseLeave={e => (e.currentTarget.src = window.titlenotscrolled)}
           />
           </Link>
           <div id="signup-signin">

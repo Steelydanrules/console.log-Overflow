@@ -32,7 +32,7 @@ class LogIn extends React.Component {
   render() {
     return (
       <div className="session-form-padding-login">
-        <img src="assets/icon.svg" alt="cool-logo" height="35" width="35" />
+        <img src={window.orangePix} alt="cool-logo" height="35" width="35" />
         <br />
         <div className="session-form">
           <form onSubmit={this.handleSubmit}>
