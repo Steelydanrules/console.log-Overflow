@@ -7,6 +7,19 @@ class Homepage extends React.Component {
     super(props);
   }
 
+  changeQuestionsImage(num){
+    let oldImages = document.getElementsByClassName("question-main-image-change-shown")
+    let oldImagesArray = Array.from(oldImages);
+    oldImagesArray[0].className = "question-main-image-change-hidden"
+    oldImagesArray[1].className = "question-main-image-change-hidden"
+
+    let newImages = document.getElementById(`image-${num}`)
+    newImages.className = "question-main-image-change-shown"
+
+    let newBottom = document.getElementById(`bottom-text-${num}`)
+    newBottom.className = "question-main-image-change-shown"
+  }
+
 
   render() {
     return(
@@ -74,25 +87,62 @@ class Homepage extends React.Component {
             </div>
           </ul>
       </div>
+    
+      <div className="questions-are-everywhere">
+      <h2 style={{ paddingTop: "50px" }}>Questions are everywhere, answers are on Stack Overflow</h2>
+        <div className="clickable-list-three-cols">
+          <ul className="clickable-list-col-one-three" style={{ listStyle: "none" }}>
+              <li onClick={() => this.changeQuestionsImage("1")}>
+              <img src={window.questionsTab1} /> Ask a question
+            </li>    
+              <li onClick={() => this.changeQuestionsImage("2")}>
+              <img src={window.questionsTab2} /> Vote on everything
+            </li>    
+              <li onClick={() => this.changeQuestionsImage("3")}>
+              <img src={window.questionsTab3} /> Answer questions
+            </li>    
+          </ul>
+
+            <img src={window.questionsMain1} id="image-1" className="question-main-image-change-shown" />
+            <img src={window.questionsMain2} id="image-2" className="question-main-image-change-hidden" />
+            <img src={window.questionsMain3} id="image-3" className="question-main-image-change-hidden" />
+            <img src={window.questionsMain4} id="image-4" className="question-main-image-change-hidden" />
+            <img src={window.questionsMain5} id="image-5" className="question-main-image-change-hidden" />
+            <img src={window.questionsMain6} id="image-6" className="question-main-image-change-hidden" />
 
 
 
-      
+          <ul className="clickable-list-col-one-three" style={{ listStyle: "none" }}>
+              <li onClick={() => this.changeQuestionsImage("4")}>
+              <img src={window.questionsTab4} /> Tag your question
+            </li>    
+              <li onClick={() => this.changeQuestionsImage("5")}>
+              <img src={window.questionsTab5} /> Accept and answer
+            </li>    
+              <li onClick={() => this.changeQuestionsImage("6")}>
+              <img src={window.questionsTab6} /> Get a star
+            </li>    
+          </ul>
+        </div>
 
+          <h4 id="bottom-text-1" className="question-main-image-change-shown">Ask a question publicly on
+            170+ Stack Exchange sites or privately using Stack Overflow for Teams.</h4>
+          <h4 id="bottom-text-2" className="question-main-image-change-hidden">Upvoting helps exceptional
+            content rise to the top and bring awareness to useful responses.</h4>
+          <h4 id="bottom-text-3" className="question-main-image-change-hidden">Answer a question to share
+            your knowledge with the world or in private with your team.</h4>
+          <h4 id="bottom-text-4" className="question-main-image-change-hidden">Tags help make information
+            searchable and find answers that are important to you.</h4>
+          <h4 id="bottom-text-5" className="question-main-image-change-hidden">Accept the answer which solved
+            your problem to let others benefit from the valuable information.</h4>
+          <h4 id="bottom-text-6" className="question-main-image-change-hidden">Our reputation system rewards
+            both the new & experienced based on contribution and activity.</h4>
 
-
-
-
-
-
-
-
-
-
-
-
-      
+          <Link to="/signup"><button className="signup-button-questions">Create and account</button></Link>
       </div>
+
+
+    </div>
     )
 
   }

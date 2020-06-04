@@ -142,3 +142,41 @@ p.front-of-image {
   padding: 15px 25px 15px 25px;
   cursor: pointer;
 }
+
+.questions-are-everywhere {
+  text-align: center;
+}
+
+.clickable-list-three-cols{
+  display: flex;
+  flex-grow: 0;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clickable-list-col-one-three li {
+  padding-top: 10px;
+  height: 65px;
+  width: 255px;
+  vertical-align: middle;
+}
+
+.clickable-list-col-one-three img {
+    vertical-align: middle;
+}
+
+.clickable-list-col-one-three li:hover {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.question-main-image-change-shown {
+  display: inline-block;
+}
+
+.question-main-image-change-hidden {
+  display: none;
+}
