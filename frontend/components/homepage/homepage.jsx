@@ -57,7 +57,7 @@ class Homepage extends React.Component {
             <img src={window.leftForDev} />
             <h4>Public Q&A</h4>
               <p>Get answers to more than like 8 questions and give back 
-              by sharing your knowledge with others.  <Link to="/#/signup">Sign up for an account!</Link>
+              by sharing your knowledge with others.  <Link to="/signup">Sign up for an account!</Link>
               </p>
               <br />
               <Link to="/#/questions"><button className="by-dev-button-bottom" >See questions!</button></Link>
@@ -142,7 +142,7 @@ class Homepage extends React.Component {
             both the new & experienced based on contribution and activity.</p>
           <br />
         </div>
-          <button onClick={event => window.location.href = '/signup'} 
+          <button onClick={event => window.location.href = 'https://console-log-overflow-aa.herokuapp.com/#/signup'} 
           className="orange-button-center">
             Create an account</button>
       </div>
