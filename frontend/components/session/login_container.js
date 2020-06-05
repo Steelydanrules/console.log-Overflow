@@ -7,7 +7,8 @@ const mSP = (state) => ({
     username: "steelydanrules",
     email: "soccer_mom123@consolelogoverflow.com",
     password: "123456"
-  }
+  },
+  errors: Object.values(state.errors.session)
 })
 
 const mDP = dispatch => ({

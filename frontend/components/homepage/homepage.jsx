@@ -5,6 +5,7 @@ import { Link, Redirect } from 'react-router-dom';
 class Homepage extends React.Component {
   constructor(props) {
     super(props);
+    this.main = React.createRef();
   }
 
   changeQuestionsImage(num){
@@ -34,16 +35,18 @@ class Homepage extends React.Component {
           <br />
 
         <div className="top-buttons-homepage">
-        <button className="white-button">will add l8r</button>
-        <button className="orange-button">will add l8r</button>
+            <button className="white-button">For developers</button>
+            <button className="orange-button">
+            {/* onClick={event => window.location.href = "#questions-everywhere"}> */}
+              Questions are abundant</button>
         </div>
       </div>
 
 
-      <div className="for-dev-by-dev">
+      <div className="for-dev-by-dev" id="for-dev">
         <h2 style={{ paddingTop: "175px" }}>For developers, by developers</h2>
         <hr className="breakpoint" width="50px"/>
-        <p>console.log Overflow is an <Link to="/questions">open community</Link> for anyone that codes. 
+        <p>console.log Overflow is an <Link to="/#/questions">open community</Link> for anyone that codes. 
         We help you get answers to your toughest coding questions, 
         share knowledge with your coworkers in private, and find your 
         next dream job.</p>
@@ -54,10 +57,10 @@ class Homepage extends React.Component {
             <img src={window.leftForDev} />
             <h4>Public Q&A</h4>
               <p>Get answers to more than like 8 questions and give back 
-              by sharing your knowledge with others.  <Link to="/signup">Sign up for an account!</Link>
+              by sharing your knowledge with others.  <Link to="/#/signup">Sign up for an account!</Link>
               </p>
               <br />
-              <Link to="/questions"><button className="by-dev-button-bottom" >See questions!</button></Link>
+              <Link to="/#/questions"><button className="by-dev-button-bottom" >See questions!</button></Link>
             </li>
             </div>
             <div className="for-dev-by-dev-list-item-container">
@@ -88,7 +91,7 @@ class Homepage extends React.Component {
           </ul>
       </div>
     
-      <div className="questions-are-everywhere">
+      <div className="questions-are-everywhere" id="questions-everywhere">
       <h2 style={{ paddingTop: "50px" }}>Questions are abundant, limited answers are on console.log Overflow</h2>
         <div className="clickable-list-three-cols">
           <ul className="clickable-list-col-one-three" style={{ listStyle: "none" }}>
@@ -126,7 +129,7 @@ class Homepage extends React.Component {
         </div>
         <div className="fourhundredpixels">
           <p id="bottom-text-1" className="question-main-image-change-shown">Ask a question publicly on
-            our site and get insigntful answers.</p>
+            our site and hopefully you'll get insigntful answers.</p>
           <p id="bottom-text-2" className="question-main-image-change-hidden">Upvoting helps exceptional
             content rise to the top and bring awareness to useful responses.</p>
           <p id="bottom-text-3" className="question-main-image-change-hidden">Answer a question to share
@@ -145,7 +148,51 @@ class Homepage extends React.Component {
       </div>
 
       <div className="learn-and-grow">
-      
+        <h2 style={{ paddingTop: "50px" }}>Learn and grow with console.log Overflow</h2>
+        <ul className="learn-and-grow-list">
+          <li className="learn-and-grow-list-item">
+            <img src={window.learnAndGrow1} />
+            <h4>Write the script of the future</h4>
+              <br />
+          </li>
+          <li className="learn-and-grow-list-item">
+            <img src={window.learnAndGrow2} />
+              <h4>Support open source</h4>
+              <br />
+          </li>
+          <li className="learn-and-grow-list-item">
+            <img src={window.learnAndGrow3} />
+              <h4>Acquire and share knowledge</h4>
+          </li>
+          <li className="learn-and-grow-list-item">
+            <img src={window.learnAndGrow4} />
+              <h4>Find career opportunities</h4>
+              <br />
+          </li>
+        </ul>
+
+        <ul className="learn-and-grow-p-tag">
+          <li className="learn-and-grow-p-tag-item">
+                Get your coding questions answered to learn, build, 
+                and level up whether you’re beginning with JavaScript 
+                or a console.log professional.
+          </li>
+
+          <li className="learn-and-grow-p-tag-item">
+              Reach users of your project by following tags, answering 
+              newcomer questions, and empowering experts in the community.
+          </li>
+
+          <li className="learn-and-grow-p-tag-item">
+                Answer questions and gain insights from an audience of 
+                developers using your technology on console.log Overflow.
+          </li>
+
+          <li className="learn-and-grow-p-tag-item">
+                <Link to="/signup">Create a profile</Link> that shows off your expertise and credentials 
+                to help you make your next move. Start your Developer Story.
+          </li>
+        </ul>
 
 
       </div>

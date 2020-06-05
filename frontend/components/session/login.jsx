@@ -30,11 +30,15 @@ class LogIn extends React.Component {
 
 
   render() {
+    let cell = 270;
+
+    { this.props.errors.forEach(er => cell += 50) }
+
     return (
       <div className="session-form-padding-login">
-        <img src={window.orangePix} alt="cool-logo" height="35" width="35" />
+        <img src={window.loginLogo} alt="cool-logo" />
         <br />
-        <div className="session-form">
+        <div className="session-form-login" style={{ width: "250px", height: `${cell}px` }}>
           <form onSubmit={this.handleSubmit}>
             <label>
               Display Name:
@@ -53,13 +57,13 @@ class LogIn extends React.Component {
             <button onClick={this.handleSubmit}>Sign In</button>
             <br />
           </form>
+          <br />
             <button onClick={() => this.demoLogin()}>Demo Login</button>
         </div>
         <br />
         <p>Don't have an account?  <Link to='/signup'>Sign up!</Link></p>
         <p>Are you an employer? <a href="https://www.linkedin.com/in/karlkonetsky/">View this linkedIn</a></p>
-        <br />
-        <a href="https://github.com/Steelydanrules">or this GitHub</a>
+        <p><a href="https://github.com/Steelydanrules">or this GitHub</a></p>
       </div>
     )
 
