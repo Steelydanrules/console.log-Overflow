@@ -2,3 +2,6 @@ button:focus {
     outline:0
 }
 
+button {
+    border: none;
+}
