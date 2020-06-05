@@ -1,15 +1,14 @@
 import { connect } from 'react-redux';
 
-import Homepage from './homepage';
+import Footer from './footer';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
   return {
-    currentUser: users[session.id],
-    clickedQuestion: 1
+    currentUser: users[session.id]
   };
 };
 
 export default connect(
   mapStateToProps,
   null
-)(Homepage);
+)(Footer);
