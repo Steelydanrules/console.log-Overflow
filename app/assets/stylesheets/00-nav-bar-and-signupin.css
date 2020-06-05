@@ -7,8 +7,9 @@ a {
   color: #F48025
 }
 
-.errors{
+.error{
   color: red;
+  font-size: 12px;
 }
 
  .nav-bar {
@@ -18,11 +19,11 @@ a {
   position: fixed;
   top: 0;
   width: 101%;
-  border-bottom: 1px solid gray;
-  border-top: 5px solid lightcoral;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  border-top: 3px solid #F48025;
   background-color: whitesmoke;
   z-index: 999;
-  height: 45px
+  height: 47px
 }
 
 .session-form-padding-signup {
@@ -65,16 +66,38 @@ a {
   padding-bottom: 3px;
 }
 
-.session-form-signup input {
+.signup-input-no-errors {
   border-color: #BBC0C4;
   border-radius: 5px;
   width: 270px;
   height: 35px;
 }
 
+.signup-input-yes-errors {
+  border-color: red;
+  border-radius: 5px;
+  width: 270px;
+  height: 35px;
+}
+
+.login-input-no-errors {
+  border-color: #BBC0C4;
+  border-radius: 5px;
+  width: 236px;
+  height: 35px;
+}
+
+.login-input-yes-errors {
+  border-color: red;
+  border-radius: 5px;
+  width: 236px;
+  height: 35px;
+
+}
+
 .session-form-login {
   padding: 20px;
-  background-color: whitesmoke;
+  background-color: #FFFFFF;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   border: 0;
@@ -86,12 +109,7 @@ a {
   padding-bottom: 3px;
 }
 
-.session-form-login input {
-  border-color: #BBC0C4;
-  border-radius: 5px;
-  width: 236px;
-  height: 35px;
-}
+
 .session-form-login button {
    background-color: #0095FF;
    cursor: pointer;
@@ -135,23 +153,27 @@ a {
  }
 
  #signup-button {
+   box-shadow:inset 0px 1px 0px 0px #71C1FF;
+   border: 1px solid #0095FF;
    background-color: #0095FF;
    cursor: pointer;
    border-radius: 5px;
-   height:30px;
-   width: 60px;
+   height:35px;
+   width: 65px;
    color: whitesmoke;
-   border: 0;
+   
   }
   
   #signup-button:hover {
+    box-shadow:inset 0px 1px 0px 0px #5FA7DD;
+    border: 1px solid #0077CC;
     background-color: #0077CC;
     cursor: pointer;
     border-radius: 5px;
-    height:30px;
-    width: 60px;
+    height:35px;
+    width: 65px;
     color: whitesmoke;
-    border: 0;
+
   }
   
   #login-button {
@@ -160,10 +182,11 @@ a {
     background-color: #E1ECF4;
     cursor: pointer;
     border-radius: 5px;
-    height:30px;
-    width: 60px;
+    height:35px;
+    width: 65px;
     color: #39739D;
-    border: 0;
+    box-shadow:inset 0px 1px 0px 0px #F6F9FC;
+    border: 1px solid #39739D;
   }
   
   #login-button:hover {
@@ -172,9 +195,37 @@ a {
     background-color: #B3D3EA;
     cursor: pointer;
     border-radius: 5px;
-    height:30px;
-    width: 60px;
-    border: 0;
+    height:35px;
+    width: 65px;
+    box-shadow:inset 0px 1px 0px 0px #E2EFF7;
+    border: 1px solid #39739D;
+    
+  }
+
+  #logout-button {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #E1ECF4;
+    cursor: pointer;
+    border-radius: 5px;
+    height:35px;
+    width: 65px;
+    color: #39739D;
+    box-shadow:inset 0px 1px 0px 0px #F6F9FC;
+    border: 1px solid #39739D;
+  }
+  
+  #logout-button:hover {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #B3D3EA;
+    cursor: pointer;
+    border-radius: 5px;
+    height:35px;
+    width: 65px;
+    box-shadow:inset 0px 1px 0px 0px #E2EFF7;
+    border: 1px solid #39739D;
+    
   }
 
   .subtext {
@@ -210,15 +261,17 @@ a {
     margin-left: 10%;
   }
 
-  .search-bar-nav{
+  .search-bar-nav input{
     margin-right: 15px;
-    outline:none;
+    outline:0;
+    border: 1px solid #BBC0C4;
   }
-
-  .search-bar-nav:focus {
+  
+  .search-bar-nav input:focus {
     margin-right: 15px;
-    outline:none;
-    border:1px solid red;
+    outline:0;
+    border: 1px solid #6CBBF7;
+    box-shadow: 0 0 5px 3px rgba(217, 236, 252, .4);
     
   }
 
@@ -228,7 +281,7 @@ a {
 
   .linked-in-nav {
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 25px;
     background-color: #0077B5;
     color: whitesmoke;
     height: 30px;
@@ -250,4 +303,36 @@ a {
     cursor: pointer;
     outline: none;
     border: 0;
+  }
+
+  .linked-in-nav:hover {
+    margin-left: 10px;
+    margin-right: 25px;
+    background-color: #F48025;
+    color: whitesmoke;
+    height: 30px;
+    width: 85px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+  }
+  
+  .github-nav:hover {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #F48025;
+    color: whitesmoke;
+    height: 30px;
+    width: 85px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+  }
+  
+  .logout-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }

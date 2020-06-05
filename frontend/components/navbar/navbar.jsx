@@ -12,15 +12,24 @@ class NavBar extends React.Component{
   constructor(props){
     super(props);
 
+    this.state = this.props;
+
     this.logOutOrInBar = this.logOutOrInBar.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
+
+  handleChange(e){
+    this.setState({searchBar: e.currentTarget.value})
+  } 
 
   logOutOrInBar(){
     if (this.props.currentUser) {
       return(
       <div className='logout-container'>
         <p>hey, {this.props.currentUser.username}</p>
-        <button onClick={() => this.props.logout()}>Log Out</button>
+        <button id="logout-button"
+        onClick={() => this.props.logout()}>
+          Log Out</button>
       </div>
       )
     } else {
@@ -34,13 +43,13 @@ class NavBar extends React.Component{
 
           <Link to='/login'>
             <button id="login-button">
-              LogIn
+              Log in
             </button>
           </Link>
 
           <Link to='/signup'>
             <button id="signup-button">
-              SignUp
+              Sign up
             </button>
           </Link>
         </div>
@@ -67,7 +76,11 @@ class NavBar extends React.Component{
 
 
           <form className="search-bar-nav">
-            <input type="text" placeholder='&#128269; Search...' style={{width: "500px", height: "25px"}} />
+            <input type="text" 
+            onChange={this.handleChange}
+            placeholder='&#128269; Search...' 
+            style={{width: "500px", height: "30px"}} 
+            value={this.state.searchBar} />
           </form>
 
           {this.logOutOrInBar()}

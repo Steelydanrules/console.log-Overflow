@@ -13,6 +13,10 @@ class LogIn extends React.Component {
     this.demoLogin = this.demoLogin.bind(this)
   }
 
+  componentDidMount() {
+    this.props.clearSessionErrors()
+  }
+
   handleChange(type) {
     return (e) => (this.setState({ [type]: e.target.value }))
   }
@@ -28,11 +32,31 @@ class LogIn extends React.Component {
   }
 
 
+  handleErrors() {
+    if (this.props.errors.length !== 0) {
+      let targetedInput = Array.from(document.getElementsByClassName("login-input-no-errors"))
+      targetedInput.forEach(el => {
+        el.className = "login-input-yes-errors"
+      })
+
+      return (
+        <div className="error">Invalid credentials!  Try again</div>
+      )
+    } else {
+
+      let targetedInput = Array.from(document.getElementsByClassName("login-input-yes-errors"))
+      targetedInput.forEach(el => {
+        el.className = "login-input-no-errors"
+      })
+    }
+  }
+
+
 
   render() {
     let cell = 270;
 
-    { this.props.errors.forEach(er => cell += 50) }
+    { this.props.errors.forEach(er => cell += 20) }
 
     return (
       <div className="session-form-padding-login">
@@ -40,24 +64,37 @@ class LogIn extends React.Component {
         <br />
         <div className="session-form-login" style={{ width: "250px", height: `${cell}px` }}>
           <form onSubmit={this.handleSubmit}>
+            {this.handleErrors()}
             <label>
               Display Name:
               <br />
-            <input type="text" value={this.state.username} onChange={this.handleChange("username")} />
+
+            <input type="text" 
+            className="login-input-no-errors"
+            value={this.state.username} 
+            onChange={this.handleChange("username")} />
             </label>
             <br />
             <br />
             <label>
               Password:
               <br />
-            <input type="password" value={this.state.password} onChange={this.handleChange("password")} />
+
+            <input type="password" 
+            className="login-input-no-errors"
+            value={this.state.password} 
+            onChange={this.handleChange("password")} />
             </label>
             <br />
             <br />
+
+
             <button onClick={this.handleSubmit}>Sign In</button>
             <br />
           </form>
           <br />
+
+
             <button onClick={() => this.demoLogin()}>Demo Login</button>
         </div>
         <br />

@@ -26,8 +26,8 @@ class Homepage extends React.Component {
     return(
     <div>
       <div className="top-image-stuff">
-        <img src={window.blankLoveToCodeURL} alt="we love people who code" width="500" height="500" style={{paddingTop: "1px"}} id="main-image" />
-        <h1 className="front-of-image" style={{ paddingTop: "150px" }}>We LOVE people who code!</h1>
+        <img src={window.blankLoveToCodeURL} alt="we love people who code" style={{paddingTop: "1px"}} id="main-image" />
+          <h1 className="front-of-image" style={{ paddingTop: "150px" }}>We &lt;3 people who code!</h1>
         <p className="front-of-image">We build products that empower developers
           and connect them to solutions that enable
           productivity, growth, and discovery.
