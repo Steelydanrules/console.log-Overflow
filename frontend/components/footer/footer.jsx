@@ -14,7 +14,7 @@ class Footer extends React.Component {
           
         <ul className="list-of-skills" >
         {/* style={{ listStyle: "none" }}> */}
-        <h4>Karl Konetskys' skills:</h4>
+        <h4>Karl Konetsky's skills:</h4>
           <li>JavaScript</li>
           <li>React</li>
           <li>Redux</li>
