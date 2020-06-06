@@ -26,7 +26,12 @@ class NavBar extends React.Component{
     if (this.props.currentUser) {
       return(
       <div className='logout-container'>
-        <p>hey, {this.props.currentUser.username}</p>
+        <Link 
+        className="my-profile-button"
+        to={`/users/${this.props.currentUser.id}`}>
+          My Profile
+          </Link>
+
         <button id="logout-button"
         onClick={() => this.props.logout()}>
           Log Out</button>

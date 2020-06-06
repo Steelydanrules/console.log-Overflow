@@ -4,7 +4,7 @@ export const UserAnswersIndex = (props) => {
   if (props.user.answers === undefined || props.user.answers.length === 0) {
     return (
       <div className="user-answers-index-blank" style={{ fontStyle: 'italic' }}>
-        User has not asked any answers.
+        {props.user.username} has not answered any questions.
       </div>
     )
   } else {
