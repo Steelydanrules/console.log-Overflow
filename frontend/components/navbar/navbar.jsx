@@ -16,11 +16,21 @@ class NavBar extends React.Component{
 
     this.logOutOrInBar = this.logOutOrInBar.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    this.actualSearch = this.actualSearch.bind(this)
+
   }
 
   handleChange(e){
     this.setState({searchBar: e.currentTarget.value})
   } 
+
+  actualSearch(e){
+    e.preventDefault()
+    let searchFormatted = this.state.searchBar.split(" ").join("+")
+    return(
+      window.location.href = `https://stackoverflow.com/search?q=${searchFormatted}`
+    )
+  }
 
   logOutOrInBar(){
     if (this.props.currentUser) {
@@ -80,7 +90,8 @@ class NavBar extends React.Component{
 
 
 
-          <form className="search-bar-nav">
+          <form className="search-bar-nav"
+            onSubmit={this.actualSearch}>
             <input type="text" 
             onChange={this.handleChange}
             placeholder='&#128269; Search...' 
