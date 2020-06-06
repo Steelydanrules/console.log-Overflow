@@ -1,0 +1,57 @@
+.user-show{
+  padding-top: 43px;
+}
+
+.users-show-banner-container{
+  width: 100vw;
+  display: flex;
+}
+
+#users-show-banner{
+  width: 100vw;
+  height: 125px;
+  z-index: 0;
+  position: absolute;
+}
+
+#log-exchange-link{
+  width: 230px;
+  height: 60px;
+  z-index: 1;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: 60vw;
+  cursor: pointer;
+}
+
+#users-show-prof-photo{
+  width: 130px;
+  height: 130px;
+}
+
+#random-box-user-show{
+  width: 470px;
+  height: 200px;
+  padding-top: 75px;
+  background-color: #F0F5F7;
+  border: 1px solid #E0EEF3;
+}
+
+.profile-photo-and-info{
+  padding-top: 75px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.user-info-show-page {
+  margin-right: 200px;
+}
+
+.questions-and-answers-users-show{
+padding-left: 20%;
+width: 60vw;
+padding-bottom: 50px;
+
+}

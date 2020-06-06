@@ -14,6 +14,7 @@ class Api::UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
+    @user.profile_photo_url = "https://i0.wp.com/www.repol.copl.ulaval.ca/wp-content/uploads/2019/01/default-user-icon.jpg"
     # debugger
     if @user.save
       login(@user)
@@ -44,6 +45,6 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :profile_photo_url)
   end
 end
