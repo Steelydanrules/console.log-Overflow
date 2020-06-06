@@ -52,10 +52,11 @@ class Footer extends React.Component {
           'https://github.com/Steelydanrules'}
           />
         </li>
-          &copy; Karl Konetsky
+          &copy; console.log Overflow
+          <br />
+          Karl Konetsky
           <br />
           Queens, NY 2020
-
         </ul>
       </div>
     )
