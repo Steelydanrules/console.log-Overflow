@@ -15,13 +15,11 @@ class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.profile_photo_url = "https://i0.wp.com/www.repol.copl.ulaval.ca/wp-content/uploads/2019/01/default-user-icon.jpg"
-    # debugger
     if @user.save
       login(@user)
       # render "api/users/show"
       render :show
     else
-      # debugger
       render json: @user.errors.full_messages, status: 422
     end
   end
@@ -35,7 +33,6 @@ class Api::UsersController < ApplicationController
       login(@user)
       render "api/users/show"
     else
-      debugger
       render json: @user.errors.full_messages, status: 422
     end
   end

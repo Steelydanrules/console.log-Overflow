@@ -15,7 +15,7 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   loginDemoUser: () => dispatch(login({
     username: "steelydanrules",
-    email: "soccer_mom123@consolelogoverflow.com",
+    email: "steelydanrules@consolelogoverflow.com",
     password: "123456"
   }))
 });

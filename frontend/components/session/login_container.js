@@ -5,7 +5,7 @@ import LogIn from './login';
 const mSP = (state) => ({
   demoUser: {
     username: "steelydanrules",
-    email: "soccer_mom123@consolelogoverflow.com",
+    email: "steelydanrules@consolelogoverflow.com",
     password: "123456"
   },
   errors: Object.values(state.errors.session)

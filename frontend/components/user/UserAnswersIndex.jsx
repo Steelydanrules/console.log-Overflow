@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 export const UserAnswersIndex = (props) => {
   if (props.user.answers === undefined || props.user.answers.length === 0) {
     return (

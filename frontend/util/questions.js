@@ -1,8 +1,9 @@
-export const fetchQuestions = () => (
+export const fetchQuestions = () => {
+  return(
   $.ajax({
     url: '/api/questions'
   })
-);
+)};
 
 export const fetchQuestion = (questionId) => (
   $.ajax({

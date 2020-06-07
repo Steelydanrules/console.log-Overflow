@@ -1,6 +1,6 @@
 import React from 'react';
-import {UserQuestionsIndex} from '../question/UserQuestionsIndex'
-import {UserAnswersIndex} from '../answer/UserAnswersIndex'
+import UserQuestionsIndex from './UserQuestionsIndex'
+import {UserAnswersIndex} from './UserAnswersIndex'
 
 class User extends React.Component{
   constructor(props){
@@ -21,6 +21,7 @@ class User extends React.Component{
         </div>
       )
     } else{
+      debugger
     return(
       <div className="user-show">
 
@@ -28,10 +29,12 @@ class User extends React.Component{
           <img src={window.usersHeader}
           id="users-show-banner" 
           style={{ width: "100vw" }}/>
+
           <img src={window.usersExchangeHeader} 
           onClick={event => window.location.href = '/'}
           id="log-exchange-link" 
           style={{ width: "230px", height: "60px" }}/>
+          
         </div>
 
 
@@ -67,11 +70,15 @@ class User extends React.Component{
             <hr />
             <div className="top-questions-user-show">
             <h3>Questions:</h3>
-            <UserQuestionsIndex user={this.props.user} />
+
+            <UserQuestionsIndex user={this.props.user}
+            fetchQuestions={this.props.fetchQuestions}
+            />
+
             </div>
             <div className="top-answers-user-show">
             <h3> Answers:</h3>
-            <UserAnswersIndex user={this.props.user} />
+            <UserAnswersIndex user={this.props.user}/>
             </div>
           </div>
 
