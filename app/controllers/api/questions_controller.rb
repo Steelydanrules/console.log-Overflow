@@ -24,6 +24,7 @@ class Api::QuestionsController < ApplicationController
     @question = Question.new(question_params)
     user = current_user
     @question.asker_id = user.id
+    @question.site_hits = 0
 
     if @quesion.save
       render :show

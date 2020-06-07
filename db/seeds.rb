@@ -51,6 +51,7 @@ Question.create!(
   title: "How do i test this 1",
   body: "Look at the body 1",
   tag: "DEMO",
+  site_hits: 0
 )
 
 Question.create!(
@@ -59,6 +60,7 @@ Question.create!(
   title: "How do i test this 2",
   body: "Look at the body 2",
   tag: "DEMO",
+  site_hits: 0
 )
 
 Question.create!(
@@ -67,6 +69,7 @@ Question.create!(
   title: "How do i test this 3",
   body: "Look at the body 3",
   tag: "DEMO",
+  site_hits: 0
 )
 
 Question.create!(
@@ -75,6 +78,7 @@ Question.create!(
   title: "How do i test this 4",
   body: "Look at the body 4",
   tag: "DEMO",
+  site_hits: 0
 )
 
 Question.create!(
@@ -83,6 +87,7 @@ Question.create!(
   title: "How do i test this 5",
   body: "Look at the body 5",
   tag: "DEMO",
+  site_hits: 0
 )
 
 Question.create!(
@@ -91,6 +96,7 @@ Question.create!(
   title: "How do i test this 6",
   body: "Look at the body 6",
   tag: "DEMO",
+  site_hits: 0
 )
   
 Question.create!(
@@ -99,6 +105,7 @@ Question.create!(
   title: "How do i test this 7",
   body: "Look at the body 7",
   tag: "DEMO",
+  site_hits: 0
 )
         
 Question.create!(
@@ -107,6 +114,7 @@ Question.create!(
   title: "How do i test this 8",
   body: "Look at the body 8",
   tag: "DEMO",
+  site_hits: 0
 )
 
 Question.create!(
@@ -115,6 +123,7 @@ Question.create!(
   title: "How do i test this 9",
   body: "Look at the body 9",
   tag: "DEMO",
+  site_hits: 0
 )
               
 Question.create!(
@@ -123,4 +132,5 @@ Question.create!(
   title: "How do i test this 10",
   body: "Look at the body 10",
   tag: "DEMO",
+  site_hits: 0
 )
