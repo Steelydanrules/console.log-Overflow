@@ -25,66 +25,66 @@ seed_urls = [
 User.destroy_all
 Question.destroy_all
 
-User.create!(  username: "steelydanrules",
+user_1 = User.create!(  username: "steelydanrules",
   email: "steelydanrules@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-User.create!(  username: "SFSorrow_332",
+user_2 = User.create!(  username: "SFSorrow_332",
   email: "SFSorrow_332@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-User.create!(  username: "Mama_Cass",
+user_3 = User.create!(  username: "Mama_Cass",
   email: "Mama_Cass@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-User.create!(  username: "Prez_cuomo",
+user_4 = User.create!(  username: "Prez_cuomo",
   email: "Prez_cuomo@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-User.create!(  username: "GOSHAKHTAR",
+user_5 = User.create!(  username: "GOSHAKHTAR",
   email: "GOSHAKHTAR@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-User.create!(  username: "OrdellRobbie",
+user_6 = User.create!(  username: "OrdellRobbie",
   email: "Ordell_robbie@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-User.create!(  username: "Rupert_pupkin99",
+user_7 = User.create!(  username: "Rupert_pupkin99",
   email: "Rupert_pupkin99@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-User.create!(  username: "username",
+user_8 = User.create!(  username: "username",
   email: "username@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-User.create!(  username: "shukudai",
+user_9 = User.create!(  username: "shukudai",
   email: "shukudai@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
-User.create!(
+user_10 = User.create!(
   username: "Lebron_Jaaames",
   email: "Lebron_Jaaames@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
-User.create!(
+user_11 = User.create!(
   username: "soccer_mom_5464",
   email: "soccer_mom_5464@consolelogoverflow.com",
   password: "123456",
@@ -93,7 +93,7 @@ User.create!(
 
 
 Question.create!(
-  asker_id: User.first.id,
+  asker_id: user_1.id;
   title: "How do i test this 1",
   body: "Look at the body 1",
   tag: "DEMO",
@@ -101,7 +101,7 @@ Question.create!(
 )
 
 Question.create!(
-  asker_id: User.second.id,
+  asker_id: user_2.id,
   title: "How do i test this 2",
   body: "Look at the body 2",
   tag: "DEMO",
@@ -109,7 +109,7 @@ Question.create!(
 )
 
 Question.create!(
-  asker_id: User.second.id,
+  asker_id: user_3.id,
   title: "How do i test this 3",
   body: "Look at the body 3",
   tag: "DEMO",
@@ -117,49 +117,55 @@ Question.create!(
 )
 
 Question.create!(
-  asker_id: User.first.id,  title: "How do i test this 4",
+  asker_id: User.first.id,  
+  title: "How do i test this 4",
   body: "Look at the body 4",
   tag: "DEMO",
   site_hits: 0
 )
 
 Question.create!(
-  asker_id: User.second.id,  title: "How do i test this 5",
+  asker_id: User.second.id,  
+  title: "How do i test this 5",
   body: "Look at the body 5",
   tag: "DEMO",
   site_hits: 0
 )
 
 Question.create!(
-  asker_id: User.first.id,  title: "How do i test this 6",
+  asker_id: User.first.id,  
+  title: "How do i test this 6",
   body: "Look at the body 6",
   tag: "DEMO",
   site_hits: 0
 )
   
 Question.create!(
-  asker_id: User.second.id,  title: "How do i test this 7",
+  asker_id: User.second.id,  
+  title: "How do i test this 7",
   body: "Look at the body 7",
   tag: "DEMO",
   site_hits: 0
 )
         
 Question.create!(
-  asker_id: User.first.id,  title: "How do i test this 8",
+  asker_id: User.first.id,  
+  title: "How do i test this 8",
   body: "Look at the body 8",
   tag: "DEMO",
   site_hits: 0
 )
 
 Question.create!(
-  asker_id: User.second.id,  title: "How do i test this 9",
+  asker_id: user_9.id,  
+  title: "How do i test this 9",
   body: "Look at the body 9",
   tag: "DEMO",
   site_hits: 0
 )
               
 Question.create!(
-  asker_id: User.first.id,
+  asker_id: user_10.id,
   title: "How do i test this 10",
   body: "Look at the body 10",
   tag: "DEMO",
@@ -167,7 +173,7 @@ Question.create!(
 )
 
 Question.create!(
-  asker_id: User.second.id,
+  asker_id: user_11.id,
   title: "How do i test this 10",
   body: "Contrary to popular belief, Lorem Ipsum is not simply random text. 
   It has roots in a piece of classical Latin literature from 45 BC, making it 

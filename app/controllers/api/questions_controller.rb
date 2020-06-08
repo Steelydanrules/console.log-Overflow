@@ -14,11 +14,18 @@ class Api::QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     if @question
+      @question.site_hits += 1
+      @question.save!
       render :show
     else
       render json: @question.errors.full_messages, status: 422
     end
   end
+
+  # def add_view
+  #   @question = Question.find(params[:question_id])
+  #   @question.site_hits += 1
+  # end 
 
   def create
     @question = Question.new(question_params)
@@ -32,11 +39,6 @@ class Api::QuestionsController < ApplicationController
       render json: @question.errors.full_messages, status: 422
     end
   end
-
-  def add_view
-    @question = Question.find(params[:id])
-    @question.site_hits += 1
-  end 
 
   def update
     @question = Question.find(params[:id])

@@ -18,6 +18,7 @@ class QuestionsShow extends React.Component {
 
   render() {
     if (this.props.question === undefined) {
+      // this.props.addViewQuestion(this.props.match.params.id)
       return (
         <div>
           <br />

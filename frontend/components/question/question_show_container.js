@@ -11,7 +11,7 @@ const mSP = (state, ownProps) => {
 
 const mDP = dispatch => ({
   fetchQuestion: (questionId) => dispatch(fetchQuestion(questionId)),
-  // addViewQuestion: (questionData) => dispatch(addViewQuestion(questionData))
+  // addViewQuestion: (questionId) => dispatch(addViewQuestion(questionId))
 })
 
 export default connect(mSP, mDP)(QuestionShow)
