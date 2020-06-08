@@ -89,9 +89,9 @@ class Signup extends React.Component{
 
 
   render(){
-    let cell = 420;
+    let signupHeight = 420;
 
-    {this.props.errors.forEach(er => cell += 12)}
+    {this.props.errors.forEach(er => signupHeight += 12)}
 
     return(
       <div className="session-form-padding-signup">
@@ -99,9 +99,9 @@ class Signup extends React.Component{
           {this.leftOfSignup()}
 
           <div className="right-of-signup">
-            <img src={window.loginLogo} alt="cool-logo" height="35" width="35" />
+            <img src={window.loginLogo} alt="cool-logo" />
             <br />
-            <div className="session-form-signup" style={{ width: "300px", height: `${cell}px` }}>
+            <div className="session-form-signup" style={{ width: "300px", height: `${signupHeight}px` }}>
               <form onSubmit={this.handleSubmit}>
               <label>
                      Display Name:
