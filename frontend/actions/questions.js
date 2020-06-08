@@ -34,7 +34,11 @@ export const fetchQuestions = () => dispatch => (
 export const fetchQuestion = (questionId) => dispatch => (
   QUESTIONUtil.fetchQuestions(questionId)
     .then(question => dispatch(receiveQuestion(question))));
-
+    
+export const addViewQuestion = (questionId) => dispatch => (
+  QUESTIONUtil.addViewQuestion(questionId)
+    .then(question => dispatch(receiveQuestion(question))));
+    
 export const postQuestion = (question) => dispatch => (
   QUESTIONUtil.postQuestion(question)
     .then(question => dispatch(receiveQuestion(question))));
@@ -43,9 +47,6 @@ export const patchQuestion = (question) => dispatch => (
   QUESTIONUtil.patchQuestion(question)
     .then(question => dispatch(receiveQuestion(question))));
 
-// export const addViewQuestion = (question) => dispatch => (
-//   QUESTIONUtil.addViewQuestion(question)
-//     .then(question => dispatch(receiveQuestion(question))));
 
 export const deleteQuestion = (questionId) => dispatch => (
   QUESTIONUtil.deleteQuestion(questionId)

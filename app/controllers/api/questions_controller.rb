@@ -33,6 +33,11 @@ class Api::QuestionsController < ApplicationController
     end
   end
 
+  def add_view
+    @question = Question.find(params[:id])
+    @question.site_hits += 1
+  end 
+
   def update
     @question = Question.find(params[:id])
     user = current_user
