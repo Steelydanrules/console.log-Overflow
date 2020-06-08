@@ -3,7 +3,6 @@ import { fetchQuestions } from '../../actions/questions';
 import QuestionIndex from './questions_index'
 
 const mSP = (state, ownProps) => {
-  console.log(ownProps)
   return ({
     questions: Object.values(state.entities.questions)
   })

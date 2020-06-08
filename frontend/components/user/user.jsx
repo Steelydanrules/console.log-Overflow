@@ -21,7 +21,6 @@ class User extends React.Component{
         </div>
       )
     } else{
-      debugger
     return(
       <div className="user-show">
 
@@ -39,8 +38,10 @@ class User extends React.Component{
 
 
         <div className="profile-photo-and-info">
+
           <div className="left-side-user-show">
           <img src={this.props.user.profile_photo_url}
+          style={{width: "93px", height: "138px"}}
           id="users-show-prof-photo"
           />
 

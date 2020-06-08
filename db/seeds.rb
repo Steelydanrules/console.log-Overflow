@@ -6,6 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+seed_urls = [
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/mcdonry01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/stralan01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/stepade01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/lundqhe01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/zuccama01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/brassde01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/boylebr01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/hagelca01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/nashri01-2017.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/mooredo01-2017.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/callary01-2020.jpg",
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/stlouma01-2015.jpg",
+  "https://www.hockey-reference.com/players/m/millejt01.html"
+]
+
 User.delete_all
 Question.delete_all
 
@@ -13,35 +29,40 @@ User.create!(
   id: 1,
   username: "steelydanrules",
   email: "steelydanrules@consolelogoverflow.com",
-  password: "123456"
+  password: "123456",
+  profile_photo_url: seed_urls.sample
 )
 
 User.create!(
   id: 2,
   username: "SFSorrow_332",
   email: "SFSorrow_332@consolelogoverflow.com",
-  password: "123456"
+  password: "123456",
+  profile_photo_url: seed_urls.sample
 )
 
 User.create!(
   id: 3,
   username: "Mama_Cass",
   email: "Mama_Cass@consolelogoverflow.com",
-  password: "123456"
+  password: "123456",
+  profile_photo_url: seed_urls.sample
 )
 
 User.create!(
   id: 4,
   username: "Prez_cuomo",
   email: "Prez_cuomo@consolelogoverflow.com",
-  password: "123456"
+  password: "123456",
+  profile_photo_url: seed_urls.sample
 )
 
 User.create!(
   id: 5,
   username: "GOSHAKHTAR",
   email: "GOSHAKHTAR@consolelogoverflow.com",
-  password: "123456"
+  password: "123456",
+  profile_photo_url: seed_urls.sample
 )
 
 

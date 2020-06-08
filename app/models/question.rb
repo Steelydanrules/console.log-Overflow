@@ -2,7 +2,7 @@ class Question < ApplicationRecord
   validates :asker_id, presence: true
   validates :title, presence: true
   validates :body, presence: true
-  # valiedate :at_least_one_site_hit
+  # validate :at_least_one_site_hit
 
   belongs_to :user,
   foreign_key: :asker_id,

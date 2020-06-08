@@ -9,15 +9,12 @@ class QuestionsShow extends React.Component {
   componentDidMount() {
     let questionId = this.props.match.params.id
     this.props.fetchQuestion(questionId)
-
   }
 
   render() {
     if (this.props.question === undefined) {
       return (
         <div>
-          <br />
-          <br />
           <br />
           <br />
           <br />

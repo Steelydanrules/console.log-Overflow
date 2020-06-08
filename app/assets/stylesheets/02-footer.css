@@ -1,12 +1,15 @@
 .entire-footer{
   /* padding-top: 25px; */
   height: 270px;
-  width: 100vw;
+  width: 100%;
   background-color: #25272A;
   display: flex;
   flex-direction: row;
   color: #E4E6E8;
   font-size: 16px;
+  padding-bottom: 15px;
+  bottom: 0;
+
 }
 .links-to-sites {
   display: flex;
@@ -14,7 +17,8 @@
   margin-right: 75px;
 }
 .list-of-skills{
-  margin-left: 18%;
+  margin-left: 18vw;
+  height: 100%;
 }
 .footer-link {
   padding-top: 35px;
