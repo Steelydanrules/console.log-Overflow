@@ -36,6 +36,7 @@ class Homepage extends React.Component {
 
         <div className="top-buttons-homepage">
             <button className="white-button">For developers</button>
+
             <Link to="/questions">
             <button className="orange-button">
             {/* onClick={event => window.location.href = "#questions-everywhere"}> */}
@@ -54,7 +55,7 @@ class Homepage extends React.Component {
         next dream job.</p>
           <ul className="for-dev-by-dev-list" style={{ listStyle: "none" }} >
             <div className="for-dev-by-dev-list-item-container">
-            <li className="for-dev-by-dev-list-item down-a-bit" height="350" width="312">
+            <li className="for-dev-by-dev-list-item down-a-bit">
           
             <img src={window.leftForDev} />
             <h4>Public Q&A</h4>
