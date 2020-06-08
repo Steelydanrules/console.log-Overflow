@@ -15,7 +15,7 @@ class QuestionsIndex extends React.Component {
   }
 
   render() {
-    if (Object.values(this.props.questions).length === 0) {
+    if (this.props.questions[0] === undefined || this.props.questions.length === 0) {
       return(
         <div>
           <br />

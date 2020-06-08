@@ -34,7 +34,7 @@ export const fetchQuestions = () => dispatch => (
   .then(questions => dispatch(receiveQuestions(questions))));
 
 export const fetchQuestion = (questionId) => dispatch => (
-  QUESTIONUtil.fetchQuestions(questionId)
+  QUESTIONUtil.fetchQuestion(questionId)
   .then(question => dispatch(receiveQuestion(question))));
   
 

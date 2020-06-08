@@ -8,6 +8,14 @@ class Question < ApplicationRecord
   foreign_key: :asker_id,
   class_name: :User
 
+  has_many :answers,
+  foreign_key: :question_id,
+  class_name: :Answer
+
+  has_many :users_who_answered_question,
+  through: :answers,
+  source: :user
+
   # def at_least_one_site_hit 
   #   if this.sit_hits = nil
   #     this.site_hits = 0

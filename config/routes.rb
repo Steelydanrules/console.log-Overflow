@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :questions do 
       post :add_view 
     end
+
+    resources :answers, only: [:show, :create, :update, :destroy]
+    
     resource :session, only: [:create, :destroy, :show]
     resources :questions, only: [:index, :show, :create, :update, :destroy]
   end

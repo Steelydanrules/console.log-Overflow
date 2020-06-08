@@ -16,7 +16,7 @@ padding-bottom: -10px;
 .question-index-right{
   flex-basis: 42%;
   margin-left: 25%;
-  height: 1800px; 
+  height: 100%; 
   overflow: auto;
   border-left: 2px solid #D6D9DC
 }

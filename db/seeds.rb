@@ -18,12 +18,12 @@ seed_urls = [
   "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/nashri01-2017.jpg",
   "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/mooredo01-2017.jpg",
   "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/callary01-2020.jpg",
-  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/stlouma01-2015.jpg",
-  "https://www.hockey-reference.com/players/m/millejt01.html"
+  "https://d9kjk42l7bfqz.cloudfront.net/req/202006011/images/headshots/stlouma01-2015.jpg"
 ]
 
 User.destroy_all
 Question.destroy_all
+Answer.destroy_all
 
 user_1 = User.create!(  username: "steelydanrules",
   email: "steelydanrules@consolelogoverflow.com",
@@ -92,15 +92,15 @@ user_11 = User.create!(
 )
 
 
-Question.create!(
-  asker_id: user_1.id;
+question_1 = Question.create!(
+  asker_id: user_1.id,
   title: "How do i test this 1",
   body: "Look at the body 1",
   tag: "DEMO",
   site_hits: 0
 )
 
-Question.create!(
+question_2 = Question.create!(
   asker_id: user_2.id,
   title: "How do i test this 2",
   body: "Look at the body 2",
@@ -108,7 +108,7 @@ Question.create!(
   site_hits: 0
 )
 
-Question.create!(
+question_3 = Question.create!(
   asker_id: user_3.id,
   title: "How do i test this 3",
   body: "Look at the body 3",
@@ -116,7 +116,7 @@ Question.create!(
   site_hits: 0
 )
 
-Question.create!(
+question_4 = Question.create!(
   asker_id: User.first.id,  
   title: "How do i test this 4",
   body: "Look at the body 4",
@@ -124,7 +124,7 @@ Question.create!(
   site_hits: 0
 )
 
-Question.create!(
+question_5 = Question.create!(
   asker_id: User.second.id,  
   title: "How do i test this 5",
   body: "Look at the body 5",
@@ -132,7 +132,7 @@ Question.create!(
   site_hits: 0
 )
 
-Question.create!(
+question_6 = Question.create!(
   asker_id: User.first.id,  
   title: "How do i test this 6",
   body: "Look at the body 6",
@@ -140,7 +140,7 @@ Question.create!(
   site_hits: 0
 )
   
-Question.create!(
+question_7 = Question.create!(
   asker_id: User.second.id,  
   title: "How do i test this 7",
   body: "Look at the body 7",
@@ -148,7 +148,7 @@ Question.create!(
   site_hits: 0
 )
         
-Question.create!(
+question_8 = Question.create!(
   asker_id: User.first.id,  
   title: "How do i test this 8",
   body: "Look at the body 8",
@@ -156,7 +156,7 @@ Question.create!(
   site_hits: 0
 )
 
-Question.create!(
+question_9 = Question.create!(
   asker_id: user_9.id,  
   title: "How do i test this 9",
   body: "Look at the body 9",
@@ -164,7 +164,7 @@ Question.create!(
   site_hits: 0
 )
               
-Question.create!(
+question_10 = Question.create!(
   asker_id: user_10.id,
   title: "How do i test this 10",
   body: "Look at the body 10",
@@ -172,7 +172,7 @@ Question.create!(
   site_hits: 0
 )
 
-Question.create!(
+question_11 = Question.create!(
   asker_id: user_11.id,
   title: "How do i test this 10",
   body: "Contrary to popular belief, Lorem Ipsum is not simply random text. 
@@ -188,4 +188,35 @@ Question.create!(
   in section 1.10.32.",
   tag: "DEMO",
   site_hits: 0
+)
+
+answer_1 = Answer.create!(
+  answerer_id: user_1.id,
+  question_id: question_2.id,
+  body: "answer!!"
+)
+answer_2 = Answer.create!(
+  answerer_id: user_2.id,
+  question_id: question_2.id,
+  body: "answer!!"
+)
+answer_3 = Answer.create!(
+  answerer_id: user_3.id,
+  question_id: question_2.id,
+  body: "answer!!"
+)
+answer_4 = Answer.create!(
+  answerer_id: user_4.id,
+  question_id: question_2.id,
+  body: "answer!!"
+)
+answer_5 = Answer.create!(
+  answerer_id: user_5.id,
+  question_id: question_2.id,
+  body: "answer!!"
+)
+answer_6 = Answer.create!(
+  answerer_id: user_1.id,
+  question_id: question_3.id,
+  body: "answer!!"
 )

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const ShowIndexItem = (props) =>{
 
   const limitBodyTextShown = () => {
-    if (props.question.body.length < 195){
+if (props.question.body.length < 195){
       return props.question.body
     } else {
       return props.question.body.slice(0, 195) + "..."
@@ -21,8 +21,8 @@ export const ShowIndexItem = (props) =>{
         </div>
 
         <div className="answers-index-item-container">
-        NUM{/* {props.question.answers} */}
-        <p style={{fontSize: "9px", marginTop: "-2px"}}>FILL IN</p>
+        {props.question.answers.length}
+        <p style={{fontSize: "9px", marginTop: "-2px"}}>ANSWERS</p>
         </div>
 
         <div className="views-index-item-container">
@@ -46,6 +46,7 @@ export const ShowIndexItem = (props) =>{
         />  
         {props.question.user.username}  
         </Link>
+
 
         </div>
 
