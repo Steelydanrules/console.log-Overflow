@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const ShowIndexItem = (props) =>{
-  debugger
 
   const limitBodyTextShown = () => {
     if (props.question.body.length < 195){

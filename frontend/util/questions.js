@@ -35,8 +35,10 @@ export const deleteQuestion = (questionId) => (
 );
 
 // export const addViewQuestion = (questionData) => {
-//   let oldViews = questionData[site_hits]
-//   questionData[site_hits] = (oldViews + 1)
+//   console.log(questionData)
+//   debugger
+//   let oldViews = questionData.site_hits
+//   questionData.site_hits = (oldViews + 1)
 //   return(
 //   $.ajax({
 //     url: `/api/questions/${questionData.id}`,

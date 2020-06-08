@@ -15,8 +15,6 @@ class QuestionsIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props)
-    debugger
     if (Object.values(this.props.questions).length === 0) {
       return(
         <div>

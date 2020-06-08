@@ -4,7 +4,6 @@ import {
   REMOVE_QUESTION } from '../actions/questions';
 
 const questionsReducer = (state = {}, action) => {
-  console.log(action)
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_QUESTION:

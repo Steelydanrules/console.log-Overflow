@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchQuestion } from '../../actions/questions';
 import QuestionShow from './question_show'
+// import { addViewQuestion } from '../../util/questions';
 
 const mSP = (state, ownProps) => {
   return ({
@@ -9,7 +10,8 @@ const mSP = (state, ownProps) => {
 };
 
 const mDP = dispatch => ({
-  fetchQuestion: (questionId) => dispatch(fetchQuestion(questionId))
+  fetchQuestion: (questionId) => dispatch(fetchQuestion(questionId)),
+  // addViewQuestion: (questionData) => dispatch(addViewQuestion(questionData))
 })
 
 export default connect(mSP, mDP)(QuestionShow)
