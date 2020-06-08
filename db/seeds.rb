@@ -65,6 +65,49 @@ User.create!(
   profile_photo_url: seed_urls.sample
 )
 
+User.create!(
+  id: 6,
+  username: "OrdellRobbie",
+  email: "Ordell_robbie@consolelogoverflow.com",
+  password: "123456",
+  profile_photo_url: seed_urls.sample
+)
+User.create!(
+  id: 7,
+  username: "Rupert_pupkin99",
+  email: "Rupert_pupkin99@consolelogoverflow.com",
+  password: "123456",
+  profile_photo_url: seed_urls.sample
+)
+User.create!(
+  id: 8,
+  username: "username",
+  email: "username@consolelogoverflow.com",
+  password: "123456",
+  profile_photo_url: seed_urls.sample
+)
+User.create!(
+  id: 9,
+  username: "shukudai",
+  email: "shukudai@consolelogoverflow.com",
+  password: "123456",
+  profile_photo_url: seed_urls.sample
+)
+User.create!(
+  id: 10,
+  username: "Lebron_Jaaames",
+  email: "Lebron_Jaaames@consolelogoverflow.com",
+  password: "123456",
+  profile_photo_url: seed_urls.sample
+)
+User.create!(
+  id: 11,
+  username: "soccer_mom_5464",
+  email: "soccer_mom_5464@consolelogoverflow.com",
+  password: "123456",
+  profile_photo_url: seed_urls.sample
+)
+
 
 Question.create!(
   id: 1,
@@ -77,7 +120,7 @@ Question.create!(
 
 Question.create!(
   id: 2,
-  asker_id: 1,
+  asker_id: 2,
   title: "How do i test this 2",
   body: "Look at the body 2",
   tag: "DEMO",
@@ -86,7 +129,7 @@ Question.create!(
 
 Question.create!(
   id: 3,
-  asker_id: 1,
+  asker_id: 3,
   title: "How do i test this 3",
   body: "Look at the body 3",
   tag: "DEMO",
@@ -95,7 +138,7 @@ Question.create!(
 
 Question.create!(
   id: 4,
-  asker_id: 2,
+  asker_id: 4,
   title: "How do i test this 4",
   body: "Look at the body 4",
   tag: "DEMO",
@@ -104,7 +147,7 @@ Question.create!(
 
 Question.create!(
   id: 5,
-  asker_id: 3,
+  asker_id: 5,
   title: "How do i test this 5",
   body: "Look at the body 5",
   tag: "DEMO",
@@ -113,7 +156,7 @@ Question.create!(
 
 Question.create!(
   id: 6,
-  asker_id: 3,
+  asker_id: 6,
   title: "How do i test this 6",
   body: "Look at the body 6",
   tag: "DEMO",
@@ -122,7 +165,7 @@ Question.create!(
   
 Question.create!(
   id: 7,
-  asker_id: 4,
+  asker_id: 7,
   title: "How do i test this 7",
   body: "Look at the body 7",
   tag: "DEMO",
@@ -131,7 +174,7 @@ Question.create!(
         
 Question.create!(
   id: 8,
-  asker_id: 4,
+  asker_id: 8,
   title: "How do i test this 8",
   body: "Look at the body 8",
   tag: "DEMO",
@@ -140,7 +183,7 @@ Question.create!(
 
 Question.create!(
   id: 9,
-  asker_id: 5,
+  asker_id: 9,
   title: "How do i test this 9",
   body: "Look at the body 9",
   tag: "DEMO",
@@ -149,9 +192,28 @@ Question.create!(
               
 Question.create!(
   id: 10,
-  asker_id: 3,
+  asker_id: 10,
   title: "How do i test this 10",
   body: "Look at the body 10",
+  tag: "DEMO",
+  site_hits: 0
+)
+
+Question.create!(
+  id: 11,
+  asker_id: 11,
+  title: "How do i test this 10",
+  body: "Contrary to popular belief, Lorem Ipsum is not simply random text. 
+  It has roots in a piece of classical Latin literature from 45 BC, making it 
+  over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+  College in Virginia, looked up one of the more obscure Latin words, 
+  consectetur, from a Lorem Ipsum passage, and going through the cites of the 
+  word in classical literature, discovered the undoubtable source. Lorem Ipsum 
+  comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum 
+  (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a 
+  treatise on the theory of ethics, very popular during the Renaissance. The 
+  first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line 
+  in section 1.10.32.",
   tag: "DEMO",
   site_hits: 0
 )
