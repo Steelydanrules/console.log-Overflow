@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Redirect } from 'react-router-dom';
+import { Link, Route, Redirect, BrowserRouter } from 'react-router-dom';
 
 
 class QuestionCreate extends React.Component {
@@ -14,8 +14,10 @@ class QuestionCreate extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.props)
     this.props.postQuestion(this.state)
-    .then(action => (<Redirect to={`/questions/${action.question.id}`} />))
+    this.setState({title: "",body: "",tag: ""})
+    // .then(action => (<Redirect to={`/questions/${action.question.id}`} />))
   }
 
   handleChange(field) {

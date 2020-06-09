@@ -12,11 +12,11 @@ export const fetchAnswer = (answerId) => (
   })
 );
 
-export const postAnswer = (answerData) => (
+export const postAnswer = (answer) => (
   $.ajax({
     url: '/api/answers',
     method: 'POST',
-    data: { answerData }
+    data: { answer }
   })
 );
 

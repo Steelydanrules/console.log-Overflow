@@ -2,9 +2,10 @@ import { connect } from 'react-redux';
 import { fetchQuestions } from '../../actions/questions';
 import QuestionIndex from './questions_index'
 
+
 const mSP = (state, ownProps) => {
   return ({
-    questions: Object.values(state.entities.questions)
+    questions: Object.values(state.entities.questions),
   })
 };
 

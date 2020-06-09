@@ -1,11 +1,11 @@
 import React from 'react';
 import UserQuestionsIndex from './UserQuestionsIndex'
-import {UserAnswersIndex} from './UserAnswersIndex'
+import UserAnswersIndex from './UserAnswersIndex'
 
 class User extends React.Component{
   constructor(props){
     super(props)
-
+    this.state = this.props
   }
 
   componentDidMount(){

@@ -7,6 +7,9 @@ class QuestionsShow extends React.Component {
   constructor(props) {
     // debugger
     super(props);
+    this.state = this.props.answer
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   specificUser(targetId){
@@ -17,8 +20,20 @@ class QuestionsShow extends React.Component {
     })
   }
 
+  handleChange() {
+    return e => this.setState({ body: e.currentTarget.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    let submitThis = Object.assign({ question_id: this.props.match.params.id }, this.state)
+    this.props.postAnswer(submitThis)
+    this.setState({ body: "" })
+  }  
+  
+  
   render() {
-    this.props
+
     if (!this.props.question) {
       // this.props.addViewQuestion(this.props.match.params.id)
       return (
@@ -78,6 +93,17 @@ class QuestionsShow extends React.Component {
               ))}
 
             </ul>
+            
+            {/* <AnswerThisQuestionContainer /> */}
+            <form onSubmit={this.handleSubmit}>
+            <input
+            onChange={this.handleChange()}
+            value={this.state.body} />
+
+            <button type="submit">
+              Add answer
+            </button>
+            </form>
 
           </div>
         </div>

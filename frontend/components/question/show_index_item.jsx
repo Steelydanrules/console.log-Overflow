@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const ShowIndexItem = (props) =>{
-
-  const limitBodyTextShown = () => {
-if (props.question.body.length < 195){
-      return props.question.body
+  const limitChars = (text, numOfChars) => {
+    if (text.length < numOfChars) {
+      return text
     } else {
-      return props.question.body.slice(0, 195) + "..."
+      return text.slice(0, numOfChars) + "..."
     }
   }
+  
+export const ShowIndexItem = (props) =>{
 
   return(
     <li key={props.question.id} className="index-question-list-item">
+
+
       <div className="question-item-info">
 
         <div className="votes-index-item-container">
@@ -31,27 +33,31 @@ if (props.question.body.length < 195){
         </div>
       </div>
 
+
       <div className="question-item-preview">
         <div className='preview-to-question-on-index'>
-        <Link to={`/questions/${props.question.id}`}>{props.question.title}</Link>
+        <Link 
+        to={`/questions/${props.question.id}`}
+        style={{ color: "#0077CC", textDecoration: "none"}}
+        >  
+          {limitChars(props.question.title, 100)}</Link>
         <br /> 
-          <p style={{ fontSize: "15px", marginTop: "-2px" }}>{limitBodyTextShown()}</p>
+          <p style={{ fontSize: "11px", marginTop: "-2px" }}>{limitChars(props.question.body, 195)}</p>
         </div>
         <div className="bottom-of-preview-question-index">
-        
-        <Link to={`/users/${props.question.user.id}`}>
+          <text>asked by:</text>
+        <Link to={`/users/${props.question.user.id}`}
+          style={{ color: "#0077CC" }}
+          >
         <img src={props.question.user.profile_photo_url}
-          style={{ width: "46px", height: "69px" }}
+          style={{ width: "19px", height: "28px" }}
           id="users-show-prof-photo"
         />  
         {props.question.user.username}  
         </Link>
 
-
         </div>
-
       </div>
-
 
     </li>
 

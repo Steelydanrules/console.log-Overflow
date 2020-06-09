@@ -31,8 +31,8 @@ user_1 = User.create!(  username: "steelydanrules",
   profile_photo_url: seed_urls.sample
 )
 
-user_2 = User.create!(  username: "SFSorrow_332",
-  email: "SFSorrow_332@consolelogoverflow.com",
+user_2 = User.create!(  username: "hquddus93",
+  email: "hquddus93@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
@@ -94,23 +94,23 @@ user_11 = User.create!(
 
 question_1 = Question.create!(
   asker_id: user_1.id,
-  title: "How do i test this 1",
-  body: "Look at the body 1",
+  title: "This is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long message",
+  body: "This is This is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messagea long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long message",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_2 = Question.create!(
   asker_id: user_2.id,
-  title: "How do i test this 2",
-  body: "Look at the body 2",
+  title: "How do i test this 2asf;asnffew4f44fqf4",
+  body: "Look at the body 2This is a long messageThis is a long messageThis is a long message",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_3 = Question.create!(
   asker_id: user_3.id,
-  title: "How do i test this 3",
+  title: "My cat is annoying me",
   body: "Look at the body 3",
   tag: "DEMO",
   site_hits: 0
@@ -118,7 +118,7 @@ question_3 = Question.create!(
 
 question_4 = Question.create!(
   asker_id: User.first.id,  
-  title: "How do i test this 4",
+  title: "RIP Jerry Stiller",
   body: "Look at the body 4",
   tag: "DEMO",
   site_hits: 0
@@ -126,7 +126,7 @@ question_4 = Question.create!(
 
 question_5 = Question.create!(
   asker_id: User.second.id,  
-  title: "How do i test this 5",
+  title: "Judge Judy should be on the supreme court",
   body: "Look at the body 5",
   tag: "DEMO",
   site_hits: 0
@@ -134,7 +134,7 @@ question_5 = Question.create!(
 
 question_6 = Question.create!(
   asker_id: User.first.id,  
-  title: "How do i test this 6",
+  title: "Michael Jordan was overrated and gambled on basketball",
   body: "Look at the body 6",
   tag: "DEMO",
   site_hits: 0
@@ -142,7 +142,7 @@ question_6 = Question.create!(
   
 question_7 = Question.create!(
   asker_id: User.second.id,  
-  title: "How do i test this 7",
+  title: "I cant wait for this project to finally look good (assuming that ever happens)",
   body: "Look at the body 7",
   tag: "DEMO",
   site_hits: 0
@@ -150,7 +150,7 @@ question_7 = Question.create!(
         
 question_8 = Question.create!(
   asker_id: User.first.id,  
-  title: "How do i test this 8",
+  title: "The show Friends is unfunny and sucks big time",
   body: "Look at the body 8",
   tag: "DEMO",
   site_hits: 0
@@ -158,7 +158,7 @@ question_8 = Question.create!(
 
 question_9 = Question.create!(
   asker_id: user_9.id,  
-  title: "How do i test this 9",
+  title: "Tarantino has like 4 good movies.  Although, I will admit Jackie Brown is one of my personal favorites",
   body: "Look at the body 9",
   tag: "DEMO",
   site_hits: 0
@@ -166,7 +166,7 @@ question_9 = Question.create!(
               
 question_10 = Question.create!(
   asker_id: user_10.id,
-  title: "How do i test this 10",
+  title: "how do i console log in css",
   body: "Look at the body 10",
   tag: "DEMO",
   site_hits: 0
@@ -197,26 +197,26 @@ answer_1 = Answer.create!(
 )
 answer_2 = Answer.create!(
   answerer_id: user_2.id,
-  question_id: question_2.id,
+  question_id: question_1.id,
   body: "answer!!"
 )
 answer_3 = Answer.create!(
   answerer_id: user_3.id,
-  question_id: question_2.id,
+  question_id: question_1.id,
   body: "answer!!"
 )
 answer_4 = Answer.create!(
   answerer_id: user_4.id,
-  question_id: question_2.id,
+  question_id: question_1.id,
   body: "answer!!"
 )
 answer_5 = Answer.create!(
   answerer_id: user_5.id,
-  question_id: question_2.id,
+  question_id: question_1.id,
   body: "answer!!"
 )
 answer_6 = Answer.create!(
   answerer_id: user_1.id,
-  question_id: question_3.id,
+  question_id: question_2.id,
   body: "answer!!"
 )
