@@ -39,9 +39,11 @@ class QuestionsIndex extends React.Component {
             <div className="question-index-right">
               <div className="questions-index-header">
                 <h3>Top Questions</h3>
-                <button
-                  className="ask-a-question-button-index"
+                <Link to={'/questions/new'}>
+                  <button
+                    className="ask-a-question-button-show"
                   >Ask Question</button>
+                </Link>
               </div>
               <h5 style={{marginLeft: "5%"}}>
                 {this.props.questions.length + "  "}

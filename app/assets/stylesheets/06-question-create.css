@@ -1,0 +1,124 @@
+.create-question-form-background{
+  background-color: #EFF0F1;
+  height: 100%;
+}
+
+.create-question-form-container{
+  padding-top: 43px;
+  background-color: #EFF0F1;
+  margin-left: 17.5%;
+  margin-right: 17.5%;
+  padding-bottom: 25px;
+}
+
+.create-question-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.create-question-container-form-and-other-stuff{
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.create-question-actual-form-container{
+  padding: 18px;
+  background-color: white;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+  margin-left: 0;
+  width: 70%;
+}
+
+.create-question-actual-form{
+  margin-right: 100%;
+  width: 100%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-question-input {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+
+.create-question-input-subtext{
+  font-size: 11px;
+  margin-bottom: 0px;
+}
+
+.create-question-actual-form input{
+  width: 100%;
+  outline:0;
+  border: 1px solid #BBC0C4;
+}
+
+.create-question-actual-form input:focus {
+  outline:0;
+  border: 1px solid #6CBBF7;
+  box-shadow: 0 0 5px 3px rgba(217, 236, 252, .4);
+  
+}
+
+.create-question-actual-form textarea{
+  width: 100%;
+  outline:0;
+  border: 1px solid #BBC0C4;
+  resize: none;
+}
+
+.create-question-actual-form textarea:focus {
+  outline:0;
+  border: 1px solid #6CBBF7;
+  box-shadow: 0 0 5px 3px rgba(217, 236, 252, .4);
+  resize: none;
+}
+
+.create-question-actual-form button { 
+   box-shadow:inset 0px 1px 0px 0px #71C1FF;
+   border: 1px solid #0095FF;
+   background-color: #0095FF;
+   cursor: pointer;
+   border-radius: 5px;
+   height:35px;
+   width: 150px;
+   color: whitesmoke;
+   margin-top: 30px;
+   
+  }
+  
+ .create-question-actual-form button:hover {
+    box-shadow:inset 0px 1px 0px 0px #5FA7DD;
+    border: 1px solid #0077CC;
+    background-color: #0077CC;
+    cursor: pointer;
+    border-radius: 5px;
+    height:35px;
+    width: 150px;
+    color: whitesmoke;
+    margin-top: 30px;
+
+  }
+
+  .right-side-send-q-tips{
+    width: 25%;
+    margin-left: 15px;
+    background-color: white;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .right-side-quesiton-tips-div{
+    margin-left: 5%;
+    width: 90%;
+
+    
+  }
+  
+  .right-side-quesiton-tips-div div{
+    font-size: 13px;
+  }

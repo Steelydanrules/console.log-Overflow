@@ -48,9 +48,13 @@ class QuestionsShow extends React.Component {
           <div className="question-show-right">
             <div className="questions-show-header">
               <h3>{this.props.question.title}</h3>
+              <Link to={'/questions/new'}>
               <button
                 className="ask-a-question-button-show"
-              >Ask Question</button>
+                >Ask Question</button>
+              </Link>
+
+
             </div>
             <p className="ask-a-question-timestamp-show">
               <text><b>Asked : </b>{` ${month}/${day}/${year}`}</text>

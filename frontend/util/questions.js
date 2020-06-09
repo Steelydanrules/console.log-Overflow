@@ -11,11 +11,11 @@ export const fetchQuestion = (questionId) => (
   })
 );
 
-export const postQuestion = (questionData) => (
+export const postQuestion = (question) => (
   $.ajax({
     url: '/api/questions',
     method: 'POST',
-    data: {questionData}
+    data: {question}
   })
 );
 

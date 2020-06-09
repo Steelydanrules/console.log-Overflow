@@ -33,7 +33,7 @@ class Api::QuestionsController < ApplicationController
     @question.asker_id = user.id
     @question.site_hits = 0
 
-    if @quesion.save
+    if @question.save
       render :show
     else
       render json: @question.errors.full_messages, status: 422
@@ -64,7 +64,7 @@ class Api::QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:title, :body, :tag, :site_hits)
+    params.require(:question).permit(:title, :body, :tag)
   end
 
 end
