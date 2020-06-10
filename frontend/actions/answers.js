@@ -12,10 +12,10 @@ const receiveAnswer = (answer) => {
   })
 };
 
-const receiveAnswers = (answers) => {
+const receiveAnswers = (answerId) => {
   return ({
     type: RECEIVE_ANSWERS,
-    answers
+    answerId
   })
 };
 
@@ -28,7 +28,7 @@ const removeAnswer = (answerId) => {
 
 export const fetchAnswers = () => dispatch => (
   ANSWERUtil.fetchAnswers()
-    .then(answers => dispatch(receiveAnswers(answers))));
+    .then(answers => dispatch(receiveAnswers(answerId))));
 
 export const fetchAnswer = (answerId) => dispatch => (
   ANSWERUtil.fetchAnswers(answerId)

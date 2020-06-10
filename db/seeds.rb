@@ -110,7 +110,7 @@ question_2 = Question.create!(
 
 question_3 = Question.create!(
   asker_id: user_3.id,
-  title: "My cat is annoying me",
+  title: "Cats are better than dogs",
   body: "Look at the body 3",
   tag: "DEMO",
   site_hits: 0
@@ -134,7 +134,7 @@ question_5 = Question.create!(
 
 question_6 = Question.create!(
   asker_id: User.first.id,  
-  title: "Michael Jordan was overrated and gambled on basketball",
+  title: "My favorite season is winter",
   body: "Look at the body 6",
   tag: "DEMO",
   site_hits: 0
@@ -158,7 +158,7 @@ question_8 = Question.create!(
 
 question_9 = Question.create!(
   asker_id: user_9.id,  
-  title: "Tarantino has like 4 good movies.  Although, I will admit Jackie Brown is one of my personal favorites",
+  title: "asdadsadasdasdsdasdsadasdasdasdasdasdasdsasdsaad",
   body: "Look at the body 9",
   tag: "DEMO",
   site_hits: 0

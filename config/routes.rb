@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :update, :show] do 
       resources :questions, only: [:index]
+      resources :answers, only: [:index]
     end
     resources :questions do 
       post :add_view 

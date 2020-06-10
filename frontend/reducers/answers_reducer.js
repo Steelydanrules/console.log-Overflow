@@ -10,6 +10,7 @@ const answersReducer = (state = {}, action) => {
     case RECEIVE_ANSWER:
       return Object.assign({}, state, action.answer);
     case RECEIVE_ANSWERS:
+      debugger
       return Object.assign({}, state, action.answers);
     case REMOVE_ANSWER:
       let nextState = Object.assign({}, state);

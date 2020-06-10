@@ -19,10 +19,17 @@ class QuestionsShow extends React.Component {
       }
     })
   }
-
+  
   handleChange() {
     return e => this.setState({ body: e.currentTarget.value });
   }
+  
+  
+  componentDidMount(){
+    this.props.fetchQuestion(this.props.match.params.id)
+    
+  }
+
 
   handleSubmit(e) {
     e.preventDefault();
@@ -30,10 +37,20 @@ class QuestionsShow extends React.Component {
     this.props.postAnswer(submitThis)
     this.setState({ body: "" })
   }  
+
+
+  questionCount() {
+    if (this.props.question.answers.length === 0){
+      return <h3>Be the first to answer</h3>
+    } else if (this.props.question.answers.length === 1){
+      return <h3>1 Answer</h3>
+    } else {
+      return <h3>{this.props.question.answers.length} Answers</h3>
+    }
+  }
   
   
   render() {
-
     if (!this.props.question) {
       // this.props.addViewQuestion(this.props.match.params.id)
       return (
@@ -51,7 +68,7 @@ class QuestionsShow extends React.Component {
       return (
         <div className="question-show-container">
           <div className="question-show-left">
-
+ 
             <Link to="/questions">
               <button className="left-nav-home-button">
                 Home
@@ -78,9 +95,30 @@ class QuestionsShow extends React.Component {
 
             <div className="question-show-body">
             <hr />
-            <p>{this.props.question.body}</p>
+            <p style={{fontSize: "12px", marginRight: "20%"}}>{this.props.question.body}</p>
             
+            <div className="bottom-of-question-show">
+              <text>asked by:</text>
+              <br />
+              <Link to={`/users/${this.props.question.user.id}`}
+                style={{ color: "#0077CC" }}
+              >
+                <img src={this.props.question.user.profile_photo_url}
+                  style={{ width: "19px", height: "28px" }}
+                  id="users-show-prof-photo"
+                />
+                {this.props.question.user.username}
+              </Link>
+              {/* <br />
+              <text>questions asked:</text> {this.props.question.user.questions_asked.length}
+                <text>questions answered:</text> {this.props.question.user.questions_answered.length} */}
+
             </div>
+
+            {this.questionCount()}
+            </div>
+
+
             <ul className="list-of-answers-to-this-question" 
             style={{listStyle : "none"}}
             >

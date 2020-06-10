@@ -103,6 +103,7 @@ padding-bottom: -10px;
   margin-top: 5px;
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 5px;
 }
 
   .question-show-answer-item{
@@ -125,3 +126,35 @@ padding-bottom: -10px;
   margin-left: 80%;
   /* margin-right: 0%; */
 }
+
+
+  .bottom-of-question-show{
+    margin-top: -10px;
+    margin-right: 0px;
+    flex-direction: column;
+    justify-content: end;
+    float: right;
+    bottom: 0;
+    font-size: 13px;
+    text-decoration: none;
+    background-color: #E1ECF4;
+    height: 70px;
+    width: 200px;
+
+  }
+  
+  .bottom-of-question-show img{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  
+  .bottom-of-question-show text{
+    color: #848D95;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .preview-to-question-on-index:link {
+    color: blue;
+  }
