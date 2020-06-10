@@ -17,7 +17,6 @@ class QuestionCreate extends React.Component {
     console.log(this.props)
     this.props.postQuestion(this.state)
     this.setState({title: "",body: "",tag: ""})
-    // .then(action => (<Redirect to={`/questions/${action.question.id}`} />))
   }
 
   handleChange(field) {

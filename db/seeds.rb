@@ -110,7 +110,7 @@ question_2 = Question.create!(
 
 question_3 = Question.create!(
   asker_id: user_3.id,
-  title: "Cats are better than dogs",
+  title: "fahdgsjjdjhhjdjfhhjdhjdhjh",
   body: "Look at the body 3",
   tag: "DEMO",
   site_hits: 0
@@ -118,7 +118,7 @@ question_3 = Question.create!(
 
 question_4 = Question.create!(
   asker_id: User.first.id,  
-  title: "RIP Jerry Stiller",
+  title: "dhjdhjdhjjhhjhjhjhjhjhjhjhjhjhjhjhjhjhjjjjh",
   body: "Look at the body 4",
   tag: "DEMO",
   site_hits: 0
@@ -126,7 +126,7 @@ question_4 = Question.create!(
 
 question_5 = Question.create!(
   asker_id: User.second.id,  
-  title: "Judge Judy should be on the supreme court",
+  title: "dfgfdgdfgfdgdfgfdfdgdgfdg",
   body: "Look at the body 5",
   tag: "DEMO",
   site_hits: 0
@@ -134,7 +134,7 @@ question_5 = Question.create!(
 
 question_6 = Question.create!(
   asker_id: User.first.id,  
-  title: "My favorite season is winter",
+  title: "fdsgdfgdfgdfgfdgdfgdf",
   body: "Look at the body 6",
   tag: "DEMO",
   site_hits: 0
@@ -150,8 +150,8 @@ question_7 = Question.create!(
         
 question_8 = Question.create!(
   asker_id: User.first.id,  
-  title: "The show Friends is unfunny and sucks big time",
-  body: "Look at the body 8",
+  title: "Long QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong Question",
+  body: "Long QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong Question",
   tag: "DEMO",
   site_hits: 0
 )
@@ -193,7 +193,7 @@ question_11 = Question.create!(
 answer_1 = Answer.create!(
   answerer_id: user_1.id,
   question_id: question_2.id,
-  body: "answer!!"
+  body: "long answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answer"
 )
 answer_2 = Answer.create!(
   answerer_id: user_2.id,

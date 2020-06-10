@@ -2,14 +2,24 @@ import {
   RECEIVE_QUESTIONS,
   RECEIVE_QUESTION,
   REMOVE_QUESTION } from '../actions/questions';
+import { RECEIVE_ANSWER } from '../actions/answers';
+import {merge} from 'lodash'
 
 const questionsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_QUESTION:
-      return Object.assign({}, state, action.question );
+      return Object.assign({}, {[action.question.id] : action.question} );
     case RECEIVE_QUESTIONS:
+      // const newObj = {};
+      // action.questions.forEach(quest => newObj[quest.id] = quest)
       return Object.assign({}, state, action.questions);
+    case RECEIVE_ANSWER:
+      const newId = action.answer.id;
+      const newState = merge({}, state );
+      debugger
+      newState[action.answer.question_id].answer_ids.push(newId);
+      return newState;
     case REMOVE_QUESTION:
       let nextState = Object.assign({}, state);
       delete nextState[action.questionId]

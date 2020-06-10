@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AnswerItemInQuestionShow } from '../answer/answer_item_question_show'
+import AnswerCreateContainer from '../answer/answer_create_container'
 
 
 class QuestionsShow extends React.Component {
   constructor(props) {
     // debugger
     super(props);
-    this.state = this.props.answer
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   specificUser(targetId){
@@ -19,39 +17,27 @@ class QuestionsShow extends React.Component {
       }
     })
   }
-  
-  handleChange() {
-    return e => this.setState({ body: e.currentTarget.value });
-  }
-  
-  
+
   componentDidMount(){
-    this.props.fetchQuestion(this.props.match.params.id)
+    this.props.fetchAnswers(this.props.match.params.id);
+    this.props.fetchQuestion(this.props.match.params.id);
     
   }
 
 
-  handleSubmit(e) {
-    e.preventDefault();
-    let submitThis = Object.assign({ question_id: this.props.match.params.id }, this.state)
-    this.props.postAnswer(submitThis)
-    this.setState({ body: "" })
-  }  
-
-
   questionCount() {
-    if (this.props.question.answers.length === 0){
+    if (this.props.question.answer_ids.length === 0){
       return <h3>Be the first to answer</h3>
-    } else if (this.props.question.answers.length === 1){
+    } else if (this.props.question.answer_ids.length === 1){
       return <h3>1 Answer</h3>
     } else {
-      return <h3>{this.props.question.answers.length} Answers</h3>
+      return <h3>{this.props.question.answer_ids.length} Answers</h3>
     }
   }
   
   
   render() {
-    if (!this.props.question) {
+    if (!this.props.question || !this.props.answers[0] === undefined) {
       // this.props.addViewQuestion(this.props.match.params.id)
       return (
         <div>
@@ -62,6 +48,7 @@ class QuestionsShow extends React.Component {
         </div>
       )
     } else {
+      console.log(this.props)
       const date = this.props.created_at
       const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' })
       const [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(date)
@@ -122,26 +109,21 @@ class QuestionsShow extends React.Component {
             <ul className="list-of-answers-to-this-question" 
             style={{listStyle : "none"}}
             >
-            {this.props.question.answers.map(answer => (
+
+              {this.props.answers.map(answer => (
               <AnswerItemInQuestionShow
               className="answer-on-q-index"
-              answer={answer}
+              answerId={answer.id}
               answerers={this.props.question.users_who_answered_question}
+              answer={answer}
               />
               ))}
 
             </ul>
             
-            {/* <AnswerThisQuestionContainer /> */}
-            <form onSubmit={this.handleSubmit}>
-            <input
-            onChange={this.handleChange()}
-            value={this.state.body} />
-
-            <button type="submit">
-              Add answer
-            </button>
-            </form>
+            <AnswerCreateContainer
+              questionId={this.props.match.params.id}
+            />
 
           </div>
         </div>

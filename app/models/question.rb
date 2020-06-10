@@ -15,6 +15,7 @@ class Question < ApplicationRecord
   has_many :users_who_answered_question,
   through: :answers,
   source: :user
+  
 
   # def at_least_one_site_hit 
   #   if this.sit_hits = nil

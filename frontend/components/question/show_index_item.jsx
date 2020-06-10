@@ -10,6 +10,13 @@ import { Link } from 'react-router-dom';
   }
   
 export const ShowIndexItem = (props) =>{
+  if (props.question.answer_ids === undefined) {
+    return (
+      <>
+        
+      </>
+      )
+  }
 
   return(
     <li key={props.question.id} className="index-question-list-item">
@@ -23,7 +30,7 @@ export const ShowIndexItem = (props) =>{
         </div>
 
         <div className="answers-index-item-container">
-        {props.question.answers.length}
+        {props.question.answer_ids.length}
         <p style={{fontSize: "9px", marginTop: "-2px"}}>ANSWERS</p>
         </div>
 

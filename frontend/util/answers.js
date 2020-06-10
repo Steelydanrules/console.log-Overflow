@@ -34,3 +34,11 @@ export const deleteAnswer = (answerId) => (
     method: 'DELTE'
   })
 );
+
+export const fetchAnswerstoQuestion = (questionId) => {
+  return (
+    $.ajax({
+      url: `/api/questions/${questionId}/answers`
+    })
+  )
+};

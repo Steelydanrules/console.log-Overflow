@@ -4,7 +4,7 @@ import QuestionIndex from './questions_index'
 
 
 const mSP = (state, ownProps) => {
-  return ({
+    return ({
     questions: Object.values(state.entities.questions),
   })
 };

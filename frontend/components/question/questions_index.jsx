@@ -13,6 +13,7 @@ class QuestionsIndex extends React.Component {
 
   componentDidMount(){
     this.props.fetchQuestions()
+
   }
 
   render() {

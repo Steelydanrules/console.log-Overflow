@@ -1,23 +1,26 @@
 import { connect } from 'react-redux';
 import { fetchQuestion } from '../../actions/questions';
-import { postAnswer } from '../../actions/answers';
 import QuestionShow from './question_show'
-import { fetchAnswers } from '../../util/answers';
-// import { addViewQuestion } from '../../util/questions';
+import { fetchAnswers } from '../../actions/answers';
 
 const mSP = (state, ownProps) => {
+  // debugger
+  const question = state.entities.questions[ownProps.match.params.id];
+  let answers;
+  if (question) {
+  answers = question.answer_ids.map(answerId => state.entities.answers[answerId]);
+  }
+
   return ({
-    question: state.entities.questions[ownProps.match.params.id],
-    // answers: state.entities.answers,
-    answer: { body: "", questionId: ownProps.match.params.id},
+    question,
+    answers
   })
 };
 
 const mDP = dispatch => ({
   fetchQuestion: (questionId) => dispatch(fetchQuestion(questionId)),
-  postAnswer: (answer) => dispatch(postAnswer(answer)),
-  // fetchAnswers: (userId) => dispatch(fetchAnswers(userId))
-  // addViewQuestion: (questionId) => dispatch(addViewQuestion(questionId))
+  fetchAnswers: (questionId) => dispatch(fetchAnswers(questionId))
+  // fetchAnswer: (answerId) => dispatch(fetchAnswer(answerId))
 })
 
 export default connect(mSP, mDP)(QuestionShow)
