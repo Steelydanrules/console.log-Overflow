@@ -38,7 +38,7 @@ class QuestionsShow extends React.Component {
     } else {
       return(
         <div
-        style={{marginLeft: "3%"}}>
+        style={{marginLeft: "6%"}}>
           Please sign in to commment
         </div>
       )
@@ -61,7 +61,7 @@ class QuestionsShow extends React.Component {
   
   
   render() {
-    if (!this.props.answers || (this.props.answers.length !== 0 && this.props.answers && this.props.answers[0] === undefined)) {
+    if (!this.props.answers || (this.props.answers.length !== 0 && this.props.answers[0] === undefined && this.props.answers)) {
       // this.props.addViewQuestion(this.props.match.params.id)
       return (
         <div>
@@ -139,6 +139,7 @@ class QuestionsShow extends React.Component {
               answerId={answer.id}
               answerers={this.props.question.users_who_answered_question}
               answer={answer}
+              currentUser={this.props.currentUser}
               />
               ))}
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {ShowIndexItem} from './show_index_item'
+import { withRouter } from 'react-router-dom';
 
 
 class QuestionsIndex extends React.Component {
@@ -74,4 +75,4 @@ class QuestionsIndex extends React.Component {
 
 
 
-export default QuestionsIndex;
+export default withRouter(QuestionsIndex);

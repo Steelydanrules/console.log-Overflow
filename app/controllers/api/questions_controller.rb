@@ -1,12 +1,25 @@
 class Api::QuestionsController < ApplicationController
   
-  
   def index
     if params[:asker_id]
       @questions = User.find(params[:asker_id]).questions
+
+    elsif params[:searchData]
+      @questions = []
+      questions = Question.all
+      questions.each do |question|
+
+        if question.body.downcase.include?(params[:searchData].downcase)
+          @questions.push(question)
+        end 
+
+      end
+
     else
+      
       @questions = Question.all
     end
+
 
     render :index
   end

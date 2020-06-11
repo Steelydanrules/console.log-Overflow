@@ -17,7 +17,6 @@ const questionsReducer = (state = {}, action) => {
     case RECEIVE_ANSWER:
       const newId = action.answer.id;
       const newState = merge({}, state );
-      debugger
       newState[action.answer.question_id].answer_ids.push(newId);
       return newState;
     case REMOVE_QUESTION:

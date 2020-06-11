@@ -21,6 +21,7 @@ class AnswerCreate extends React.Component {
     let submitThis = Object.assign({ question_id: this.props.questionId }, this.state)
     this.props.postAnswer(submitThis)
     this.setState({ body: "" })
+    this.forceUpdate()
   }  
 
 

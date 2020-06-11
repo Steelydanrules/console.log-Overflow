@@ -51,7 +51,6 @@ export const deleteQuestion = (questionId) => dispatch => (
   QUESTIONUtil.deleteQuestion(questionId)
     .then(question => dispatch(removeQuestion(question.id))));
 
-// export const searchQuestion = (searchData) => dispatch => (
-
-
-// )
+export const searchQuestions = searchData => dispatch => (
+  QUESTIONUtil.searchQuestions(searchData)
+    .then(questions => dispatch(receiveQuestions(questions))))

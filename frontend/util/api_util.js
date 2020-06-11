@@ -10,8 +10,9 @@ export const fetchUser = userId => {
 export const searchQuestions = searchData => {
   return ( 
     $.ajax({
-      url: `api/search/${searchData}`,
-      method: 'GET'
+      url: `api/questions`,
+      method: 'GET',
+      data: {searchData}
     })
   )
 }

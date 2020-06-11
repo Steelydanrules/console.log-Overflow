@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect, Route } from 'react-router-dom';
+
 // import defaultLogo  from '../images/titlenotscrolled.png'
 
 // {window.blankLoveToCodeURL}
@@ -12,7 +13,7 @@ class NavBar extends React.Component{
   constructor(props){
     super(props);
 
-    this.state = this.props;
+    this.state = this.props.searchBar;
 
     this.logOutOrInBar = this.logOutOrInBar.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -26,10 +27,8 @@ class NavBar extends React.Component{
 
   actualSearch(e){
     e.preventDefault()
-    let searchFormatted = this.state.searchBar.split(" ").join("+")
-    return(
-      window.location.href = `https://stackoverflow.com/search?q=${searchFormatted}`
-    )
+    this.props.searchQuestions(this.state.searchBar)
+    this.props.history.push('/search')
   }
 
   logOutOrInBar(){

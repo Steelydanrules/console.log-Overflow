@@ -11,12 +11,22 @@ const mSP = (state, ownProps) => {
   answers = question.answer_ids.map(answerId => state.entities.answers[answerId]);
   }
   const session = state.session.id;
-
-  return ({
-    question,
-    answers,
-    session
-  })
+  debugger
+  if (session === undefined) {
+    return ({
+      question,
+      answers,
+      session,
+    })
+  } else {
+    const currentUser = state.entities.users[session]
+    return ({
+      question,
+      answers,
+      session,
+      currentUser
+    })
+  }
 };
 
 const mDP = dispatch => ({

@@ -115,10 +115,9 @@ padding-bottom: -10px;
   
   .bottom-of-preview-question-index{
     margin-top: -10px;
-    margin-right: 0px;
+    margin-left: 60%;
     flex-direction: row;
     justify-content: end;
-    float: right;
     bottom: 0;
     font-size: 13px;
     text-decoration: none;

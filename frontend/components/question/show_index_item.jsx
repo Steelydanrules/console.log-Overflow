@@ -51,6 +51,7 @@ export const ShowIndexItem = (props) =>{
         <br /> 
           <p style={{ fontSize: "11px", marginTop: "-2px" }}>{limitChars(props.question.body, 195)}</p>
         </div>
+        
         <div className="bottom-of-preview-question-index">
           <text>asked by:</text>
         <Link to={`/users/${props.question.user.id}`}

@@ -5,6 +5,14 @@ export const fetchQuestions = () => {
   })
 )};
 
+export const searchQuestions = (searchData) => {
+  return(
+  $.ajax({
+    url: '/api/questions',
+    data: {searchData}
+  })
+)};
+
 export const fetchQuestion = (questionId) => (
   $.ajax({
     url: `/api/questions/${questionId}`

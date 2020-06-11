@@ -5,9 +5,17 @@ export const AnswerItemInQuestionShow = (props) => {
   let { answer, answerId } = props;
   let thisUser
 
+
+  
+
   props.answerers.forEach(user => {
     if (user.id === answer.answerer_id) thisUser = user 
   })
+
+    if (props.currentUser !== undefined) {
+    if (thisUser === undefined) thisUser = props.currentUser
+    }
+
 
   return(
     <li className="answer-on-q-index">
