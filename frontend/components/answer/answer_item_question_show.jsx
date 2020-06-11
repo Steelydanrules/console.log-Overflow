@@ -6,7 +6,7 @@ export const AnswerItemInQuestionShow = (props) => {
   let thisUser
 
   const handleDelete = () => {
-    
+
     props.deleteAnswer(answerId)
     // window.location.reload();
 
@@ -32,22 +32,33 @@ export const AnswerItemInQuestionShow = (props) => {
     {answer.body}
     </body>
 
-    <button onClick={() => handleDelete()}>Delete me!</button>
-    <Link to={`/answers/${answerId}/edit`}>Edit</Link>
+    {/* <Link to={`/answers/${answerId}/edit`}>Edit</Link> */}
 
-    <body className="bottom-of-q-index">
-      <text>answerer:</text>
-      <br />
-        <Link to={`/users/${thisUser.id}`}
-          style={{ color: "#0077CC", fontSize: "12px" }}
-        >
-          <img src={thisUser.profile_photo_url}
-            style={{ width: "19px", height: "28px" }}
-            id="users-show-prof-photo"
-          />
-          {thisUser.username}
-        </Link>
+    <body className="answer-item-in-question">
 
+      <div className="bottom-left">
+
+      <button onClick={() => handleDelete()}>delete</button>
+
+      </div>
+
+
+
+      <div className="bottom-right">
+
+        <text>answerer:</text>
+        <br />
+          <Link to={`/users/${thisUser.id}`}
+            style={{ color: "#0077CC", fontSize: "12px" }}
+            >
+            <img src={thisUser.profile_photo_url}
+              style={{ width: "19px", height: "28px" }}
+              id="users-show-prof-photo"
+              />
+            {thisUser.username}
+          </Link>
+
+      </div>
     </body>
   </li>
 )}
