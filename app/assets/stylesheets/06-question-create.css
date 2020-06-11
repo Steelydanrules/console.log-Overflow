@@ -65,6 +65,7 @@
 }
 
 .create-question-actual-form textarea{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 100%;
   outline:0;
   border: 1px solid #BBC0C4;
@@ -72,6 +73,7 @@
 }
 
 .create-question-actual-form textarea:focus {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   outline:0;
   border: 1px solid #6CBBF7;
   box-shadow: 0 0 5px 3px rgba(217, 236, 252, .4);

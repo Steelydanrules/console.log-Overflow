@@ -37,8 +37,8 @@ user_2 = User.create!(  username: "hquddus93",
   profile_photo_url: seed_urls.sample
 )
 
-user_3 = User.create!(  username: "Mama_Cass",
-  email: "Mama_Cass@consolelogoverflow.com",
+user_3 = User.create!(  username: "sinoyuco",
+  email: "sinoyuco@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
@@ -49,14 +49,14 @@ user_4 = User.create!(  username: "Prez_cuomo",
   profile_photo_url: seed_urls.sample
 )
 
-user_5 = User.create!(  username: "GOSHAKHTAR",
+user_5 = User.create!(  username: "omelnykov1",
   email: "GOSHAKHTAR@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-user_6 = User.create!(  username: "OrdellRobbie",
-  email: "Ordell_robbie@consolelogoverflow.com",
+user_6 = User.create!(  username: "Mama_Cass",
+  email: "Mama_Cass@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
@@ -67,20 +67,20 @@ user_7 = User.create!(  username: "Rupert_pupkin99",
   profile_photo_url: seed_urls.sample
 )
 
-user_8 = User.create!(  username: "username",
-  email: "username@consolelogoverflow.com",
+user_8 = User.create!(  username: "adreeyun",
+  email: "adreeyun@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 
-user_9 = User.create!(  username: "shukudai",
-  email: "shukudai@consolelogoverflow.com",
+user_9 = User.create!(  username: "aklee2106",
+  email: "aklee2106@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
 user_10 = User.create!(
-  username: "Lebron_Jaaames",
-  email: "Lebron_Jaaames@consolelogoverflow.com",
+  username: "Lebron_Jaames",
+  email: "Lebron_Jaames@consolelogoverflow.com",
   password: "123456",
   profile_photo_url: seed_urls.sample
 )
@@ -94,48 +94,48 @@ user_11 = User.create!(
 
 question_1 = Question.create!(
   asker_id: user_1.id,
-  title: "This is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long message",
-  body: "This is This is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messagea long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long messageThis is a long message",
+  title: "How do I log something to the console?",
+  body: "I've been up all night trying to get something to log to the console! I tried everything! Somebody please help!",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_2 = Question.create!(
   asker_id: user_2.id,
-  title: "How do i test this 2asf;asnffew4f44fqf4",
-  body: "Look at the body 2This is a long messageThis is a long messageThis is a long message",
+  title: "Why is it called console.log?  why not console.print",
+  body: "Just a thought",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_3 = Question.create!(
   asker_id: user_3.id,
-  title: "fahdgsjjdjhhjdjfhhjdhjdhjh",
-  body: "Look at the body 3",
+  title: "Is Ringo Starr the best Beatle?",
+  body: "The guy could really swing em",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_4 = Question.create!(
   asker_id: User.first.id,  
-  title: "dhjdhjdhjjhhjhjhjhjhjhjhjhjhjhjhjhjhjhjjjjh",
-  body: "Look at the body 4",
+  title: "I'm running out of remotely clever/interesting things to say",
+  body: "Seeding is harder than i thought",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_5 = Question.create!(
   asker_id: User.second.id,  
-  title: "dfgfdgdfgfdgdfgfdfdgdgfdg",
-  body: "Look at the body 5",
+  title: "What happened at the end of the Sopranos?",
+  body: "did tony die",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_6 = Question.create!(
   asker_id: User.first.id,  
-  title: "fdsgdfgdfgdfgfdgdfgdf",
-  body: "Look at the body 6",
+  title: "Will shakhtar ever win the world cup?",
+  body: "idk anything about soccer.  is that a real thing?",
   tag: "DEMO",
   site_hits: 0
 )
@@ -143,23 +143,23 @@ question_6 = Question.create!(
 question_7 = Question.create!(
   asker_id: User.second.id,  
   title: "I cant wait for this project to finally look good (assuming that ever happens)",
-  body: "Look at the body 7",
+  body: "Body body body",
   tag: "DEMO",
   site_hits: 0
 )
         
 question_8 = Question.create!(
   asker_id: User.first.id,  
-  title: "Long QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong Question",
-  body: "Long QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong QuestionLong Question",
+  title: "I'm doing console.log in ruby but it won't work!! alvin said something about printing but I did not understand ",
+  body: "I was trying to console.log my cat's name and nothing happened",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_9 = Question.create!(
   asker_id: user_9.id,  
-  title: "asdadsadasdasdsdasdsadasdasdasdasdasdasdsasdsaad",
-  body: "Look at the body 9",
+  title: "are mozilla docs reliable?",
+  body: "I mean who uses firefox anymore",
   tag: "DEMO",
   site_hits: 0
 )
@@ -167,14 +167,14 @@ question_9 = Question.create!(
 question_10 = Question.create!(
   asker_id: user_10.id,
   title: "how do i console log in css",
-  body: "Look at the body 10",
+  body: "it's annoying, bc when I try to flex something it screws up the entire page!!  How do I see what it's doing.",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_11 = Question.create!(
   asker_id: user_11.id,
-  title: "How do i test this 10",
+  title: "I'm asking a long question to show off the great CSS styling I've achieved",
   body: "Contrary to popular belief, Lorem Ipsum is not simply random text. 
   It has roots in a piece of classical Latin literature from 45 BC, making it 
   over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney 
@@ -191,32 +191,37 @@ question_11 = Question.create!(
 )
 
 answer_1 = Answer.create!(
-  answerer_id: user_1.id,
-  question_id: question_2.id,
-  body: "long answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answerlong answer"
+  answerer_id: user_2.id,
+  question_id: question_1.id,
+  body: "Do console.log('what you'd like to log') .... LOL noob!"
 )
 answer_2 = Answer.create!(
   answerer_id: user_2.id,
   question_id: question_1.id,
-  body: "answer!!"
+  body: "do p 'text' "
 )
 answer_3 = Answer.create!(
-  answerer_id: user_3.id,
-  question_id: question_1.id,
-  body: "answer!!"
+  answerer_id: user_7.id,
+  question_id: question_8.id,
+  body: "i have the same question"
 )
 answer_4 = Answer.create!(
-  answerer_id: user_4.id,
+  answerer_id: user_1.id,
   question_id: question_1.id,
-  body: "answer!!"
+  body: "Thank you!! you are so kind!"
 )
 answer_5 = Answer.create!(
   answerer_id: user_5.id,
-  question_id: question_1.id,
-  body: "answer!!"
+  question_id: question_7.id,
+  body: "good luck!"
 )
 answer_6 = Answer.create!(
-  answerer_id: user_1.id,
-  question_id: question_2.id,
-  body: "answer!!"
+  answerer_id: user_8.id,
+  question_id: question_4.id,
+  body: "i dont get the question.  please re-phrase"
+)
+answer_7 = Answer.create!(
+  answerer_id: user_5.id,
+  question_id: question_6.id,
+  body: "i hope so"
 )

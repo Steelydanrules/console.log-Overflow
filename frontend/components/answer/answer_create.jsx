@@ -28,16 +28,18 @@ class AnswerCreate extends React.Component {
   render(){
 
     return(
-    <div>
-        <form onSubmit={this.handleSubmit}>
-            <input
-            onChange={this.handleChange()}
-            value={this.state.body} />
-
-            <button type="submit">
-              Add answer
-            </button>
-            </form>
+    <div className="answer-create-form">
+      <form className="answer-create-actual-form"
+      onSubmit={this.handleSubmit}>
+        <textarea
+        className="answer-input-box"
+        onChange={this.handleChange()}
+        value={this.state.body} />
+        <br />
+        <button type="submit">
+          Add answer
+        </button>
+      </form>
     </div>
     )
 

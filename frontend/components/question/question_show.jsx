@@ -8,6 +8,7 @@ class QuestionsShow extends React.Component {
   constructor(props) {
     // debugger
     super(props);
+    this.answerBox = this.answerBox.bind(this)
   }
 
   specificUser(targetId){
@@ -25,6 +26,29 @@ class QuestionsShow extends React.Component {
   }
 
 
+  answerBox(){
+    if (this.props.session) {
+      return(
+        <div>
+      <AnswerCreateContainer 
+            questionId={this.props.match.params.id}
+      />
+        </div>
+      )
+    } else {
+      return(
+        <div
+        style={{marginLeft: "3%"}}>
+          Please sign in to commment
+        </div>
+      )
+    }
+
+
+
+  }
+
+
   questionCount() {
     if (this.props.question.answer_ids.length === 0){
       return <h3>Be the first to answer</h3>
@@ -37,7 +61,7 @@ class QuestionsShow extends React.Component {
   
   
   render() {
-    if (!this.props.question || !this.props.answers[0] === undefined) {
+    if (!this.props.answers || (this.props.answers.length !== 0 && this.props.answers && this.props.answers[0] === undefined)) {
       // this.props.addViewQuestion(this.props.match.params.id)
       return (
         <div>
@@ -48,7 +72,6 @@ class QuestionsShow extends React.Component {
         </div>
       )
     } else {
-      console.log(this.props)
       const date = this.props.created_at
       const dateTimeFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: '2-digit' })
       const [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(date)
@@ -121,9 +144,8 @@ class QuestionsShow extends React.Component {
 
             </ul>
             
-            <AnswerCreateContainer
-              questionId={this.props.match.params.id}
-            />
+            {this.answerBox()}
+
 
           </div>
         </div>

@@ -10,10 +10,12 @@ const mSP = (state, ownProps) => {
   if (question) {
   answers = question.answer_ids.map(answerId => state.entities.answers[answerId]);
   }
+  const session = state.session.id;
 
   return ({
     question,
-    answers
+    answers,
+    session
   })
 };
 

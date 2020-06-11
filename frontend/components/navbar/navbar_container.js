@@ -7,7 +7,7 @@ import NavBar from './navbar';
 const mapStateToProps = (state) => {
   return {
     currentUser: state.entities.users[state.session.id],
-    searchBar: ""
+    searchBar: "",
   };
 };
 
@@ -18,6 +18,8 @@ const mapDispatchToProps = dispatch => ({
     email: "steelydanrules@consolelogoverflow.com",
     password: "123456"
   }))
+  
+
 });
 
 export default connect(

@@ -4,9 +4,9 @@ Rails.application.routes.draw do
       resources :questions, only: [:index]
       resources :answers, only: [:index]
     end
-    resources :questions do 
-      post :add_view 
-    end
+
+    resources :search, only: [:index]
+
 
     resources :answers, only: [:show, :create, :update, :destroy]
     

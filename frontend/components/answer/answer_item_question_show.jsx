@@ -6,14 +6,13 @@ export const AnswerItemInQuestionShow = (props) => {
   let thisUser
 
   props.answerers.forEach(user => {
-    if (user.id === answerId) thisUser = user 
+    if (user.id === answer.answerer_id) thisUser = user 
   })
 
-  debugger
   return(
     <li className="answer-on-q-index">
-      {answer.body}
-{/*       
+
+      
     <body className="top-of-q-index"
     style={{fontSize: "15px" }}
     >
@@ -22,6 +21,8 @@ export const AnswerItemInQuestionShow = (props) => {
     </body>
 
     <body className="bottom-of-q-index">
+      <text>answerer:</text>
+      <br />
         <Link to={`/users/${thisUser.id}`}
           style={{ color: "#0077CC", fontSize: "12px" }}
         >
@@ -32,6 +33,6 @@ export const AnswerItemInQuestionShow = (props) => {
           {thisUser.username}
         </Link>
 
-    </body> */}
+    </body>
   </li>
 )}

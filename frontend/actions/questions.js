@@ -50,3 +50,8 @@ export const patchQuestion = (question) => dispatch => (
 export const deleteQuestion = (questionId) => dispatch => (
   QUESTIONUtil.deleteQuestion(questionId)
     .then(question => dispatch(removeQuestion(question.id))));
+
+// export const searchQuestion = (searchData) => dispatch => (
+
+
+// )

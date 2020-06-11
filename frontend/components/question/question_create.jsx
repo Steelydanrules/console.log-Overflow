@@ -8,13 +8,13 @@ class QuestionCreate extends React.Component {
     super(props);
 
     this.state = this.props.question;
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props)
     this.props.postQuestion(this.state)
     this.setState({title: "",body: "",tag: ""})
   }
