@@ -1,38 +1,60 @@
+.entire-footer-background{
+  background-color: #25272A;
+  min-height: 285px;
+  width: 100%;
+  
+}
+
+
 .entire-footer{
   /* padding-top: 25px; */
-  height: 270px;
-  width: 100%;
   background-color: #25272A;
+  height: 270px;
   display: flex;
   flex-direction: row;
   color: #E4E6E8;
   font-size: 16px;
   padding-bottom: 15px;
   bottom: 0;
-
+  margin-left: 20vw;
+  margin-right: 20vw;
+  font-size: 12px;
 }
 .links-to-sites {
   display: flex;
   flex-direction: row;
   margin-right: 75px;
 }
-.list-of-skills{
-  margin-left: 18vw;
-  height: 100%;
+
+.links-to-sites p {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+  width: 150px;
 }
-.footer-link {
-  padding-top: 35px;
-  margin: 0 25px 0 25px;
-  height: 200px;
+
+.list-of-skills{
+  list-style: none;
+  height: 100%;
   width: 200px;
+}
+
+.beatles-albums{
+  height: 100%;
+  width: 200px;
+}
+
+.footer-link {
+  margin: 25px;
+  height: 25px;
+  width: 25px;
   cursor: pointer;
 }
 
 .footer-link:hover {
-  padding-top: 35px;
-  margin: 0 25px 0 25px;
-  height: 200px;
-  width: 200px;
+  margin: 25px;
+  height: 25px;
+  width: 25px;
   cursor: pointer;
   opacity: 75%;
 }

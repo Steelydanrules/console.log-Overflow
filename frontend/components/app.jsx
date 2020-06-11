@@ -8,6 +8,7 @@ import UserContainer from './user/user_container'
 import QuestionsIndexContainer from './question/questions_index_container'
 import SearchContainer from './search/search_container'
 import QuestionCreateContainer from './question/question_create_container'
+import AnswerEditContainer from './answer/answer_edit_container'
 import QuestionShowContainer from './question/question_show_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import HomePageContainer from './homepage/homepage_container'
@@ -26,6 +27,7 @@ const App = () => (
     <Route exact path='/questions' component={QuestionsIndexContainer} />
     <Route exact path='/search' component={SearchContainer} />
     <Route exact path='/questions/:id' component={QuestionShowContainer} />
+    <ProtectedRoute exact path='/answers/:answerId/edit' component={AnswerEditContainer} />
     <AuthRoute exact path='/signup' component={SignUpContainer} />
     <AuthRoute exact path='/login' component={LogInContainer} />
     </Switch>

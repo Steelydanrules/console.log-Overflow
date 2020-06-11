@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Route, Redirect, BrowserRouter } from 'react-router-dom';
-
+import { withRouter } from 'react-router-dom';
 
 class QuestionCreate extends React.Component {
   constructor(props) {
@@ -17,6 +17,10 @@ class QuestionCreate extends React.Component {
     e.preventDefault();
     this.props.postQuestion(this.state)
     this.setState({title: "",body: "",tag: ""})
+    debugger
+    this.props.history.push('/questions')
+
+
   }
 
   handleChange(field) {
@@ -137,4 +141,4 @@ class QuestionCreate extends React.Component {
 
 }
 
-export default QuestionCreate
+export default withRouter(QuestionCreate);

@@ -9,7 +9,8 @@ class Footer extends React.Component {
 
   render() {
     return(
-      
+      <div className="entire-footer-background">
+
       <div className="entire-footer">
           
         <ul className="list-of-skills" >
@@ -26,7 +27,19 @@ class Footer extends React.Component {
           <li>HTML</li>
           <li>And more</li>
         </ul>
-
+      
+        <ol className="beatles-albums" >
+          {/* style={{ listStyle: "none" }}> */}
+          <h4>Greatest Beatles albums, Ranked</h4>
+          <li>Abbey Rd</li>
+          <li>Rubber Soul</li>
+          <li>Sgt Pepper</li>
+          <li>The White Album</li>
+          <li>Revolver</li>
+          <li>Beatles for Sale</li>
+          <li>Magical Mystery Tour</li>
+          <li>Help!</li>
+        </ol>
 
 
         <ul className="links-to-sites"
@@ -52,12 +65,16 @@ class Footer extends React.Component {
           'https://github.com/Steelydanrules'}
           />
         </li>
+        <p>
+           
           &copy; console.log Overflow
           <br />
           Karl Konetsky
           <br />
           Queens, NY 2020
+        </p>
         </ul>
+      </div>
       </div>
     )
 

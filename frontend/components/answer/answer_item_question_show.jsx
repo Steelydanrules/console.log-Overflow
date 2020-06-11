@@ -5,6 +5,12 @@ export const AnswerItemInQuestionShow = (props) => {
   let { answer, answerId } = props;
   let thisUser
 
+  const handleDelete = () => {
+    
+    props.deleteAnswer(answerId)
+    // window.location.reload();
+
+  }
 
   
 
@@ -16,17 +22,18 @@ export const AnswerItemInQuestionShow = (props) => {
     if (thisUser === undefined) thisUser = props.currentUser
     }
 
-
   return(
     <li className="answer-on-q-index">
 
-      
     <body className="top-of-q-index"
     style={{fontSize: "15px" }}
     >
     <hr />
     {answer.body}
     </body>
+
+    <button onClick={() => handleDelete()}>Delete me!</button>
+    <Link to={`/answers/${answerId}/edit`}>Edit</Link>
 
     <body className="bottom-of-q-index">
       <text>answerer:</text>

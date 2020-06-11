@@ -1,7 +1,6 @@
 class Api::AnswersController < ApplicationController 
 
   def index
-    # debugger
     if params[:user_id]
     @answers = User.find(params[:user_id]).answers_to_questions
     elsif params[:question_id]
@@ -12,7 +11,7 @@ class Api::AnswersController < ApplicationController
   end
 
   def show
-    @answer = answer.find(params[:id])
+    @answer = Answer.find(params[:id])
     if @answer
       render :show
     else
@@ -45,9 +44,9 @@ class Api::AnswersController < ApplicationController
   def destroy
     @answer = Answer.find(params[:id])
     user = current_user
-    if @answer && @answer.asker_id == user.id
+    if @answer && @answer.answerer_id == user.id
       @answer.destroy
-      redirect_to answers_url
+      render :show
     else
       render json: @answer.errors.full_messages, status: 401
     end

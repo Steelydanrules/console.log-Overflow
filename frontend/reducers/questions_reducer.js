@@ -15,8 +15,12 @@ const questionsReducer = (state = {}, action) => {
       // action.questions.forEach(quest => newObj[quest.id] = quest)
       return Object.assign({}, state, action.questions);
     case RECEIVE_ANSWER:
+      console.log(this)
       const newId = action.answer.id;
       const newState = merge({}, state );
+      if (newState[action.answer.question_id].answer_ids === undefined){
+        return { [action.answer.id]: action.answer };
+      }
       newState[action.answer.question_id].answer_ids.push(newId);
       return newState;
     case REMOVE_QUESTION:

@@ -31,7 +31,7 @@ export const patchAnswer = (answerData) => (
 export const deleteAnswer = (answerId) => (
   $.ajax({
     url: `/api/answers/${answerId}`,
-    method: 'DELTE'
+    method: 'DELETE'
   })
 );
 
