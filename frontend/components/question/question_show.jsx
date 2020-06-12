@@ -108,13 +108,23 @@ class QuestionsShow extends React.Component {
               <button className="left-nav-home-button">
                 Home
               </button>
+              
             </Link>
 
           </div>
 
           <div className="question-show-right">
             <div className="questions-show-header">
-              <h3>{this.props.question.title}</h3>
+
+              <div className="votes">
+              <i className="fas fa-sort-up fa-3x" />
+
+              <h3>   0</h3>
+
+              <i className="fas fa-sort-down fa-3x" />
+              </div>
+
+              <h3 id="question-title">{this.props.question.title}</h3>
               <Link to={'/questions/new'}>
               <button
                 className="ask-a-question-button-show"
@@ -138,6 +148,7 @@ class QuestionsShow extends React.Component {
               <Link to={`/users/${this.props.question.user.id}`}
                 style={{ color: "#0077CC" }}
               >
+
                 <img src={this.props.question.user.profile_photo_url}
                   style={{ width: "19px", height: "28px" }}
                   id="users-show-prof-photo"

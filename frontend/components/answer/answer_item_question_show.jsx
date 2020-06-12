@@ -23,24 +23,33 @@ export const AnswerItemInQuestionShow = (props) => {
     }
 
   return(
+    <div className="entire-answer">
+      <hr />
+
+
+
     <li className="answer-on-q-index">
+
+      <div className="answers">
+        <i className="fas fa-sort-up fa-3x answer-votes-up" />
+
+        <h3>   0</h3>
+
+        <i className="fas fa-sort-down fa-3x answer-votes-down" />
+      </div>
 
     <body className="top-of-q-index"
     style={{fontSize: "15px" }}
     >
-    <hr />
-    {answer.body}
+          <p>{answer.body}</p>
+
+      <button onClick={() => handleDelete()}>delete</button>
+
     </body>
 
     {/* <Link to={`/answers/${answerId}/edit`}>Edit</Link> */}
 
     <body className="answer-item-in-question">
-
-      <div className="bottom-left">
-
-      <button onClick={() => handleDelete()}>delete</button>
-
-      </div>
 
 
 
@@ -61,4 +70,5 @@ export const AnswerItemInQuestionShow = (props) => {
       </div>
     </body>
   </li>
+  </div>
 )}

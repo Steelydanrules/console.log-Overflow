@@ -1,12 +1,12 @@
 .question-show-container{
-padding-top: 45px;
+padding-top: 43px;
 display: flex;
 height: 80%;
 padding-bottom: -10px;
 }
 
 .question-show-left{
-  background: red;
+  /* background: red; */
   width: 25%;
   position: fixed;
   left: 0;
@@ -19,6 +19,7 @@ padding-bottom: -10px;
   height: 100%; 
   overflow: auto;
   border-left: 2px solid #D6D9DC
+
 }
 
 .left-nav-home-button{
@@ -36,18 +37,65 @@ padding-bottom: -10px;
   font-weight: bold;
 }
 
+.votes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa-sort-up{
+  margin-top: 70px;
+  color: #BBC0C4;
+}
+
+.fa-sort-down{
+  margin-bottom: 50px;
+  color: #BBC0C4;
+}
+
+.fa-sort-up:hover{
+  /* margin-top: 50px; */
+  color: green;
+  cursor: pointer;
+}
+
+.fa-sort-down:hover{
+  margin-bottom: 50px;
+  color: red;
+  cursor: pointer;
+}
+
+
+.votes h3{
+  padding-left: 11px;
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: -25px;
+  color: #BBC0C4
+}
+
 .questions-show-header{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 5px;
-  margin-left: 5%;
+  /* justify-content: space-between; */
+  margin-top: -50px;
+  margin-left: -200px;
   margin-right: 5%;
   
 }
 
 
+.questions-show-header h3{
+  width: 500px;
+  margin-left: -1%;
+}
+
+  #question-title{
+    margin-left: -200px;
+    width: 800px;
+    margin-right: 100px;
+  }
 
 .ask-a-question-timestamp-show{
   display: flex;
@@ -58,6 +106,7 @@ padding-bottom: -10px;
   justify-content: space-between;
   
 }
+
 
 .ask-a-question-timestamp-show b{
   margin-right: 5px;
@@ -120,7 +169,9 @@ padding-bottom: -10px;
   margin-right: 5%;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: -25px
+  margin-bottom: -25px;
+  float: right;
+  margin-left: 50%
 }
 
 .bottom-of-q-index{
@@ -132,9 +183,22 @@ padding-bottom: -10px;
   flex-direction: row;
   justify-content: space-between;
 }
+.top-of-q-index{
+  display: flex;
+  text-align: left;
+  padding-left: 15px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 500px;
+}
+
+.top-of-q-index p{
+  width: 800px;
+  /* background-color: red; */
+}
 
 
-  .bottom-left button {
+  .top-of-q-index button {
     margin-right: 10px;
     background-color: #E1ECF4;
     cursor: pointer;
@@ -148,7 +212,7 @@ padding-bottom: -10px;
     margin-top: 5px;
   }
   
-  .bottom-left button:hover {
+  .top-of-q-index button:hover {
     margin-right: 10px;
     background-color: #B3D3EA;
     cursor: pointer;
@@ -162,25 +226,10 @@ padding-bottom: -10px;
     
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .bottom-left{
   margin-top: 25px;
 
-
 }
-
 
   .bottom-of-question-show{
     margin-top: -10px;
@@ -197,7 +246,8 @@ padding-bottom: -10px;
 
   }
   
-  .bottom-of-question-show img{
+  
+  .bottom-right img{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
@@ -205,7 +255,7 @@ padding-bottom: -10px;
   
   .bottom-of-question-show text{
     color: #848D95;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-right: 10px;
   }
   
@@ -217,8 +267,66 @@ padding-bottom: -10px;
     margin-top: -30px;
   }
 
+  .bottom-right{
+    margin-left: -300px;
+    height: 75px;
+    width: 150px;
+    bottom: 5px;
+    margin-top: 80px;
+  }
+
   .bottom-right text{
   font-size: 12px;
   color: #848D95;
   padding-top: -15px;
+}
+
+.answer-on-q-index{
+  display: flex;
+  flex-direction: row;
+  width: 100%
+}
+
+.entire-answer{
+  width: 93%;
+  margin-left: 1.5%;
+  min-height: 150px;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.answer-votes-up{
+  margin-top: 50px;
+  color: #BBC0C4;
+}
+
+.answer-votes-down{
+  margin-bottom: 50px;
+  color: #BBC0C4;
+}
+
+.answer-votes-up:hover{
+  margin-top: 50px;
+  color: green;
+  cursor: pointer;
+}
+
+.answer-votes-down:hover{
+  margin-bottom: 50px;
+  color: red;
+  cursor: pointer;
+}
+
+
+.answers h3{
+  padding-left: 1px;
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: -25px;
+  color: #BBC0C4
 }
