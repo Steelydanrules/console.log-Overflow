@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     end
 
     resources :search, only: [:index]
+    resources :votes, only: [:index, :create]
 
 
     resources :answers, only: [:show, :create, :update, :destroy]

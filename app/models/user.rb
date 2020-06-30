@@ -19,6 +19,10 @@ class User < ApplicationRecord
   foreign_key: :answerer_id,
   class_name: :Answer
 
+  has_many :votes,
+  foreign_key: :liker_id,
+  class_name: :Vote
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
 

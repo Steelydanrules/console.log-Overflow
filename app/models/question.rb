@@ -16,6 +16,9 @@ class Question < ApplicationRecord
   through: :answers,
   source: :user
   
+  has_many :votes,
+  foreign_key: :question_id,
+  class_name: :Vote
 
   # def at_least_one_site_hit 
   #   if this.sit_hits = nil
