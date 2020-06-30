@@ -8,6 +8,20 @@ import { Link } from 'react-router-dom';
       return text.slice(0, numOfChars) + "..."
     }
   }
+
+  const figureOutKarma = (votesArr) => {
+    let score = 0;
+    votesArr.forEach(vote => {
+      console.log(vote)
+      if (vote.like_or_dislike === "LIKE") {
+        score += 1;
+      } else {
+        score -= 1;
+      }
+    })
+
+    return score;
+  }
   
 export const ShowIndexItem = (props) =>{
   if (props.question.answer_ids === undefined) {
@@ -25,8 +39,8 @@ export const ShowIndexItem = (props) =>{
       <div className="question-item-info">
 
         <div className="votes-index-item-container">
-        VOTES{/* {props.question.site_hits} */}
-        <p style={{fontSize: "9px", marginTop: "-2px"}}>Fill IN</p>
+        {figureOutKarma(props.question.votes)}
+        <p style={{fontSize: "9px", marginTop: "-2px"}}>VOTES</p>
         </div>
 
         <div className="answers-index-item-container">

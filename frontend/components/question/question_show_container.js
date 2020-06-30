@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchQuestion } from '../../actions/questions';
 import QuestionShow from './question_show'
 import { fetchAnswers, patchAnswer, deleteAnswer } from '../../actions/answers';
+import { postVote } from '../../util/vote';
 
 const mSP = (state, ownProps) => {
   // debugger
@@ -34,6 +35,8 @@ const mDP = dispatch => ({
   fetchAnswers: (questionId) => dispatch(fetchAnswers(questionId)),
   patchAnswer: (answerData) => dispatch(patchAnswer(answerData)),
   deleteAnswer: (answerId) => dispatch(deleteAnswer(answerId)),
+  fetchVotes: (questionId) => dispatch(fetchVotes(questionId)),
+  postVote: (vote) => dispatch(postVote(vote))
 
   // fetchAnswer: (answerId) => dispatch(fetchAnswer(answerId))
 })

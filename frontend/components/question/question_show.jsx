@@ -23,7 +23,20 @@ class QuestionsShow extends React.Component {
   componentDidMount(){
     this.props.fetchAnswers(this.props.match.params.id);
     this.props.fetchQuestion(this.props.match.params.id);
-    
+    this.props.fetchVotes(this.props.match.params.id);
+  }
+
+  figureOutKarma(){
+    let score = 0;
+    this.props.question.votes.forEach(vote => {
+      console.log(vote)
+      if (vote.like_or_dislike === "LIKE") {
+        score += 1;
+      } else {
+        score -= 1;
+      }
+    })
+    return score;
   }
 
 
@@ -44,9 +57,6 @@ class QuestionsShow extends React.Component {
         </div>
       )
     }
-
-
-
   }
 
 
@@ -81,9 +91,16 @@ class QuestionsShow extends React.Component {
       }
     }
 
+  upVote(){
+    let toSend = { like_or_dislike: "LIKE", question_id: this.props.match.params.id};
+    this.props.postVote(toSend);
+  }
 
+  downVote(){
+    let toSend = { like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
+    this.props.postVote(toSend);
+  }
 
-  
   
   render() {
     if (!this.props.answers || (this.props.answers.length !== 0 && this.props.answers[0] === undefined && this.props.answers)) {
@@ -117,11 +134,15 @@ class QuestionsShow extends React.Component {
             <div className="questions-show-header">
 
               <div className="votes">
-              <i className="fas fa-sort-up fa-3x" />
+              <i className="fas fa-sort-up fa-3x" 
+              onClick = {() => this.upVote()}
+              />
 
-              <h3>   0</h3>
+              <h3>{this.figureOutKarma()}</h3>
 
-              <i className="fas fa-sort-down fa-3x" />
+              <i className="fas fa-sort-down fa-3x" 
+              onClick={() => this.downVote()}
+              />
               </div>
 
               <h3 id="question-title">{this.props.question.title}</h3>
