@@ -15,5 +15,5 @@ export const postVote = (vote) => dispatch => (
     .then(() => dispatch(receiveVotes())))
 
 export const fetchVotes = () => dispatch => (
-  QUESTIONUtil.fetchVotes()
+  VOTEUtil.fetchVotes()
     .then(votes => dispatch(receiveVotes(votes))));
