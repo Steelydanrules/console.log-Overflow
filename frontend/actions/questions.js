@@ -46,7 +46,6 @@ export const patchQuestion = (question) => dispatch => (
   QUESTIONUtil.patchQuestion(question)
     .then(question => dispatch(receiveQuestion(question))));
 
-
 export const deleteQuestion = (questionId) => dispatch => (
   QUESTIONUtil.deleteQuestion(questionId)
     .then(question => dispatch(removeQuestion(question.id))));

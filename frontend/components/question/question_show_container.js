@@ -2,17 +2,15 @@ import { connect } from 'react-redux';
 import { fetchQuestion } from '../../actions/questions';
 import QuestionShow from './question_show'
 import { fetchAnswers, patchAnswer, deleteAnswer } from '../../actions/answers';
-import { postVote } from '../../util/vote';
+import { postVote, fetchVotes } from '../../actions/votes';
 
 const mSP = (state, ownProps) => {
-  // debugger
   const question = state.entities.questions[ownProps.match.params.id];
   let answers;
   if (question) {
   answers = question.answer_ids.map(answerId => state.entities.answers[answerId]);
   }
   const session = state.session.id;
-  debugger
   if (session === undefined) {
     return ({
       question,

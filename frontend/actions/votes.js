@@ -1,6 +1,7 @@
 import * as VOTEUtil from '../util/vote'
 
 export const RECEIVE_VOTES = 'RECEIVE_VOTES'
+export const RECEIVE_VOTE = 'RECEIVE_VOTE'
 
 const receiveVotes = (votes) => {
   return ({
@@ -9,10 +10,17 @@ const receiveVotes = (votes) => {
   })
 };
 
+const receiveVote = (vote) => {
+  return ({
+    type: RECEIVE_VOTE,
+    vote
+  })
+};
+
 
 export const postVote = (vote) => dispatch => (
   VOTEUtil.postVote(vote)
-    .then(() => dispatch(receiveVotes())))
+    .then((vote) => dispatch(receiveVote(vote))));
 
 export const fetchVotes = () => dispatch => (
   VOTEUtil.fetchVotes()

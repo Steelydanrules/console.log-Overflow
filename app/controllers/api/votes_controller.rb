@@ -1,14 +1,17 @@
 class Api::VotesController < ApplicationController
 
   def index
-    @votes = Question.find(params[:question_id]).votes
+    debugger
+    if params[:question_id]
+      @votes = Question.find(params[:question_id]).votes
+    end
 
   end
 
   def create
-    # debugger
+    debugger
     @vote = Vote.new(vote_params)
-    # debugger
+    debugger
     @vote.liker_id = current_user.id
 
     votes = Question.find(vote_params[:question_id]).votes

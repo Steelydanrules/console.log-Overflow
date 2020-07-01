@@ -1,0 +1,1 @@
+json.extract! vote, :id, :liker_id, :question_id, :like_or_dislike, :question, :liker

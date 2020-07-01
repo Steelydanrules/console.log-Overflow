@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
 
     resources :search, only: [:index]
-    resources :votes, only: [:index, :create]
+    resources :votes, only: [:create]
 
 
     resources :answers, only: [:show, :create, :update, :destroy]
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :questions, only: [:index, :show, :create, :update, :destroy] do 
       resources :answers, only: [:index]
+      resources :votes, only: [:index]
     end 
   end
 

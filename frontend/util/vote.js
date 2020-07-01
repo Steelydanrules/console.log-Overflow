@@ -5,3 +5,11 @@ export const postVote = (vote) => (
     data: { vote }
   })
 );
+
+export const fetchVotes = (questionId) => {
+  return (
+    $.ajax({
+      url: `/api/questions/${questionId}/votes`
+    })
+  )
+};

@@ -8,8 +8,9 @@ class QuestionsShow extends React.Component {
   constructor(props) {
     // debugger
     super(props);
-    this.answerBox = this.answerBox.bind(this)
-    this.possibleAnswer = this.possibleAnswer.bind(this)
+    this.answerBox = this.answerBox.bind(this);
+    this.possibleAnswer = this.possibleAnswer.bind(this);
+    this.loaded = false;
   }
 
   specificUser(targetId){
@@ -23,7 +24,8 @@ class QuestionsShow extends React.Component {
   componentDidMount(){
     this.props.fetchAnswers(this.props.match.params.id);
     this.props.fetchQuestion(this.props.match.params.id);
-    this.props.fetchVotes(this.props.match.params.id);
+    this.props.fetchVotes( {question_Id: this.props.match.params.id});
+    this.loaded = true;
   }
 
   figureOutKarma(){
@@ -92,19 +94,18 @@ class QuestionsShow extends React.Component {
     }
 
   upVote(){
-    let toSend = { like_or_dislike: "LIKE", question_id: this.props.match.params.id};
+    let toSend = {vote: { like_or_dislike: "LIKE", question_id: this.props.match.params.id}};
     this.props.postVote(toSend);
   }
 
   downVote(){
-    let toSend = { like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
+    let toSend = {vote: { like_or_dislike: "DISLIKE", question_id: this.props.match.params.id}};
     this.props.postVote(toSend);
   }
 
   
   render() {
-    if (!this.props.answers || (this.props.answers.length !== 0 && this.props.answers[0] === undefined && this.props.answers)) {
-      // this.props.addViewQuestion(this.props.match.params.id)
+    if (this.loaded === false) {
       return (
         <div>
           <br />
