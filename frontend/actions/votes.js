@@ -20,8 +20,8 @@ const receiveVote = (vote) => {
 
 export const postVote = (vote) => dispatch => (
   VOTEUtil.postVote(vote)
-    .then((vote) => dispatch(receiveVote(vote))));
+    .then((vote) => dispatch(fetchVotes(vote.questionId))));
 
-export const fetchVotes = () => dispatch => (
-  VOTEUtil.fetchVotes()
+export const fetchVotes = (questionId) => dispatch => (
+  VOTEUtil.fetchVotes(questionId)
     .then(votes => dispatch(receiveVotes(votes))));

@@ -24,14 +24,15 @@ class QuestionsShow extends React.Component {
   componentDidMount(){
     this.props.fetchAnswers(this.props.match.params.id);
     this.props.fetchQuestion(this.props.match.params.id);
-    this.props.fetchVotes( {question_Id: this.props.match.params.id});
+    this.props.fetchVotes(this.props.match.params.id);
     this.loaded = true;
   }
 
   figureOutKarma(){
+    if (this.loaded === false) return;
+    debugger
     let score = 0;
-    this.props.question.votes.forEach(vote => {
-      console.log(vote)
+    this.props.votes.forEach(vote => {
       if (vote.like_or_dislike === "LIKE") {
         score += 1;
       } else {
@@ -94,18 +95,18 @@ class QuestionsShow extends React.Component {
     }
 
   upVote(){
-    let toSend = {vote: { like_or_dislike: "LIKE", question_id: this.props.match.params.id}};
+    let toSend = { like_or_dislike: "LIKE", question_id: this.props.match.params.id};
     this.props.postVote(toSend);
   }
 
   downVote(){
-    let toSend = {vote: { like_or_dislike: "DISLIKE", question_id: this.props.match.params.id}};
+    let toSend = { like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
     this.props.postVote(toSend);
   }
 
   
   render() {
-    if (this.loaded === false) {
+    if (this.loaded === false || this.props.question === undefined) {
       return (
         <div>
           <br />

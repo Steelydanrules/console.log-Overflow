@@ -1,7 +1,6 @@
 class Api::VotesController < ApplicationController
 
   def index
-    debugger
     if params[:question_id]
       @votes = Question.find(params[:question_id]).votes
     end

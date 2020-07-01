@@ -6,9 +6,12 @@ import { postVote, fetchVotes } from '../../actions/votes';
 
 const mSP = (state, ownProps) => {
   const question = state.entities.questions[ownProps.match.params.id];
+  debugger
   let answers;
+  let votes = Object.values(state.entities.votes);
   if (question) {
   answers = question.answer_ids.map(answerId => state.entities.answers[answerId]);
+  debugger
   }
   const session = state.session.id;
   if (session === undefined) {
@@ -16,6 +19,7 @@ const mSP = (state, ownProps) => {
       question,
       answers,
       session,
+      votes
     })
   } else {
     const currentUser = state.entities.users[session]
@@ -23,6 +27,7 @@ const mSP = (state, ownProps) => {
       question,
       answers,
       session,
+      votes,
       currentUser
     })
   }
