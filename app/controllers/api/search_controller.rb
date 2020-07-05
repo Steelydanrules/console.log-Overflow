@@ -1,7 +1,6 @@
 class Api::SearchController < ApplicationController
 
   def index
-    debugger
     @questions = []
     questions = Question.all
     questions.each do |question|

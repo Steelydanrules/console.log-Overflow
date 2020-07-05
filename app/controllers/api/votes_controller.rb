@@ -8,9 +8,7 @@ class Api::VotesController < ApplicationController
   end
 
   def create
-    debugger
     @vote = Vote.new(vote_params)
-    debugger
     @vote.liker_id = current_user.id
 
     votes = Question.find(vote_params[:question_id]).votes

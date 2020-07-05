@@ -8,6 +8,7 @@ class QuestionsShow extends React.Component {
   constructor(props) {
     // debugger
     super(props);
+    this.state = this.props;
     this.answerBox = this.answerBox.bind(this);
     this.possibleAnswer = this.possibleAnswer.bind(this);
     this.loaded = false;
@@ -97,11 +98,13 @@ class QuestionsShow extends React.Component {
   upVote(){
     let toSend = { like_or_dislike: "LIKE", question_id: this.props.match.params.id};
     this.props.postVote(toSend);
+    this.setState({ votes: this.props.question.votes })
   }
 
   downVote(){
     let toSend = { like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
     this.props.postVote(toSend);
+    this.setState({votes: this.props.question.votes})
   }
 
   
