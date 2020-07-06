@@ -8,6 +8,7 @@ class QuestionsShow extends React.Component {
   constructor(props) {
     // debugger
     super(props);
+    debugger
     this.state = this.props;
     this.answerBox = this.answerBox.bind(this);
     this.possibleAnswer = this.possibleAnswer.bind(this);
@@ -34,6 +35,7 @@ class QuestionsShow extends React.Component {
     debugger
     let score = 0;
     this.props.votes.forEach(vote => {
+    // this.state.votes.forEach(vote => {
       if (vote.like_or_dislike === "LIKE") {
         score += 1;
       } else {
@@ -96,15 +98,19 @@ class QuestionsShow extends React.Component {
     }
 
   upVote(){
-    let toSend = { like_or_dislike: "LIKE", question_id: this.props.match.params.id};
+    let toSend = {like_or_dislike: "LIKE", question_id: this.props.match.params.id};
+    debugger
     this.props.postVote(toSend);
-    this.setState({ votes: this.props.question.votes })
+    this.props.fetchVotes(this.props.match.params.id);
+    // this.forceUpdate();
   }
 
   downVote(){
-    let toSend = { like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
+    let toSend = {like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
+    debugger
     this.props.postVote(toSend);
-    this.setState({votes: this.props.question.votes})
+    this.props.fetchVotes(this.props.match.params.id);
+    // this.forceUpdate();
   }
 
   

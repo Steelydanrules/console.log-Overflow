@@ -3,6 +3,7 @@ class Api::VotesController < ApplicationController
   def index
     if params[:question_id]
       @votes = Question.find(params[:question_id]).votes
+      render :index
     end
 
   end
@@ -10,7 +11,7 @@ class Api::VotesController < ApplicationController
   def create
     @vote = Vote.new(vote_params)
     @vote.liker_id = current_user.id
-
+    # debugger
     votes = Question.find(vote_params[:question_id]).votes
     votes.each do |vote|
       if vote.liker_id == current_user.id
@@ -19,7 +20,7 @@ class Api::VotesController < ApplicationController
     end 
 
     if @vote.save
-      return
+      render :show
     else
       render json: @vote.errors.full_messages, status: 422
     end 

@@ -10,12 +10,19 @@ const receiveVotes = (votes) => {
   })
 };
 
+const receiveVote = (vote) => {
+  return ({
+    type: RECEIVE_VOTE,
+    vote
+  })
+};
+
 
 export const postVote = (vote) => dispatch => {
   debugger
   return(
   VOTEUtil.postVote(vote)
-    .then((vote) => dispatch(fetchVotes(vote))))};
+      .then((vote) => dispatch(receiveVote(vote))))};
 
 export const fetchVotes = (questionId) => dispatch => (
   VOTEUtil.fetchVotes(questionId)
