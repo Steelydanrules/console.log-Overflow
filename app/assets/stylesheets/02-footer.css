@@ -9,7 +9,7 @@
 .entire-footer{
   /* padding-top: 25px; */
   background-color: #25272A;
-  height: 270px;
+  min-height: 270px;
   display: flex;
   flex-direction: row;
   color: #E4E6E8;

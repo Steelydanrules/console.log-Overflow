@@ -102,7 +102,7 @@ class QuestionsShow extends React.Component {
     debugger
     this.props.postVote(toSend);
     this.props.fetchVotes(this.props.match.params.id);
-    // this.forceUpdate();
+    this.forceUpdate();
   }
 
   downVote(){
@@ -110,7 +110,7 @@ class QuestionsShow extends React.Component {
     debugger
     this.props.postVote(toSend);
     this.props.fetchVotes(this.props.match.params.id);
-    // this.forceUpdate();
+    this.forceUpdate();
   }
 
   
