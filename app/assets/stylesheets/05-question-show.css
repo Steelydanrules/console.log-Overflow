@@ -242,7 +242,9 @@ padding-bottom: -10px;
     text-decoration: none;
     background-color: #E1ECF4;
     min-height: 35px;
-    width: 200px;
+    width: 150px;
+    border-radius: 5px;
+    padding: 10px;
 
   }
   
