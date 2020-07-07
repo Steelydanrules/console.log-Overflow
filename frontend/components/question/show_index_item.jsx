@@ -67,7 +67,7 @@ export const ShowIndexItem = (props) =>{
         </div>
         
         <div className="bottom-of-preview-question-index">
-          <text>asked by:</text>
+          <p className="asked-by-text">asked by:</p>
         <Link to={`/users/${props.question.user.id}`}
           style={{ color: "#0077CC" }}
           >

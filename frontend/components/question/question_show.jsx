@@ -9,7 +9,7 @@ class QuestionsShow extends React.Component {
     // debugger
     super(props);
     debugger
-    this.state = this.props;
+    // this.state = this.props;
     this.answerBox = this.answerBox.bind(this);
     this.possibleAnswer = this.possibleAnswer.bind(this);
     this.loaded = false;
@@ -76,7 +76,7 @@ class QuestionsShow extends React.Component {
     }
   }
 
-  possibleAnswer(answer) {
+  possibleAnswer(answer, idx) {
     if (answer === undefined) {
       return(
         <>
@@ -85,6 +85,7 @@ class QuestionsShow extends React.Component {
       } else {
         return(
         <AnswerItemInQuestionShow
+        key={idx}
           className="answer-on-q-index"
           answerId={answer.id}
           answerers={this.props.question.users_who_answered_question}
@@ -165,17 +166,17 @@ class QuestionsShow extends React.Component {
 
 
             </div>
-            <p className="ask-a-question-timestamp-show">
-              <text><b>Asked : </b>{` ${month}/${day}/${year}`}</text>
-              <text><b>Views : </b>{this.props.question.site_hits}</text>
-              </p>
+            <div className="ask-a-question-timestamp-show">
+              <p><b>Asked : </b>{` ${month}/${day}/${year}`}</p>
+              <p><b>Views : </b>{this.props.question.site_hits}</p>
+              </div>
 
             <div className="question-show-body">
             <hr />
             <p style={{fontSize: "12px", marginRight: "20%"}}>{this.props.question.body}</p>
             
             <div className="bottom-of-question-show">
-              <text>asked by:</text>
+              <p>asked by:</p>
               <br />
               <Link to={`/users/${this.props.question.user.id}`}
                 style={{ color: "#0077CC" }}
@@ -188,8 +189,8 @@ class QuestionsShow extends React.Component {
                 {this.props.question.user.username}
               </Link>
               {/* <br />
-              <text>questions asked:</text> {this.props.question.user.questions_asked.length}
-                <text>questions answered:</text> {this.props.question.user.questions_answered.length} */}
+              <p>questions asked:</p> {this.props.question.user.questions_asked.length}
+                <p>questions answered:</p> {this.props.question.user.questions_answered.length} */}
 
             </div>
 
@@ -201,8 +202,8 @@ class QuestionsShow extends React.Component {
             style={{listStyle : "none"}}
             >
 
-              {this.props.answers.map(answer => (
-                this.possibleAnswer(answer)
+              {this.props.answers.map((answer, i) => (
+                this.possibleAnswer(answer, i)
               ))}
 
             </ul>

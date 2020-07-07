@@ -54,8 +54,9 @@ class QuestionsIndex extends React.Component {
 
               <ul className="index-list-of-questions">
 
-              {this.props.questions.map(question => (
+              {this.props.questions.map((question, idx) => (
                 <ShowIndexItem 
+                key={idx}
                 question={question}
                 />
                 ))}
