@@ -190,3 +190,7 @@ padding-bottom: -10px;
   height: 200px;
   box-shadow: 0 0 5px 3px rgba(217, 236, 252, .4);
 }
+
+.hot-questions {
+  background-color: green;
+}

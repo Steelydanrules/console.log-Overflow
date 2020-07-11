@@ -63,8 +63,15 @@ class QuestionsIndex extends React.Component {
               
               </ul>
 
+              <div className="hot-questions">
+                <h1>hihihih</h1>                
+              </div>
+
             </div>
 
+              <div className="hot-questions">
+                           asdasdas
+              </div>
 
 
           </div>

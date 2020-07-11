@@ -35,12 +35,12 @@ class Homepage extends React.Component {
           <br />
 
         <div className="top-buttons-homepage">
-            <button className="white-button">For developers</button>
+            <button className="white-button">My Personal Site</button>
 
             <Link to="/questions">
             <button className="orange-button">
             {/* onClick={event => window.location.href = "#questions-everywhere"}> */}
-              Questions are abundant</button>
+              Jump to Questions!</button>
             </Link>
         </div>
       </div>
@@ -63,7 +63,9 @@ class Homepage extends React.Component {
               by sharing your knowledge with others.  <Link to="/signup">Sign up for an account!</Link>
               </p>
               <br />
-              <Link to="/questions"><button className="by-dev-button-bottom" >See questions!</button></Link>
+              <Link to="/questions"
+              onClick={() => $(window).scrollTop(100)}
+              ><button className="by-dev-button-bottom" >See questions!</button></Link>
             </li>
             </div>
             <div className="for-dev-by-dev-list-item-container">
@@ -74,7 +76,9 @@ class Homepage extends React.Component {
               <p>Log in now and start sharing knowledge with your coworkers.  What
               are you waiting for?</p>
               <br />
-              <Link to="/signup"><button className="by-dev-button-center" >Start now!</button></Link>
+              <Link to="/signup"
+              onClick={() => $(window).scrollTop(100)}
+              ><button className="by-dev-button-center" >Start now!</button></Link>
 
             </li>
             </div>
@@ -145,9 +149,10 @@ class Homepage extends React.Component {
             both the new & experienced based on contribution and activity.</p>
           <br />
         </div>
-          <button onClick={event => window.location.href = 'https://console-log-overflow-aa.herokuapp.com/#/signup'} 
-          className="orange-button-center">
+          <Link to="/signup"><button className="orange-button-center"
+          onClick={ () => $(window).scrollTop(100) }>
             Create an account</button>
+          </Link>
       </div>
 
       <div className="learn-and-grow">
@@ -192,7 +197,9 @@ class Homepage extends React.Component {
           </li>
 
           <li className="learn-and-grow-p-tag-item">
-                <Link to="/signup">Create a profile</Link> that shows off your expertise and credentials 
+                <Link to="/signup"
+                onClick={() => $(window).scrollTop(100)}
+                >Create a profile</Link> that shows off your expertise and credentials 
                 to help you make your next move. Start your Developer Story.
           </li>
         </ul>

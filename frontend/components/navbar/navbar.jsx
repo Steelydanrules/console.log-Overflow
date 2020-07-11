@@ -37,6 +37,7 @@ class NavBar extends React.Component{
       <div className='logout-container'>
         <Link 
         className="my-profile-button"
+        onClick={() => $(window).scrollTop(0)}
         to={`/users/${this.props.currentUser.id}`}>
           My Profile
           </Link>
