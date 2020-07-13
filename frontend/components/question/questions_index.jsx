@@ -7,17 +7,77 @@ import { withRouter } from 'react-router-dom';
 class QuestionsIndex extends React.Component {
   constructor(props) {
     super(props);
-
+    this.loaded = false;
+    // this.topFiveQuestion = this.topFiveQuestion.bind(this)
   }
 
   componentDidMount(){
-    this.props.fetchQuestions()
+    this.props.fetchQuestions();
+    this.loaded = true;
+  }
+
+  questionLinkItem() {
+    let sortedQ = this.props.questions.sort((a, b) => {
+      return parseFloat(b.site_hits) - parseFloat(a.site_hits);
+    });
+
+    return sortedQ.slice(0, 5);
+  }
+
+  limitChars(text) {
+    if (text.length < 255) {
+      return text
+    } else {
+      console.log(text)
+      return text.slice(0, 255) + "..."
+    }
+  }
+
+
+
+  topFiveQuestion(){
+    if (this.loaded === false) {
+      return
+    } else {
+      let topFive = this.questionLinkItem();
+      return(
+      <ul className="hot-questions-list">
+          <li>Hot Questions</li>
+      <li>
+          <Link to={`/questions/${topFive[0].id}`}>{topFive[0].title}</Link>
+          <br />
+          <p>{this.limitChars(topFive[0].body)}</p>
+      </li>
+      <li>
+          <Link to={`/questions/${topFive[1].id}`}>{topFive[1].title}</Link>
+          <br />
+          <p>{this.limitChars(topFive[1].body)}</p>
+      </li>
+      <li>
+          <Link to={`/questions/${topFive[2].id}`}>{topFive[2].title}</Link>
+          <br />
+          <p>{this.limitChars(topFive[2].body)}</p>
+      </li>
+      <li>
+          <Link to={`/questions/${topFive[3].id}`}>{topFive[3].title}</Link>
+          <br />
+          <p>{this.limitChars(topFive[3].body)}</p>
+      </li>
+      <li>
+          <Link to={`/questions/${topFive[4].id}`}>{topFive[4].title}</Link>
+          <br />
+          <p>{this.limitChars(topFive[4].body)}</p>
+      </li>
+      </ul>
+      )
+    }
   }
 
 
 
   render() {
     if (this.props.questions[0] === undefined || this.props.questions.length === 0) {
+    // if (this.loaded = false) {
       return(
         <div>
           <br />
@@ -66,15 +126,7 @@ class QuestionsIndex extends React.Component {
 
               <div className="hot-questions-container">
                 <div className="hot-questions">
-                  <ul className="hot-questions-list">
-                  <li>Hot Questions</li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                  </ul>
-
+                  {this.topFiveQuestion()}
                 </div>
               </div>
 
