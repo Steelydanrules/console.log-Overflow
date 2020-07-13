@@ -10,12 +10,11 @@ class QuestionsIndex extends React.Component {
 
   }
 
-
-
   componentDidMount(){
     this.props.fetchQuestions()
-
   }
+
+
 
   render() {
     if (this.props.questions[0] === undefined || this.props.questions.length === 0) {
@@ -63,14 +62,20 @@ class QuestionsIndex extends React.Component {
               
               </ul>
 
-              <div className="hot-questions">
-                <h1>hihihih</h1>                
-              </div>
-
             </div>
 
-              <div className="hot-questions">
-                           asdasdas
+              <div className="hot-questions-container">
+                <div className="hot-questions">
+                  <ul className="hot-questions-list">
+                  <li>Hot Questions</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                  </ul>
+
+                </div>
               </div>
 
 
