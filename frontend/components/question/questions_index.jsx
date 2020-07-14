@@ -42,32 +42,27 @@ class QuestionsIndex extends React.Component {
       let topFive = this.questionLinkItem();
       return(
       <ul className="hot-questions-list">
-          <li>Hot Questions</li>
-      <li>
+          <li className="hot-questions-header">Hot Questions</li>
+      <li className="hot-questions-title">
           <Link to={`/questions/${topFive[0].id}`}>{topFive[0].title}</Link>
-          <br />
-          <p>{this.limitChars(topFive[0].body)}</p>
       </li>
-      <li>
+          <li className="hot-questions-li">{this.limitChars(topFive[0].body)}</li>
+      <li className="hot-questions-title">
           <Link to={`/questions/${topFive[1].id}`}>{topFive[1].title}</Link>
-          <br />
-          <p>{this.limitChars(topFive[1].body)}</p>
       </li>
-      <li>
+          <li className="hot-questions-li">{this.limitChars(topFive[1].body)}</li>
+      <li className="hot-questions-title">
           <Link to={`/questions/${topFive[2].id}`}>{topFive[2].title}</Link>
-          <br />
-          <p>{this.limitChars(topFive[2].body)}</p>
       </li>
-      <li>
+          <li className="hot-questions-li">{this.limitChars(topFive[2].body)}</li>
+      <li className="hot-questions-title">
           <Link to={`/questions/${topFive[3].id}`}>{topFive[3].title}</Link>
-          <br />
-          <p>{this.limitChars(topFive[3].body)}</p>
       </li>
-      <li>
+          <li className="hot-questions-li">{this.limitChars(topFive[3].body)}</li>
+      <li className="hot-questions-title">
           <Link to={`/questions/${topFive[4].id}`}>{topFive[4].title}</Link>
-          <br />
-          <p>{this.limitChars(topFive[4].body)}</p>
       </li>
+          <li className="hot-questions-li">{this.limitChars(topFive[4].body)}</li>
       </ul>
       )
     }
