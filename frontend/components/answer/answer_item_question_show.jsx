@@ -14,6 +14,7 @@ export const AnswerItemInQuestionShow = (props) => {
   }
 
   const shouldIDelete = () => {
+    if (props.currentUser === undefined) return;
     if (currentUser.id === answer.answerer_id) {
       return (
         <button onClick={() => handleDelete()}>Delete</button>
@@ -57,7 +58,7 @@ export const AnswerItemInQuestionShow = (props) => {
     >
           <p>{answer.body}</p>
 
-      {/* {shouldIDelete()} */}
+      {shouldIDelete()}
       {/* <button onClick={() => handleDelete()}>Delete</button> */}
 
     </body>
