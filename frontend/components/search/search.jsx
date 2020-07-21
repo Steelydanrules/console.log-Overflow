@@ -11,16 +11,61 @@ class Search extends React.Component {
 
 
   componentDidMount() {
-
+    
   }
 
   render() {
     if (this.props.questions[0] === undefined || this.props.questions.length === 0) {
       return (
-        <div style={{marginLeft: "30%", paddingBottom: "30%", paddingTop: "25px"}}>
-          <br />
-          <br />
-          no results :( Please try another phrase
+        <div className="question-index-container">
+          <div className="question-index-left">
+
+            <Link to="/questions">
+              <button className="left-nav-home-button">
+                Home
+              </button>
+            </Link>
+
+            <ul className="left-nav-link-list">
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://github.com/Steelydanrules'}>
+                    Github
+                </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://www.linkedin.com/in/karlkonetsky/'}>
+                LinkedIn
+                </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://angel.co/u/karl-konetsky'}>
+                Angellist
+                </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://steelydanrules.github.io/Karl_Konetsky.github.io/'}>
+                Personal
+                </li>
+            </ul>
+
+          </div>
+
+          <div className="question-index-right">
+            <div className="questions-index-header"
+              style={{ marginBottom: "600px" }}>
+              <h3>Please try another phrase!</h3>
+              <Link to={'/questions/new'}>
+                <button
+                  className="ask-a-question-button-show"
+                >Ask Question</button>
+              </Link>
+            </div>
+
+          </div>
+
+
+
         </div>
       )
     } else {
@@ -34,6 +79,29 @@ class Search extends React.Component {
                 Home
               </button>
             </Link>
+
+            <ul className="left-nav-link-list">
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://github.com/Steelydanrules'}>
+                    Github
+              </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://www.linkedin.com/in/karlkonetsky/'}>
+                LinkedIn
+                </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://angel.co/u/karl-konetsky'}>
+                Angellist
+                </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://steelydanrules.github.io/Karl_Konetsky.github.io/'}>
+                Personal
+                </li>
+            </ul>
 
           </div>
 

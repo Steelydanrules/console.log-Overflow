@@ -203,26 +203,26 @@ a {
   }
 
   #logout-button {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
     background-color: #E1ECF4;
     cursor: pointer;
     border-radius: 5px;
     height:35px;
-    width: 65px;
+    width: 75px;
     color: #39739D;
     box-shadow:inset 0px 1px 0px 0px #F6F9FC;
     border: 1px solid #39739D;
   }
   
   #logout-button:hover {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
     background-color: #B3D3EA;
     cursor: pointer;
     border-radius: 5px;
     height:35px;
-    width: 65px;
+    width: 75px;
     box-shadow:inset 0px 1px 0px 0px #E2EFF7;
     border: 1px solid #39739D;
     

@@ -42,7 +42,7 @@ class QuestionsIndex extends React.Component {
       let topFive = this.questionLinkItem();
       return(
       <ul className="hot-questions-list">
-          <li className="hot-questions-header">Hot Questions</li>
+          <li className="hot-questions-header" style={{fontSize: "32px", textAlign:"center"}}>Hot Questions</li>
       <li className="hot-questions-title">
           <Link to={`/questions/${topFive[0].id}`}>{topFive[0].title}</Link>
       </li>
@@ -90,7 +90,30 @@ class QuestionsIndex extends React.Component {
                 Home
               </button>
               </Link>
-              
+
+              <ul className="left-nav-link-list">
+                <li className="left-nav-link-item"
+                  onClick={event => window.location.href =
+                    'https://github.com/Steelydanrules'}>
+                      Github
+                </li>
+                <li className="left-nav-link-item"
+                  onClick={event => window.location.href =
+                    'https://www.linkedin.com/in/karlkonetsky/'}>
+                  LinkedIn
+                </li>
+                <li className="left-nav-link-item"
+                  onClick={event => window.location.href =
+                    'https://angel.co/u/karl-konetsky'}>
+                  Angellist
+                </li>
+                <li className="left-nav-link-item"
+                  onClick={event => window.location.href =
+                    'https://steelydanrules.github.io/Karl_Konetsky.github.io/'}>
+                  Personal
+                </li>
+              </ul>
+
             </div>
 
             <div className="question-index-right">

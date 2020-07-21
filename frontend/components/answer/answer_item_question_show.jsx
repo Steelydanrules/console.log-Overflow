@@ -2,14 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export const AnswerItemInQuestionShow = (props) => {
-  let { answer, answerId } = props;
+  let { answer, answerId, currentUser } = props;
   let thisUser
+
 
   const handleDelete = () => {
 
     props.deleteAnswer(answerId)
     // window.location.reload();
 
+  }
+
+  const shouldIDelete = () => {
+    debugger
+    if (currentUser.id === answer.answerer_id) {
+      return (
+        <button onClick={() => handleDelete()}>Delete</button>
+      )
+    }
   }
 
   
@@ -43,7 +53,8 @@ export const AnswerItemInQuestionShow = (props) => {
     >
           <p>{answer.body}</p>
 
-      <button onClick={() => handleDelete()}>delete</button>
+      {shouldIDelete()}
+      {/* <button onClick={() => handleDelete()}>Delete</button> */}
 
     </body>
 

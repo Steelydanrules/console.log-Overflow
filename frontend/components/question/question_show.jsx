@@ -83,6 +83,8 @@ class QuestionsShow extends React.Component {
         </>
       )
       } else {
+        //this.props.currentUser
+        //answer.answerer_id
         return(
         <AnswerItemInQuestionShow
         key={idx}
@@ -131,14 +133,36 @@ class QuestionsShow extends React.Component {
       const [{ value: month }, , { value: day }, , { value: year }] = dateTimeFormat.formatToParts(date)
       return (
         <div className="question-show-container">
-          <div className="question-show-left">
- 
+          <div className="question-index-left">
+
             <Link to="/questions">
               <button className="left-nav-home-button">
                 Home
               </button>
-              
             </Link>
+
+            <ul className="left-nav-link-list">
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://github.com/Steelydanrules'}>
+                    Github
+              </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://www.linkedin.com/in/karlkonetsky/'}>
+                LinkedIn
+                </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://angel.co/u/karl-konetsky'}>
+                Angellist
+                </li>
+              <li className="left-nav-link-item"
+                onClick={event => window.location.href =
+                  'https://steelydanrules.github.io/Karl_Konetsky.github.io/'}>
+                Personal
+                </li>
+            </ul>
 
           </div>
 
