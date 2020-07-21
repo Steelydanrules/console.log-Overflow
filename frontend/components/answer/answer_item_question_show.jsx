@@ -57,7 +57,7 @@ export const AnswerItemInQuestionShow = (props) => {
     >
           <p>{answer.body}</p>
 
-      {shouldIDelete()}
+      {/* {shouldIDelete()} */}
       {/* <button onClick={() => handleDelete()}>Delete</button> */}
 
     </body>
