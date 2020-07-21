@@ -3,5 +3,14 @@ button:focus {
 }
 
 button {
+    font-family: 'Work Sans', sans-serif;
     border: none;
+}
+
+a {
+
+    font-family: 'Work Sans', sans-serif;
+}
+div{
+    font-family: 'Work Sans', sans-serif;
 }

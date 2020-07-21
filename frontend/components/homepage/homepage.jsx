@@ -91,7 +91,9 @@ class Homepage extends React.Component {
             roles based on title, technology stack, salary, location, and more.</p>
             <br />
               <form action="https://www.linkedin.com/in/karlkonetsky/">
-                <input type="submit" className="by-dev-button-bottom" value="View that candidate!" />
+                <input type="submit" className="by-dev-button-bottom"
+                    style={{ fontFamily: "Work Sans, sans-serif"}}
+                value="View that candidate!" />
             </form>
             </li>
             </div>

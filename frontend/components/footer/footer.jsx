@@ -45,10 +45,10 @@ class Footer extends React.Component {
         <ul className="links-to-sites"
         style={{ listStyle: "none" }}>
         <li>
-          <img src={window.footerStackOverflow}
+          <img src={window.footerAngelList}
           className="footer-link"
           onClick={event => window.location.href =
-            'https://stackoverflow.com/users/13608231/karl-konetsky'}
+            'https://angel.co/u/karl-konetsky'}
             />
         </li>
         <li>
