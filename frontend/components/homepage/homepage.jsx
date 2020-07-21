@@ -35,7 +35,10 @@ class Homepage extends React.Component {
           <br />
 
         <div className="top-buttons-homepage">
-            <button className="white-button">My Personal Site</button>
+            <button className="white-button"
+              onClick={event => window.location.href =
+            'https://steelydanrules.github.io/Karl_Konetsky.github.io/'}
+            >My Personal Site</button>
 
             <Link to="/questions">
             <button className="orange-button">

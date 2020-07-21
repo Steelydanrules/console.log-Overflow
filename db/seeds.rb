@@ -118,8 +118,8 @@ question_3 = Question.create!(
 
 question_4 = Question.create!(
   asker_id: User.first.id,  
-  title: "I'm running out of remotely clever/interesting things to say",
-  body: "Seeding is harder than i thought",
+  title: "Are The Kinks better than the Beatles?",
+  body: "It's hard to say",
   tag: "DEMO",
   site_hits: 0
 )
@@ -127,7 +127,7 @@ question_4 = Question.create!(
 question_5 = Question.create!(
   asker_id: User.second.id,  
   title: "What happened at the end of the Sopranos?",
-  body: "did tony die",
+  body: "DID TONY DIE?? WHY DID IT END OUT OF NOWHERE?",
   tag: "DEMO",
   site_hits: 0
 )
@@ -135,7 +135,7 @@ question_5 = Question.create!(
 question_6 = Question.create!(
   asker_id: User.first.id,  
   title: "Will shakhtar ever win the world cup?",
-  body: "idk anything about soccer.  is that a real thing?",
+  body: "idk anything about soccer. is that a real thing?",
   tag: "DEMO",
   site_hits: 0
 )
@@ -143,7 +143,7 @@ question_6 = Question.create!(
 question_7 = Question.create!(
   asker_id: User.second.id,  
   title: "I cant wait for this project to finally look good (assuming that ever happens)",
-  body: "Body body body",
+  body: "Body bodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybody",
   tag: "DEMO",
   site_hits: 0
 )
@@ -158,8 +158,8 @@ question_8 = Question.create!(
 
 question_9 = Question.create!(
   asker_id: user_9.id,  
-  title: "are mozilla docs reliable?",
-  body: "I mean who uses firefox anymore",
+  title: "Are Mozilla docs reliable??!!?!?!?",
+  body: "I mean who uses Firefox anymore?!?!?!",
   tag: "DEMO",
   site_hits: 0
 )

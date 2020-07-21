@@ -3,7 +3,10 @@ padding-top: 43px;
 display: flex;
 height: 80%;
 padding-bottom: -10px;
+  overflow-x: hidden;
 }
+
+
 
 .question-show-left{
   /* background: red; */
