@@ -14,10 +14,14 @@ export const AnswerItemInQuestionShow = (props) => {
   }
 
   const shouldIDelete = () => {
-    debugger
     if (currentUser.id === answer.answerer_id) {
       return (
         <button onClick={() => handleDelete()}>Delete</button>
+      )
+    } else {
+      return(
+        <>
+        </>
       )
     }
   }
