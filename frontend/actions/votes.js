@@ -22,7 +22,7 @@ export const postVote = (vote) => dispatch => {
   debugger
   return(
   VOTEUtil.postVote(vote)
-  // )}
+  // )};
       .then((vote) => dispatch(receiveVote(vote))))};
 
 export const fetchVotes = (questionId) => dispatch => (

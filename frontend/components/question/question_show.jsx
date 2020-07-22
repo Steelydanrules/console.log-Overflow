@@ -6,13 +6,12 @@ import { withRouter } from 'react-router-dom';
 
 class QuestionsShow extends React.Component {
   constructor(props) {
-    // debugger
     super(props);
-    debugger
-    // this.state = this.props;
     this.answerBox = this.answerBox.bind(this);
     this.possibleAnswer = this.possibleAnswer.bind(this);
+    this.figureOutKarma = this.figureOutKarma.bind(this);
     this.loaded = false;
+    this.sent = 0;
   }
 
   specificUser(targetId){
@@ -32,16 +31,31 @@ class QuestionsShow extends React.Component {
 
   figureOutKarma(){
     if (this.loaded === false) return;
-    debugger
     let score = 0;
+    let counted = [];
     this.props.votes.forEach(vote => {
-    // this.state.votes.forEach(vote => {
-      if (vote.like_or_dislike === "LIKE") {
-        score += 1;
-      } else {
-        score -= 1;
-      }
+      if (counted.indexOf(vote.liker_id) === -1) {
+        if (vote.like_or_dislike === "LIKE") {
+          score += 1;
+        } else {
+          score -= 1;
+        }
+        counted.push(vote.liker_id);
+      };
+
     })
+    
+    if (this.sent === 0) {
+      this.sent += 1
+      this.props.fetchVotes(this.props.match.params.id);
+      this.figureOutKarma();
+    } else if(this.sent === 1) {
+      this.sent += 1;
+    } else {
+      this.sent = 0;
+    }
+    
+    
     return score;
   }
 
@@ -83,8 +97,6 @@ class QuestionsShow extends React.Component {
         </>
       )
       } else {
-        //this.props.currentUser
-        //answer.answerer_id
         return(
         <AnswerItemInQuestionShow
         key={idx}
@@ -101,16 +113,16 @@ class QuestionsShow extends React.Component {
     }
 
   upVote(){
+    console.log(this.props)
     let toSend = {like_or_dislike: "LIKE", question_id: this.props.match.params.id};
-    debugger
     this.props.postVote(toSend);
     this.props.fetchVotes(this.props.match.params.id);
     this.forceUpdate();
   }
 
   downVote(){
+    console.log(this.props)
     let toSend = {like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
-    debugger
     this.props.postVote(toSend);
     this.props.fetchVotes(this.props.match.params.id);
     this.forceUpdate();
@@ -155,7 +167,7 @@ class QuestionsShow extends React.Component {
               <li className="left-nav-link-item"
                 onClick={event => window.location.href =
                   'https://angel.co/u/karl-konetsky'}>
-                Angellist
+                Angel List
                 </li>
               <li className="left-nav-link-item"
                 onClick={event => window.location.href =

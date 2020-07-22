@@ -40,9 +40,10 @@ class Search extends React.Component {
               <li className="left-nav-link-item"
                 onClick={event => window.location.href =
                   'https://angel.co/u/karl-konetsky'}>
-                Angellist
+                Angel List
                 </li>
               <li className="left-nav-link-item"
+                style={{ marginBottom: "1px" }}
                 onClick={event => window.location.href =
                   'https://steelydanrules.github.io/Karl_Konetsky.github.io/'}>
                 Personal
@@ -53,7 +54,8 @@ class Search extends React.Component {
 
           <div className="question-index-right">
             <div className="questions-index-header"
-              style={{ marginBottom: "600px" }}>
+              style={{ marginBottom: "60vh" }}
+              >
               <h3>Please try another phrase!</h3>
               <Link to={'/questions/new'}>
                 <button
@@ -63,9 +65,6 @@ class Search extends React.Component {
             </div>
 
           </div>
-
-
-
         </div>
       )
     } else {
@@ -94,7 +93,7 @@ class Search extends React.Component {
               <li className="left-nav-link-item"
                 onClick={event => window.location.href =
                   'https://angel.co/u/karl-konetsky'}>
-                Angellist
+                Angel List
                 </li>
               <li className="left-nav-link-item"
                 onClick={event => window.location.href =

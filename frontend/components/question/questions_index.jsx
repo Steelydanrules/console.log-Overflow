@@ -105,7 +105,7 @@ class QuestionsIndex extends React.Component {
                 <li className="left-nav-link-item"
                   onClick={event => window.location.href =
                     'https://angel.co/u/karl-konetsky'}>
-                  Angellist
+                  Angel List
                 </li>
                 <li className="left-nav-link-item"
                   onClick={event => window.location.href =
