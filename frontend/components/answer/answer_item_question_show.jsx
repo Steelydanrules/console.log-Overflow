@@ -2,12 +2,44 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export const AnswerItemInQuestionShow = (props) => {
+  debugger
   let { answer, answerId, currentUser } = props;
   let thisUser
 
 
   const handleDelete = () => {
     props.deleteAnswer(answerId)
+
+  }
+
+  const upVote = () => {
+    let toSend = { like_or_dislike: "LIKE", answer_id: answerId };
+    props.postAnswerVote(toSend);
+    props.fetchAnswerVotes(answerId);
+  }
+
+  const downVote = () => {
+    let toSend = { like_or_dislike: "DISLIKE", answer_id: answerId };
+    props.postAnswerVote(toSend);
+    props.fetchAnswerVotes(answerId);
+  }
+
+
+
+  const figureOutKarma = () => {
+    if (props.votes.length === 0) return 0;
+    let karma = 0;
+    for (let i = 0; i < props.votes.length; i++) {
+      let vote = props.votes[i];
+      if (vote.like_or_dislike === "LIKE") {
+        karma++
+      } else {
+        karma--;
+      }
+    }
+
+    return karma;
+
 
   }
 
@@ -36,22 +68,30 @@ export const AnswerItemInQuestionShow = (props) => {
     }
 
   return(
-    <div className="entire-answer">
+    <div className="entire-answer"
+    key={props.idx}
+    >
       <hr />
 
 
 
-    <li className="answer-on-q-index">
+    <li className="answer-on-q-index"
+    key={props.idx}
+    >
 
       <div className="answers">
-        <i className="fas fa-sort-up fa-3x answer-votes-up" />
+        <i className="fas fa-sort-up fa-3x answer-votes-up"
+        onClick={() => upVote()}
+        />
 
-        <h3>   0</h3>
+        <h3>{figureOutKarma()}</h3>
 
-        <i className="fas fa-sort-down fa-3x answer-votes-down" />
+        <i className="fas fa-sort-down fa-3x answer-votes-down"
+        onClick={() => downVote()}
+        />
       </div>
 
-    <body className="top-of-q-index"
+    <div className="top-of-q-index"
     style={{fontSize: "15px" }}
     >
           <p>{answer.body}</p>
@@ -59,17 +99,17 @@ export const AnswerItemInQuestionShow = (props) => {
       {shouldIDelete()}
       {/* <button onClick={() => handleDelete()}>Delete</button> */}
 
-    </body>
+    </div>
 
     {/* <Link to={`/answers/${answerId}/edit`}>Edit</Link> */}
 
-    <body className="answer-item-in-question">
+    <div className="answer-item-in-question">
 
 
 
       <div className="bottom-right">
 
-        <text>answerer:</text>
+          <p className="formerly-text">answerer:</p>
         <br />
           <Link to={`/users/${thisUser.id}`}
             style={{ color: "#0077CC", fontSize: "12px" }}
@@ -82,7 +122,7 @@ export const AnswerItemInQuestionShow = (props) => {
           </Link>
 
       </div>
-    </body>
+    </div>
   </li>
   </div>
 )}

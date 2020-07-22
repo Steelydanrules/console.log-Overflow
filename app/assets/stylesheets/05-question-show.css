@@ -277,13 +277,13 @@ padding-bottom: -10px;
     height: 75px;
     width: 150px;
     bottom: 5px;
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
-  .bottom-right text{
-  font-size: 12px;
+  .formerly-text{
+  font-size: 16px;
   color: #848D95;
-  padding-top: -15px;
+  margin-top: -15px;
 }
 
 .answer-on-q-index{

@@ -11,7 +11,7 @@ class Answer < ApplicationRecord
   foreign_key: :answerer_id,
   class_name: :User
 
-  has_many :votes,
+  has_many :answer_votes,
   foreign_key: :answer_id,
   class_name: :AnswerVote
 

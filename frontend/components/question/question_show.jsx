@@ -99,21 +99,23 @@ class QuestionsShow extends React.Component {
       } else {
         return(
         <AnswerItemInQuestionShow
-        key={idx}
-          className="answer-on-q-index"
-          answerId={answer.id}
-          answerers={this.props.question.users_who_answered_question}
-          answer={answer}
-          currentUser={this.props.currentUser}
-          patchAnswer={this.props.patchAnswer}
-          deleteAnswer={this.props.deleteAnswer}
-          />
+        idx={idx}
+        votes={this.props.answerVotes}
+        postAnswerVote={this.props.postAnswerVote}
+        fetchAnswerVotes={this.props.fetchAnswerVotes}
+        className="answer-on-q-index"
+        answerId={answer.id}
+        answerers={this.props.question.users_who_answered_question}
+        answer={answer}
+        currentUser={this.props.currentUser}
+        patchAnswer={this.props.patchAnswer}
+        deleteAnswer={this.props.deleteAnswer}
+        />
           )
       }
     }
 
   upVote(){
-    console.log(this.props)
     let toSend = {like_or_dislike: "LIKE", question_id: this.props.match.params.id};
     this.props.postVote(toSend);
     this.props.fetchVotes(this.props.match.params.id);
@@ -121,7 +123,6 @@ class QuestionsShow extends React.Component {
   }
 
   downVote(){
-    console.log(this.props)
     let toSend = {like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
     this.props.postVote(toSend);
     this.props.fetchVotes(this.props.match.params.id);
@@ -154,21 +155,25 @@ class QuestionsShow extends React.Component {
 
             <ul className="left-nav-link-list">
               <li className="left-nav-link-item"
+                  key="1"
                 onClick={event => window.location.href =
                   'https://github.com/Steelydanrules'}>
                     Github
               </li>
               <li className="left-nav-link-item"
+                  key="2"
                 onClick={event => window.location.href =
                   'https://www.linkedin.com/in/karlkonetsky/'}>
                 LinkedIn
                 </li>
               <li className="left-nav-link-item"
+                  key="3"
                 onClick={event => window.location.href =
                   'https://angel.co/u/karl-konetsky'}>
                 Angel List
                 </li>
               <li className="left-nav-link-item"
+                  key="4"
                 onClick={event => window.location.href =
                   'https://steelydanrules.github.io/Karl_Konetsky.github.io/'}>
                 Personal
