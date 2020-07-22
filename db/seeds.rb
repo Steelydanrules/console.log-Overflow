@@ -110,8 +110,8 @@ question_2 = Question.create!(
 
 question_3 = Question.create!(
   asker_id: user_3.id,
-  title: "Is Ringo Starr the best Beatle?",
-  body: "The guy could really swing em",
+  title: "Why is every profile picture on this site a player from the 2013-2014 NY Rangers?",
+  body: "They were completely robbed of a fair shake at Lord Stanley's Cup that year",
   tag: "DEMO",
   site_hits: 0
 )
@@ -119,31 +119,31 @@ question_3 = Question.create!(
 question_4 = Question.create!(
   asker_id: User.first.id,  
   title: "Are The Kinks better than the Beatles?",
-  body: "It's hard to say",
+  body: "It's very possible",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_5 = Question.create!(
   asker_id: User.second.id,  
-  title: "What happened at the end of the Sopranos?",
-  body: "DID TONY DIE?? WHY DID IT END OUT OF NOWHERE?",
+  title: "Why are programmers obsessed with cats?",
+  body: "I like cats, don't get me wrong; but every question online is cat this, feline that",
   tag: "DEMO",
   site_hits: 0
 )
 
 question_6 = Question.create!(
   asker_id: User.first.id,  
-  title: "Will shakhtar ever win the world cup?",
-  body: "idk anything about soccer. is that a real thing?",
+  title: "Will Shakhtar ever win the world cup?",
+  body: "IDK anything about soccer. Is that a real thing?",
   tag: "DEMO",
   site_hits: 0
 )
   
 question_7 = Question.create!(
   asker_id: User.second.id,  
-  title: "I cant wait for this project to finally look good (assuming that ever happens)",
-  body: "Body bodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybody",
+  title: "When is Le Mans?",
+  body: "This is my first time on a computer and I don't know how to Google",
   tag: "DEMO",
   site_hits: 0
 )
@@ -174,7 +174,7 @@ question_10 = Question.create!(
 
 question_11 = Question.create!(
   asker_id: user_11.id,
-  title: "I'm asking a long question to show off the great CSS styling I've achieved",
+  title: "I'm asking a long question to test the CSS styling",
   body: "Contrary to popular belief, Lorem Ipsum is not simply random text. 
   It has roots in a piece of classical Latin literature from 45 BC, making it 
   over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney 

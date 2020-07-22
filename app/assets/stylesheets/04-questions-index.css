@@ -25,7 +25,7 @@ html{
   flex-basis: 42%;
   margin-left: 25%;
   height: 100%; 
-  overflow: auto;
+  overflow: hidden;
   border-left: 2px solid #D6D9DC;
   font-family: 'Work Sans', sans-serif;
 }
