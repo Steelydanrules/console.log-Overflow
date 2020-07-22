@@ -31,7 +31,7 @@ As seen in my package.json:
 
 **Challenges**\
 One difficulty was the splash page--there's a lot going on. Towards the bottom of the page, I wanted to have an image w/ text show/disappear depending on where the user clicks. I did this in React combined with some vanilla JS properties. When a picure is clicked, it finds the picture with that ID, changes the class to one with a property to show, and the one that is currently showing is changed to hidden. It allows for a smooth and seamless transition between images/text.
-![show-image-1](app/assets/images/Challenge-1.png)\
+![show-image-1](app/assets/images/Challenge-1.png)
 
 First, we place all of the images on the window.  The default image/text (1) is showing at first.
 
@@ -87,7 +87,7 @@ The onClick function passes a number into this formula, telling our browser whic
 
 Another difficulty was creating the search method. What I ended up doing was creating an if/else if statement on the questions index controller in order to allow for a searchData param. If a searchData param is passed into the controller, the app will query every question in the d/b and check if there is a matching string of text to the question's body. I made it so each question and answer would be downcase to avoid case-sensitive miss. The JSON sent back to the frontend will only be the questions with that matching string in any part of the body.
 
-![show-image-1](app/assets/images/Challenge-2.png)\
+![show-image-1](app/assets/images/Challenge-2.png)
 
   def index
       if params`[:asker_id]`
@@ -113,6 +113,8 @@ Another difficulty was creating the search method. What I ended up doing was cre
       render :index
     end
 
+**Looking Ahead**\
+I'm like to add tags in the future, as well as fake advertisements to give it the real Stack Overflow feel.
 
 <!-- **W1D1:**
 
