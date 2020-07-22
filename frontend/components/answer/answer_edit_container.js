@@ -3,7 +3,6 @@ import { postAnswer, fetchAnswer } from '../../actions/answers';
 import AnswerEdit from './answer_edit'
 
 const mSP = (state, ownProps) => {
-  debugger
   return({
   answer: state.entities.answers[ownProps.match.params.answerId]
 })};

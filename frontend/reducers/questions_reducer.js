@@ -11,8 +11,6 @@ const questionsReducer = (state = {}, action) => {
     case RECEIVE_QUESTION:
       return Object.assign({}, {[action.question.id] : action.question} );
     case RECEIVE_QUESTIONS:
-      // const newObj = {};
-      // action.questions.forEach(quest => newObj[quest.id] = quest)
       return Object.assign({}, state, action.questions);
     case RECEIVE_ANSWER:
       console.log(this)

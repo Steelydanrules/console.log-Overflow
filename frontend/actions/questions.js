@@ -26,9 +26,6 @@ const removeQuestion = (questionId) => {
   })
 };
 
-// export const addViewQuestion = (questionId) => (
-//   QUESTIONUtil.addViewQuestion(questionId))
-
 export const fetchQuestions = () => dispatch => (
   QUESTIONUtil.fetchQuestions()
   .then(questions => dispatch(receiveQuestions(questions))));

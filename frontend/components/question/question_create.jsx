@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 
 class QuestionCreate extends React.Component {
   constructor(props) {
-    // debugger
     super(props);
 
     this.state = this.props.question;
@@ -17,7 +16,6 @@ class QuestionCreate extends React.Component {
     e.preventDefault();
     this.props.postQuestion(this.state)
     this.setState({title: "",body: "",tag: ""})
-    debugger
     this.props.history.push('/questions')
 
 

@@ -10,9 +10,7 @@ const votesReducer = (state = {}, action) => {
       
 
       return Object.assign({}, state, {[action.vote.id] : action.vote });
-      // return Object.assign({}, state.vote);
     case RECEIVE_VOTES:
-      debugger
       return action.votes;
     default:
       return state;

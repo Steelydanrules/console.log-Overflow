@@ -6,12 +6,10 @@ import { postVote, fetchVotes } from '../../actions/votes';
 
 const mSP = (state, ownProps) => {
   const question = state.entities.questions[ownProps.match.params.id];
-  debugger
   let answers;
   let votes = Object.values(state.entities.votes);
   if (question) {
   answers = question.answer_ids.map(answerId => state.entities.answers[answerId]);
-  debugger
   }
   const session = state.session.id;
   if (session === undefined) {
@@ -40,8 +38,6 @@ const mDP = dispatch => ({
   deleteAnswer: (answerId) => dispatch(deleteAnswer(answerId)),
   fetchVotes: (questionId) => dispatch(fetchVotes(questionId)),
   postVote: (vote) => dispatch(postVote(vote))
-
-  // fetchAnswer: (answerId) => dispatch(fetchAnswer(answerId))
 })
 
 export default connect(mSP, mDP)(QuestionShow)

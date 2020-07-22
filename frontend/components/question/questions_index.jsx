@@ -8,7 +8,6 @@ class QuestionsIndex extends React.Component {
   constructor(props) {
     super(props);
     this.loaded = false;
-    // this.topFiveQuestion = this.topFiveQuestion.bind(this)
   }
 
   componentDidMount(){
@@ -73,7 +72,6 @@ class QuestionsIndex extends React.Component {
 
   render() {
     if (this.props.questions[0] === undefined || this.props.questions.length === 1) {
-    // if (this.loaded = false) {
       return(
         <div style={{ marginBottom: "1800px" }}>
           <br />

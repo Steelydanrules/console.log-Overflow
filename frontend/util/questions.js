@@ -41,11 +41,3 @@ export const deleteQuestion = (questionId) => (
     method: 'DELTE'
   })
 );
-
-// export const addViewQuestion = (questionId) => {
-//   return(
-//   $.ajax({
-//     url: `/api/questions/${questionId}/add_view`,
-//     method: 'POST'
-//   })
-// )};

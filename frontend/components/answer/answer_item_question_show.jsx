@@ -7,9 +7,7 @@ export const AnswerItemInQuestionShow = (props) => {
 
 
   const handleDelete = () => {
-
     props.deleteAnswer(answerId)
-    // window.location.reload();
 
   }
 

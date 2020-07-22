@@ -21,11 +21,6 @@ class AnswerEdit extends React.Component {
 
 
   handleSubmit(e) {
-    // e.preventDefault();
-    // let submitThis = Object.assign({ question_id: this.props.questionId }, this.state)
-    // this.props.postAnswer(submitThis)
-    // this.setState({ body: "" })
-    // this.forceUpdate()
   }  
 
 
@@ -42,7 +37,6 @@ class AnswerEdit extends React.Component {
         </div>
       )
     } else {
-      debugger
       return(
       <div className="answer-create-form">
         <form className="answer-create-actual-form"

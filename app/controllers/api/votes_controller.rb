@@ -11,7 +11,7 @@ class Api::VotesController < ApplicationController
   def create
     @vote = Vote.new(vote_params)
     @vote.liker_id = current_user.id
-    # debugger
+    # 
     votes = Question.find(vote_params[:question_id]).votes
     votes.each do |vote|
       if vote.liker_id == current_user.id

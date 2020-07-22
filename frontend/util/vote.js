@@ -7,7 +7,6 @@ export const postVote = (vote) => (
 );
 
 export const fetchVotes = (questionId) => {
-  debugger
   return (
     $.ajax({
       url: `/api/questions/${questionId}/votes`

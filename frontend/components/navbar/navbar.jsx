@@ -1,14 +1,6 @@
 import React from 'react';
 import { Link, Redirect, Route } from 'react-router-dom';
 
-// import defaultLogo  from '../images/titlenotscrolled.png'
-
-// {window.blankLoveToCodeURL}
-// {window.circleOrangeIcon} 
-// {window.icon} 
-// {window.titlenotscrolled} 
-// {window.titlescrolled} 
-
 class NavBar extends React.Component{
   constructor(props){
     super(props);
@@ -24,9 +16,10 @@ class NavBar extends React.Component{
   handleChange(e){
     this.setState({searchBar: e.currentTarget.value})
   } 
-
+  
   actualSearch(e){
-    e.preventDefault()
+    e.preventDefault();
+    debugger
     this.props.searchQuestions(this.state.searchBar)
     this.props.history.push('/search')
   }

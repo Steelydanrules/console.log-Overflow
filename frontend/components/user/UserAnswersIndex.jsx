@@ -12,20 +12,14 @@ const limitText = (text) => {
 
 const UserAnswersIndex = (props) => {
 
-  
-  // debugger
-  // let testThis = Object.values(this.props.fetchQuestions())
-  // debugger
   console.log(props)
   if (props.user.questions_answered === undefined || props.user.questions_answered.length === 0) {
-    // debugger
     return (
       <div className="user-answers-index-blank" style={{ fontStyle: 'italic' }}>
         {props.user.username} has not answered any Questions.
       </div>
     )
   } else {
-    // debugger
     return (
       <ul className="user-answers-index" style={{ listStyle: "none", fontSize: '12px' }}>
         {props.user.questions_answered.map(answer => (
