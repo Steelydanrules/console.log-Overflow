@@ -1,0 +1,1 @@
+json.partial! 'api/answer_votes/answer_vote', answer_vote: @answer_vote

@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_30_011417) do
+ActiveRecord::Schema.define(version: 2020_07_22_172840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answer_votes", force: :cascade do |t|
+    t.integer "liker_id", null: false
+    t.integer "answer_id", null: false
+    t.string "like_or_dislike", null: false
+    t.index ["answer_id"], name: "index_answer_votes_on_answer_id"
+    t.index ["like_or_dislike"], name: "index_answer_votes_on_like_or_dislike"
+    t.index ["liker_id"], name: "index_answer_votes_on_liker_id"
+  end
 
   create_table "answers", force: :cascade do |t|
     t.integer "answerer_id", null: false
