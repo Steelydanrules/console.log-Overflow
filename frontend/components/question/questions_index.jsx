@@ -38,6 +38,7 @@ class QuestionsIndex extends React.Component {
   topFiveQuestion(){
     if (this.loaded === false) {
       return
+      
     } else {
       let topFive = this.questionLinkItem();
       return(
@@ -71,13 +72,13 @@ class QuestionsIndex extends React.Component {
 
 
   render() {
-    if (this.props.questions[0] === undefined || this.props.questions.length === 0) {
+    if (this.props.questions[0] === undefined || this.props.questions.length === 1) {
     // if (this.loaded = false) {
       return(
-        <div>
+        <div style={{ marginBottom: "1800px" }}>
           <br />
           <br />
-          LOADING
+          <br />
         </div>
       )} else {
         return(

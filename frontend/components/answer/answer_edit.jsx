@@ -39,7 +39,6 @@ class AnswerEdit extends React.Component {
           <br />
           <br />
           <br />
-          Loading
         </div>
       )
     } else {

@@ -8,12 +8,6 @@ class Search extends React.Component {
 
   }
 
-
-
-  componentDidMount() {
-    
-  }
-
   render() {
     if (this.props.questions[0] === undefined || this.props.questions.length === 0) {
       return (

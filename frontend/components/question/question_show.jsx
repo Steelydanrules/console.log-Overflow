@@ -132,11 +132,10 @@ class QuestionsShow extends React.Component {
   render() {
     if (this.loaded === false || this.props.question === undefined) {
       return (
-        <div>
+        <div style={{marginBottom: "1800px"}}>
           <br />
           <br />
           <br />
-          LOADING
         </div>
       )
     } else {
