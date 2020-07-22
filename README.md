@@ -1,35 +1,36 @@
-# README
+# README - console.log Overflow
+![show-image](app/assets/images/ScrollLogo.png)
+
+**The Basics:**
+console.log Overflow is a clone of one of the most essential websites for any programmer: Stack Overflow. Similar to Stack Overflow, a user can create an account, post questions, post answers, vote on questions, search, & browse questions/answers. Feel free to create an account and post or browse (the very insightful questions) on my clone.
+
+**Live Site:**
+https://console-log-overflow-aa.herokuapp.com/#/
+
+**The Tech Used:** 
+This clone was built using React-Redux on the frontend and Ruby-on-Rails & Postgres on the backend. 
+
+**Dependencies**
+As seen in my package.json:
+
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "javascript-time-ago": "^2.0.7",
+    "parcel": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**W1D1:**
+<!-- **W1D1:**
 
 put on heroku
 
@@ -74,4 +75,4 @@ topbar: links to my userpage, dropdown for settings, asked questions(bonus)
 - fake ads
 
 **W2D4:** 
-- hit on bonus and fix what doesn't work(sure there will be debugging)
+- hit on bonus and fix what doesn't work(sure there will be debugging) -->
