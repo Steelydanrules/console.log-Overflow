@@ -13,3 +13,13 @@ export const fetchAnswerVotes = (answerId) => {
     })
   )
 };
+
+export const fetchAnswerVotestoQuestion = (id) => {
+  return (
+    $.ajax({
+      url: `/api/answer_votes/${id}`,
+      method: 'GET'
+    })
+  )
+};
+

@@ -20,6 +20,11 @@ class Question < ApplicationRecord
   foreign_key: :question_id,
   class_name: :Vote
 
+  has_many :votes_on_answers,
+  through: :answers,
+  source: :answer_votes
+  
+
   # def at_least_one_site_hit 
   #   if this.sit_hits = nil
   #     this.site_hits = 0

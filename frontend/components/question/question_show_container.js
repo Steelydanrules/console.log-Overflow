@@ -3,7 +3,7 @@ import { fetchQuestion } from '../../actions/questions';
 import QuestionShow from './question_show'
 import { fetchAnswers, patchAnswer, deleteAnswer } from '../../actions/answers';
 import { postVote, fetchVotes } from '../../actions/votes';
-import { postAnswerVote, fetchAnswerVotes } from '../../actions/answer_votes';
+import { postAnswerVote, fetchAnswerVotes, fetchAnswerVotestoQuestion } from '../../actions/answer_votes';
 
 const mSP = (state, ownProps) => {
   const question = state.entities.questions[ownProps.match.params.id];
@@ -43,6 +43,7 @@ const mDP = dispatch => ({
   fetchVotes: (questionId) => dispatch(fetchVotes(questionId)),
   postVote: (vote) => dispatch(postVote(vote)),
   fetchAnswerVotes: (answerId) => dispatch(fetchAnswerVotes(answerId)),
+  fetchAnswerVotestoQuestion: (id) => dispatch(fetchAnswerVotestoQuestion(id)),
   postAnswerVote: (answerVote) => dispatch(postAnswerVote(answerVote)),
 })
 

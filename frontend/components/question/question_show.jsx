@@ -26,6 +26,7 @@ class QuestionsShow extends React.Component {
     this.props.fetchAnswers(this.props.match.params.id);
     this.props.fetchQuestion(this.props.match.params.id);
     this.props.fetchVotes(this.props.match.params.id);
+    this.props.fetchAnswerVotestoQuestion(this.props.match.params.id);
     this.loaded = true;
   }
 
@@ -100,13 +101,13 @@ class QuestionsShow extends React.Component {
         return(
         <AnswerItemInQuestionShow
         idx={idx}
-        votes={this.props.answerVotes}
+        answerVotes={this.props.answerVotes}
         postAnswerVote={this.props.postAnswerVote}
-        fetchAnswerVotes={this.props.fetchAnswerVotes}
+        fetchAnswerVotestoQuestion={this.props.fetchAnswerVotestoQuestion}
         className="answer-on-q-index"
-        answerId={answer.id}
         answerers={this.props.question.users_who_answered_question}
         answer={answer}
+        questionId={this.props.match.params.id}
         currentUser={this.props.currentUser}
         patchAnswer={this.props.patchAnswer}
         deleteAnswer={this.props.deleteAnswer}
@@ -119,14 +120,14 @@ class QuestionsShow extends React.Component {
     let toSend = {like_or_dislike: "LIKE", question_id: this.props.match.params.id};
     this.props.postVote(toSend);
     this.props.fetchVotes(this.props.match.params.id);
-    this.forceUpdate();
+    // this.forceUpdate();
   }
 
   downVote(){
     let toSend = {like_or_dislike: "DISLIKE", question_id: this.props.match.params.id};
     this.props.postVote(toSend);
     this.props.fetchVotes(this.props.match.params.id);
-    this.forceUpdate();
+    // this.forceUpdate();
   }
 
   

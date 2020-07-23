@@ -2,46 +2,81 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export const AnswerItemInQuestionShow = (props) => {
-  debugger
   let { answer, answerId, currentUser } = props;
   let thisUser
+  let likers = [];
+  let karma = 0;
+  let sent = 0
+  let votedAlready = false;
 
 
   const handleDelete = () => {
-    props.deleteAnswer(answerId)
+    props.deleteAnswer(answer.id)
 
   }
 
   const upVote = () => {
-    let toSend = { like_or_dislike: "LIKE", answer_id: answerId };
+    let toSend = { like_or_dislike: "LIKE", answer_id: answer.id };
     props.postAnswerVote(toSend);
-    props.fetchAnswerVotes(answerId);
+    props.fetchAnswerVotestoQuestion(props.questionId);
+    figureOutNextKarma();
   }
 
   const downVote = () => {
-    let toSend = { like_or_dislike: "DISLIKE", answer_id: answerId };
+    let toSend = { like_or_dislike: "DISLIKE", answer_id: answer.id };
     props.postAnswerVote(toSend);
-    props.fetchAnswerVotes(answerId);
+    props.fetchAnswerVotestoQuestion(props.questionId);
+    figureOutNextKarma();
   }
 
 
 
   const figureOutKarma = () => {
-    if (props.votes.length === 0) return 0;
-    let karma = 0;
-    for (let i = 0; i < props.votes.length; i++) {
-      let vote = props.votes[i];
-      if (vote.like_or_dislike === "LIKE") {
-        karma++
-      } else {
-        karma--;
+    if (props === undefined) return;
+    let counted = [];
+    for (let i = 0; i < props.answerVotes.length; i++) {
+      let vote = props.answerVotes[i];
+      debugger
+      if (vote.like_or_dislike === "LIKE" && vote.answer_id === props.answer.id) {
+        likers.push(vote.liker_id)
+        karma += 1
+      } else if (vote.like_or_dislike === "DISLIKE" && vote.answer_id === props.answer.id) {
+        likers.push(vote.liker_id)
+        karma -= 1;
       }
+    };
+  }
+  figureOutKarma();
+
+
+  const figureOutNextKarma = () => {
+    let counted = [];
+    props.answerVotes.forEach(vote => {
+      if (counted.indexOf(vote.liker_id) === -1) {
+        if (vote.like_or_dislike === "LIKE") {
+          karma += 1;
+        } else {
+          karma -= 1;
+        }
+        counted.push(vote.liker_id);
+      };
+
+    })
+
+    if (sent === 0) {
+      sent += 1
+      props.fetchAnswerVotestoQuestion(props.questionId);
+      figureOutNextKarma();
+    } else if (sent === 1) {
+      sent += 1;
+    } else {
+      sent = 0;
     }
 
-    return karma;
-
-
   }
+
+  
+
 
   const shouldIDelete = () => {
     if (props.currentUser === undefined) return;
@@ -67,10 +102,15 @@ export const AnswerItemInQuestionShow = (props) => {
     if (thisUser === undefined) thisUser = props.currentUser
     }
 
-  return(
-    <div className="entire-answer"
-    key={props.idx}
-    >
+
+  if (props === undefined) {
+    return
+  } else {
+
+    return(
+      <div className="entire-answer"
+      key={props.idx}
+      >
       <hr />
 
 
@@ -84,7 +124,7 @@ export const AnswerItemInQuestionShow = (props) => {
         onClick={() => upVote()}
         />
 
-        <h3>{figureOutKarma()}</h3>
+        <h3>{karma}</h3>
 
         <i className="fas fa-sort-down fa-3x answer-votes-down"
         onClick={() => downVote()}
@@ -126,3 +166,4 @@ export const AnswerItemInQuestionShow = (props) => {
   </li>
   </div>
 )}
+}

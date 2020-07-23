@@ -19,7 +19,6 @@ const receiveAnswerVote = (answerVote) => {
 
 
 export const postAnswerVote = (answerVote) => dispatch => {
-
   return (
     ANSWERVOTEUtil.postAnswerVote(answerVote)
       .then((answerVote) => dispatch(receiveAnswerVote(answerVote))))
@@ -27,4 +26,8 @@ export const postAnswerVote = (answerVote) => dispatch => {
 
 export const fetchAnswerVotes = (answerId) => dispatch => (
   ANSWERVOTEUtil.fetchAnswerVotes(answerId)
+    .then(answerVotes => dispatch(receiveAnswerVotes(answerVotes))));
+    
+export const fetchAnswerVotestoQuestion = (id) => dispatch => (
+  ANSWERVOTEUtil.fetchAnswerVotestoQuestion(id)
     .then(answerVotes => dispatch(receiveAnswerVotes(answerVotes))));

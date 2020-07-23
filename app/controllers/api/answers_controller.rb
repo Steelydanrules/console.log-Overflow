@@ -6,7 +6,6 @@ class Api::AnswersController < ApplicationController
     elsif params[:question_id]
     @answers = Question.find(params[:question_id]).answers
     end 
-
     render :index
   end
 
