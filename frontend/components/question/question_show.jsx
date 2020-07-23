@@ -29,6 +29,7 @@ class QuestionsShow extends React.Component {
     this.props.fetchAnswerVotestoQuestion(this.props.match.params.id);
     this.loaded = true;
   }
+  
 
   figureOutKarma(){
     if (this.loaded === false) return;
