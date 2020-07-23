@@ -26,7 +26,7 @@ class QuestionsShow extends React.Component {
     this.props.fetchAnswers(this.props.match.params.id);
     this.props.fetchQuestion(this.props.match.params.id);
     this.props.fetchVotes(this.props.match.params.id);
-    this.props.fetchAnswerVotestoQuestion(this.props.match.params.id);
+    // this.props.fetchAnswerVotestoQuestion(this.props.match.params.id);
     this.loaded = true;
   }
   
@@ -104,7 +104,7 @@ class QuestionsShow extends React.Component {
         idx={idx}
         answerVotes={this.props.answerVotes}
         postAnswerVote={this.props.postAnswerVote}
-        fetchAnswerVotestoQuestion={this.props.fetchAnswerVotestoQuestion}
+        // fetchAnswerVotestoQuestion={this.props.fetchAnswerVotestoQuestion}
         className="answer-on-q-index"
         answerers={this.props.question.users_who_answered_question}
         answer={answer}

@@ -19,63 +19,63 @@ export const AnswerItemInQuestionShow = (props) => {
     let toSend = { like_or_dislike: "LIKE", answer_id: answer.id };
     props.postAnswerVote(toSend);
     // props.fetchAnswerVotestoQuestion(props.questionId);
-    figureOutNextKarma();
+    // figureOutNextKarma();
   }
 
   const downVote = () => {
     let toSend = { like_or_dislike: "DISLIKE", answer_id: answer.id };
     props.postAnswerVote(toSend);
     // props.fetchAnswerVotestoQuestion(props.questionId);
-    figureOutNextKarma();
+    // figureOutNextKarma();
   }
 
 
 
-  const figureOutKarma = () => {
-    if (props === undefined) return;
-    let counted = [];
-    for (let i = 0; i < props.answerVotes.length; i++) {
-      let vote = props.answerVotes[i];
-      if (vote.like_or_dislike === "LIKE" && vote.answer_id === props.answer.id) {
-        likers.push(vote.liker_id)
-        karma += 1
-      } else if (vote.like_or_dislike === "DISLIKE" && vote.answer_id === props.answer.id) {
-        likers.push(vote.liker_id)
-        karma -= 1;
-      }
-    };
-  }
-  figureOutKarma();
+  // const figureOutKarma = () => {
+  //   if (props === undefined) return;
+  //   let counted = [];
+  //   for (let i = 0; i < props.answerVotes.length; i++) {
+  //     let vote = props.answerVotes[i];
+  //     if (vote.like_or_dislike === "LIKE" && vote.answer_id === props.answer.id) {
+  //       likers.push(vote.liker_id)
+  //       karma += 1
+  //     } else if (vote.like_or_dislike === "DISLIKE" && vote.answer_id === props.answer.id) {
+  //       likers.push(vote.liker_id)
+  //       karma -= 1;
+  //     }
+  //   };
+  // }
+  // figureOutKarma();
 
 
-  const figureOutNextKarma = () => {
-    let counted = [];
-    props.answerVotes.forEach(vote => {
-      if (counted.indexOf(vote.liker_id) === -1) {
-        if (vote.like_or_dislike === "LIKE") {
-          toAdd += 1;
-        } else {
-          toAdd -= 1;
-        }
-        counted.push(vote.liker_id);
-      };
+  // const figureOutNextKarma = () => {
+  //   let counted = [];
+  //   props.answerVotes.forEach(vote => {
+  //     if (counted.indexOf(vote.liker_id) === -1) {
+  //       if (vote.like_or_dislike === "LIKE") {
+  //         toAdd += 1;
+  //       } else {
+  //         toAdd -= 1;
+  //       }
+  //       counted.push(vote.liker_id);
+  //     };
 
-    })
+  //   })
 
-    if (sent === 0) {
-      sent += 1
-      props.fetchAnswerVotestoQuestion(props.questionId);
-      figureOutNextKarma();
-    } else if (sent === 1) {
-      props.fetchAnswerVotestoQuestion(props.questionId);
-      sent += 1;
-    } else {
-      karma += toAdd;
-      sent = 0;
-      toAdd = 0;
-    }
+  //   if (sent === 0) {
+  //     sent += 1
+  //     props.fetchAnswerVotestoQuestion(props.questionId);
+  //     figureOutNextKarma();
+  //   } else if (sent === 1) {
+  //     props.fetchAnswerVotestoQuestion(props.questionId);
+  //     sent += 1;
+  //   } else {
+  //     karma += toAdd;
+  //     sent = 0;
+  //     toAdd = 0;
+  //   }
 
-  }
+  // }
 
   
 
