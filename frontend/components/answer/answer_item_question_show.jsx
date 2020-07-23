@@ -6,8 +6,8 @@ export const AnswerItemInQuestionShow = (props) => {
   let thisUser
   let likers = [];
   let karma = 0;
-  let sent = 0
-  let votedAlready = false;
+  let sent = 0;
+  let toAdd = 0;
 
 
   const handleDelete = () => {
@@ -18,14 +18,14 @@ export const AnswerItemInQuestionShow = (props) => {
   const upVote = () => {
     let toSend = { like_or_dislike: "LIKE", answer_id: answer.id };
     props.postAnswerVote(toSend);
-    props.fetchAnswerVotestoQuestion(props.questionId);
+    // props.fetchAnswerVotestoQuestion(props.questionId);
     figureOutNextKarma();
   }
 
   const downVote = () => {
     let toSend = { like_or_dislike: "DISLIKE", answer_id: answer.id };
     props.postAnswerVote(toSend);
-    props.fetchAnswerVotestoQuestion(props.questionId);
+    // props.fetchAnswerVotestoQuestion(props.questionId);
     figureOutNextKarma();
   }
 
@@ -36,7 +36,6 @@ export const AnswerItemInQuestionShow = (props) => {
     let counted = [];
     for (let i = 0; i < props.answerVotes.length; i++) {
       let vote = props.answerVotes[i];
-      debugger
       if (vote.like_or_dislike === "LIKE" && vote.answer_id === props.answer.id) {
         likers.push(vote.liker_id)
         karma += 1
@@ -54,9 +53,9 @@ export const AnswerItemInQuestionShow = (props) => {
     props.answerVotes.forEach(vote => {
       if (counted.indexOf(vote.liker_id) === -1) {
         if (vote.like_or_dislike === "LIKE") {
-          karma += 1;
+          toAdd += 1;
         } else {
-          karma -= 1;
+          toAdd -= 1;
         }
         counted.push(vote.liker_id);
       };
@@ -68,9 +67,12 @@ export const AnswerItemInQuestionShow = (props) => {
       props.fetchAnswerVotestoQuestion(props.questionId);
       figureOutNextKarma();
     } else if (sent === 1) {
+      props.fetchAnswerVotestoQuestion(props.questionId);
       sent += 1;
     } else {
+      karma += toAdd;
       sent = 0;
+      toAdd = 0;
     }
 
   }

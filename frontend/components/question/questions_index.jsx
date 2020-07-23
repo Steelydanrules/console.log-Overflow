@@ -27,7 +27,6 @@ class QuestionsIndex extends React.Component {
     if (text.length < 255) {
       return text
     } else {
-      console.log(text)
       return text.slice(0, 255) + "..."
     }
   }

@@ -13,7 +13,6 @@ const questionsReducer = (state = {}, action) => {
     case RECEIVE_QUESTIONS:
       return Object.assign({}, state, action.questions);
     case RECEIVE_ANSWER:
-      console.log(this)
       const newId = action.answer.id;
       const newState = merge({}, state );
       if (newState[action.answer.question_id].answer_ids === undefined){

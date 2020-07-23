@@ -9,7 +9,6 @@ class User extends React.Component{
   }
 
   componentDidMount(){
-    console.log(this.props)
     this.props.fetchUser(this.props.match.params.id)
   }
 

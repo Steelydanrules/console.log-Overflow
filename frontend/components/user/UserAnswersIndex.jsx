@@ -11,8 +11,6 @@ const limitText = (text) => {
 }
 
 const UserAnswersIndex = (props) => {
-
-  console.log(props)
   if (props.user.questions_answered === undefined || props.user.questions_answered.length === 0) {
     return (
       <div className="user-answers-index-blank" style={{ fontStyle: 'italic' }}>

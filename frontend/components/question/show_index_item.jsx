@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
   const figureOutKarma = (votesArr) => {
     let score = 0;
     votesArr.forEach(vote => {
-      console.log(vote)
       if (vote.like_or_dislike === "LIKE") {
         score += 1;
       } else {
