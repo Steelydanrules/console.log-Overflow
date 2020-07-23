@@ -5,6 +5,7 @@ class Api::AnswersController < ApplicationController
     @answers = User.find(params[:user_id]).answers_to_questions
     elsif params[:question_id]
     @answers = Question.find(params[:question_id]).answers
+    # @answers = Answer.find_by(question_id: params[:question_id])
     end 
     render :index
   end
