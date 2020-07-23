@@ -18,14 +18,14 @@ export const AnswerItemInQuestionShow = (props) => {
   const upVote = () => {
     let toSend = { like_or_dislike: "LIKE", answer_id: answer.id };
     props.postAnswerVote(toSend);
-    // props.fetchAnswerVotestoQuestion(props.questionId);
+    props.fetchAnswerVotestoQuestion(props.questionId);
     figureOutNextKarma();
   }
 
   const downVote = () => {
     let toSend = { like_or_dislike: "DISLIKE", answer_id: answer.id };
     props.postAnswerVote(toSend);
-    // props.fetchAnswerVotestoQuestion(props.questionId);
+    props.fetchAnswerVotestoQuestion(props.questionId);
     figureOutNextKarma();
   }
 
